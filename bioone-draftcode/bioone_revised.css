@@ -141,25 +141,11 @@ footer {
 	font-size: 12px;
 }
 
-h4 {
-	padding: 0;
-	margin: 0;
-	list-style-type: none; 
-	font-style: italic;
-	font-weight: 100;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-} 
-
 #footer-rule {
 	width: 100%;
 	height: 50px;
 	margin-bottom: 20px;
 	background-color: #D8DBE9;
-}
-
-#footer-logo {
-	width: 120px;
 }
 
 #page-footer_content {
@@ -179,6 +165,34 @@ h4 {
  	align-items: "baseline";
 }
 
+footer section {
+	flex: 1;
+	padding-left: 60px;
+}
+
+#footer-logo {
+	width: 120px;
+}
+
+footer a {
+	color: color: #3B4991;
+	text-decoration: none; 
+}
+
+h4 {
+	padding: 0;
+	margin: 0;
+	list-style-type: none; 
+	font-style: italic;
+	font-weight: 100;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+} 
+
+address {
+	font-style: normal;
+}
+
 footer ul {
 	list-style-type: none;
 	padding: 0;
@@ -191,8 +205,4 @@ footer li img {
 	margin-top: 5px;
 }
 
-footer a {
-	color: color: #3B4991;
-	text-decoration: none; 
-}
 
