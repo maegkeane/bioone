@@ -58,10 +58,19 @@
 
 <!--main content-->
 <article>
+	<!-- 
+		Ian: I know I got after you about classes last time, but don't be
+		afraid to use them when you need them. This is fine as is, but 
+		if you eventually have more than one article type don't be afraid
+		to give them classes.
+	-->
 	<header>
 		<h1>Corporate Documents</h1>
 	</header>
 
+	<!-- 
+		Ian: You're rockin' the semantic HTML like mad here. *fistbump*
+	-->
 		<section>
 			<h2>See how we've grown.</h2>
 				<p>Thumb through our annual reports to learn more about BioOne’s strategic growth, business model, and goals for the future. We’re proud to share how we’ve nimbly and responsibly pivoted to the changing needs of librarians, publishers, and researchers over the years. You can also view our our bylaws, organizational reporting, and public financials below.</p>
@@ -92,6 +101,31 @@
 						<li><a href="">Financial Statements</a></li>
 						<li><a href="">Form 990</a></li>
 					</ol>
+				<!-- 
+					Ian: Totally anal comment here, consider your tab structure 
+					when you're working on your markup. This all technically works
+					and the browser doesn't even care what your tabs look like,
+					but I'm reading this  as "An OL which lives within an H3 which 
+					lives within an H2." Even though that's not the case, it's what 
+					your tabbing suggest.
+
+					I'd probably do it like this:
+
+					<section>
+						<h2>Blah</h2>
+						<h3>blah blah</h3>
+						<ol>
+							<li>...</li>
+						</ol>
+					</section>
+
+					This doesn't matter if you're the only one reading your file, but
+					it's something that your boss/coworkers would get after you about if
+					you were working as part of a larger team. Some companies even have
+					coding style guides where they tell you exactly how they want you
+					to tab your code, whether to use spaces or tabs, how many spaces
+					equal a tab, etc. etc.
+				-->	
 				<h3>FY2014</h3>
 					<ol>
 						<li><a href="">Financial Statements</a></li>
@@ -127,6 +161,25 @@
 						<li><a href="">Financial Statements</a></li>
 						<li><a href="">Form 990</a></li>
 					</ol>
+
+				<!-- 
+					Ian: Again, this technically works. However to be anal about it,
+					are these lists ordered as the OL suggests? Not really. Financial 
+					Statements could come before the Form 990 and it wouldn't matter. 
+					What's ordered about this is the years. So you could write it like this:
+
+					<ol>
+						<li>
+							<h3>FY2014</h3>
+							<ul>
+								<li><a>...</a></li>
+							</ul>
+						</li>
+					</ol>
+
+					Or a ton of different ways. Just as long as it makes sense to you and
+					others who read it.
+				-->
 		</section>
 </article>
 
@@ -137,7 +190,10 @@
 	<div id="page-footer_content">
 	<section>
 		<img id="footer-logo" src="images/logo.png" alt="logo" />
-   	</section>	
+   	</section>
+   	<!--
+   		Ian: Taaaaabs.
+   	-->
    		<section>
     		<h4>Physical</h4> 
     		<address>
@@ -157,6 +213,9 @@
    			</ul>
  		</section>
  		<section>
+ 				<!--
+ 					Ian: &copy; will give you the copyright symbol.
+ 				-->
   			Copyright 2016<br/>
    			<a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
    		</section>

@@ -33,6 +33,24 @@ body {
 	position: relative;
 	left: 50px;
 	top: 20px;
+
+	/* 
+		Ian: Alright, here's a tricky little concept that can help with
+		making your code more consistent and easier to edit in the future.
+		How and why are you positioning this image? Are you doing it the
+		best and most consistent way you can? If I look at the UL below,
+		I see you're declaring a padding-right value equal to the left value
+		on this image. My take away is that your goal is to have the .page-header
+		element have 50px of left and right padding, but you're applying that
+		to its child elements instead.
+
+		This is not wrong per se. It technically works just fine. However you've
+		now defined that 50px value in two separate places instead of one.
+		I do this stuff ALL THE TIME (which is why I call it tricky) because it's
+		easy to think, "okay, I want this iamge to be about 50px away from the
+		edge of that thing," but really what's going on is that "I want EVERYTHING
+		within that thing to be 50px away from the edge."
+	*/
 }
 
 nav ul {
@@ -89,6 +107,14 @@ section {
 	margin-bottom: 35px;
 }
 
+/* 
+	Ian: The next several rules are what most people would consider
+	"base styles" that should live at the top of your document.
+	Since you're applying styles to _all_ paragraphs and links and
+	whatnot, if you put them at the top you allow them to cascade
+	to everything below. As this is organized now, your header
+	and navigation are special beasts which do not receive these styles.
+*/
 p {
 	font-size: 14px;
 	line-height: 20px;
@@ -176,10 +202,41 @@ footer section {
 
 footer a {
 	color: color: #3B4991;
+	/* 
+		Ian: Whoops, syntax error. CSS is tricky in this regard because
+		most browsers will just silently ignore (or sometimes accept) 
+		CSS and HTML syntax errors whereas Javascript syntax errors
+		cause them to flip out and scream at you. So this color might work
+		in Chrome because it's smart enough to figure out what you were trying
+		to say, whereas Internet Explorer might go, "lol i can't understand this
+		so dunno what color she wants so this footer link is just whatever color 
+		links are supposed to be."
+
+		A good practice is to validate your HTML and CSS every once in 
+		awhile during a project to make sure you don't have any glaring errors.
+		The W3C has great validators you can use:
+
+		CSS: https://jigsaw.w3.org/css-validator/
+		HTML: https://validator.w3.org/
+
+		These will both tell you if there's something wrong with your code.
+		Some of the warnings you can take with a grain of salt (eg. an image
+		missing an alt tag will still work, it's just not as accessible as
+		it could be).
+
+		Once you get into Javascript, you'll want to look at JS Lint, which
+		is similar but also very opinionated about how to best organize 
+		your Javascript.
+
+		http://www.jslint.com/
+	*/
 	text-decoration: none; 
 }
 
 h4 {
+	/* 
+		Ian: Base style, should probably live with the other base styles.
+	*/
 	padding: 0;
 	margin: 0;
 	list-style-type: none; 
@@ -190,6 +247,9 @@ h4 {
 } 
 
 address {
+	/* 
+		Ian: Ditto.
+	*/
 	font-style: normal;
 }
 
