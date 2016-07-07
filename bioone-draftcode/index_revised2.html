@@ -7,46 +7,42 @@
   <!-- fonts -->
   <!-- icons -->
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="bioone_revised.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/css/bioone.css">
   <!-- js -->
 </head>
 
 <body>
-<header class="page-header">
-	<a href="#home"><img src="images/whitelogo.png"></a>
+	<header class="page-header">
+	<a href="#home"><img src="images/whitelogo.png" alt="BioOne Logo"></a>
+	
 	<nav>
-		<ul>
-			<li>
-				<a href="#">Who We Are</a>
-					<ul>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Board</a></li>
-						<li><a href="#">Corporate Documents</a></li>
-					</ul>	
-			</li>
+	<ul>
+		<li class="has-children"><a href="#">Who We Are</a>
+			<ul class="children" >
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Board</a></li>
+				<li><a href="#">Corporate Documents</a></li>
+			</ul>	
+		</li>
 		
-			<li>
-				<a href="#">Our Story</a>
-			</li>
-			<li>
-				<a href="#">Our Work</a>
-				<ul>
-					<li><a href="#">Publications</a></li>
-					<li><a href="#">Initatives &amp; Resources</a></li>
-				</ul>
-			</li>
+		<li><a href="#">Our Story</a></li>
+			
+		<li class="has-children"><a href="#">Our Work</a>
+			<ul class="children">
+				<li><a href="#">Publications</a></li>
+				<li><a href="#">Initatives &amp; Resources</a></li>
+			</ul>
+		</li>
 		
-			<li>
-				<a href="#">News &amp; Events</a>
-			</li>
-			<li>
-			<a href="#">Contact</a>
-				<ul>
-					<li><a href="#">Say Hello</a></li>
-					<li><a href="#">For The Press</a></li>
-				</ul>
-			</li>
-		</ul>
+		<li><a href="#">News &amp; Events</a></li>
+		
+		<li class="has-children" ><a href="#">Contact</a>
+			<ul class="children" id="nav-align-left">
+				<li><a href="#">Say Hello</a></li>
+				<li><a href="#">For The Press</a></li>
+			</ul>
+		</li>
+	</ul>
 	</nav>
 </header>
 
@@ -57,7 +53,7 @@
 
 	<section>
 		<h2>See how we've grown.</h2>
-			<p>Thumb through our annual reports to learn more about BioOne’s strategic growth, business model, and goals for the future. We’re proud to share how we’ve nimbly and responsibly pivoted to the changing needs of librarians, publishers, and researchers over the years. You can also view our our bylaws, organizational reporting, and public financials below.</p>
+		<p>Thumb through our annual reports to learn more about BioOne’s strategic growth, business model, and goals for the future. We’re proud to share how we’ve nimbly and responsibly pivoted to the changing needs of librarians, publishers, and researchers over the years. You can also view our our bylaws, organizational reporting, and public financials below.</p>
 	</section>
 	<section>
 		<h2>Annual Reports</h2>
@@ -72,11 +68,9 @@
 			<li><a href="">2008 Annual Report</a></li>
 		</ol>
 	</section>
-
 	<section>
 		<h2><a href="">BioOne Bylaws</a></h2>
 	</section>
-
 	<section>
 		<h2>Audited Financial Statements &amp; 990s</h2>
 		<ol>
@@ -163,7 +157,7 @@
    			<li><img src="images/twitter.png" alt="twitter" /><img src="images/fb.png" alt="facebook" /><img src="images/linkedin.png" alt="linkedin" /><li>
    		</ul>
  	</section>
- 	<section>
+ 	<section class="footer-copyright">
   		Copyright &copy; 2016<br/>
    		<a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
    	</section>
