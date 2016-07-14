@@ -1,4 +1,72 @@
+//
+// BREAKPOINTS
+//
+$break-small: 655px;
+$break-medium: 857px;
+$break-large: 1024px;
+$break-huge: 1280px;
 
+//
+// MIXINS
+//
+
+//mixin for breakpoints
+@mixin media-query($type,$size) {
+	@if $type == min { 
+	@if $size == small {
+		@media only screen and (min-width: $break-small) { @content; }
+    }
+    @else if $size == medium {
+    	@media only screen and (min-width: $break-medium + 1) { @content; }
+    }
+    @else if $size == large {
+    	@media only screen and (min-width: $break-large) { @content; }
+    }
+    @else if $size == huge {
+    	@media only screen and (min-width: $break-huge) { @content; }
+    }
+  }
+ 
+	@else if $type == max {
+	@if $size == small {
+		@media only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $size == medium {
+		@media only screen and (max-width: $break-medium) { @content; }
+    }
+
+    @else if $size == large {
+		@media only screen and (max-width: $break-large) { @content; }
+    }
+    @else if $size == huge {
+		@media only screen and (max-width: $break-huge) { @content; }
+    }
+  }
+ 
+	@else if $type == only {
+	@if $size == small {
+		@media only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $size == medium {
+      @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+    }
+    @else if $size == large {
+      @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+    }
+    @else if $size == huge {
+      @media only screen and (min-width: $break-huge) { @content; }
+    }
+  }
+}
+
+//mixin for flexbox
+
+
+
+
+//
+// VARIABLES
+//
 $color-main: #000000; //black
 $color-brand: #6E9934; //green
 $color-accent: #3B4991; //indigo
@@ -17,6 +85,25 @@ $font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 //base styles
 body {
 	margin: 0;
+	padding: 0; 
+}
+
+article {
+	max-width: 900px;
+	margin: {
+		top: 30px;
+		left: 80px;
+		}
+	font: {
+		family: $font-serif;
+		size: 14px;
+		}
+	@include media-query(max,medium) {
+		margin: 0 40px; 
+	}
+	@include media-query(max,small) {
+		margin: 0 40px; 
+	}
 }
 
 section {
@@ -73,19 +160,18 @@ h4 {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	list-style-type: none; 
-
 } 
 
 address {
 	font-style: normal;
 }
 
-//navigation
+//NAVIGATION
 
 .page-header {
 	width: 100%;
 	height: 90px;
-	padding: 25px 75px 0 50px;
+	padding: 25px 25px 0 50px;
 	margin: 0;
 	position: relative;
 	font: {
@@ -98,26 +184,84 @@ address {
 
 	background-image: url("../../images/headerbg.png");
 	
+	@include media-query(max, medium) {
+	 	font-size: 10px;
+	  	padding: 25px 0 0 25px; 
+	}
+	
+	@include media-query(max, small) {
+		background-image: none; 
+		position: relative; 
+		height: 50px; 
+		border-bottom: $color-brand solid 2px; 
+	}
+		
 	img {
-	width: 130px;
-	float: left;
+		width: 130px;
+		float: left;
+
+		@include media-query(max, medium) {  
+			width: 110px;
+			padding-top: 2px; 
+		} 
+	
+		@include media-query(max, small) {
+			display: none; 
+		}
 	}
 }
+
+ul#top-nav {
+	padding-right: 20px; 
+}
+
+//only at mobile
+nav {
+	@include media-query(max, small) {
+		position: absolute; 
+		top: 0; 
+		bottom: 0; 
+		left: 100%; 
+		background: $color-brand; 
+		transition: left 200ms ease-in-out; 
+		
+	.nav.open {
+		left: 50px; 
+	}
+		
+	.handle {
+		width: 60px; 
+		height: 50px; 
+		position: absolute; 
+		top: 0; 
+		left: -60px; 
+		border-left: 2px solid $color-brand; 
+		border-right: 2px solid $color-brand; 
+		cursor: pointer; 
+	}
+	}
+}
+
+
 
 nav ul {
 	position: relative;
 	float: right;
-	
+
 	li {
 		display: inline;
 		position: relative;
-		padding-right: 35px;
+		padding-left: 35px;
+	
+		@include media-query(max, medium) { 
+			padding-left: 15px; 
+		} 
 
 		a {
 		color: #FFFFFF;
 		text-decoration: none; 
 			}
-		}
+	}
 
 	ul {
 		padding: 10px;
@@ -132,7 +276,7 @@ nav ul {
 
 	li:hover ul {
 		display: block; 
-		}
+	}
 }
 
 //nav-dropdown 
@@ -147,8 +291,8 @@ nav .children {
 
 		a {
 		display: block; 
-		color: $color-light;
 		padding: 10px 20px; 
+		color: $color-light;
 		border-bottom: 2px solid lighten($color-light, 30%);  
 			&:hover {
 			color: darken($color-light, 30%);
@@ -171,19 +315,9 @@ nav li.has-children > a:before {
 	font-size: 80%; 
 }
 
-//content 
-article {
-	max-width: 900px;
-	margin: {
-		top: 30px;
-		left: 80px;
-		}
-	font: {
-		family: $font-serif;
-		size: 14px;
-		}
-}
+//CONTENT
 
+//should define these list types
 ol, ul {
 	padding: 0;
 	list-style-type: none;
@@ -192,21 +326,40 @@ ol li, ul li {
 	padding-bottom: 10px;
 }
 
-//footer
+//FOOTER
 footer {
 	width: 100%;
 	padding: {
 		top: 50px;
-		bottom: 80px;
+		bottom: 50px;
 	}
 	font: {
 		family: $font-serif;
 		size: 12px;
+		} 
+	}	
+
+#footer-rule {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 20px;
+	background: lighten($color-accent, 50%)
+}
+
+.page-footer_content {
+	display: flex; 
+	justify-content: space-around; 
+	max-width: 1100px;  	
+
+	@include media-query(max,small) {
+		flex-direction: column; 
+		padding-left: 40px;
+	}
+
+	section { 
+		@include media-query(max, small) {
+			margin: 0 0 15px 0;
 		}
-	 
-	section {
-		flex: 1;
-		padding-left: 60px;
 	}
 
 	ul {
@@ -234,17 +387,16 @@ footer {
 
 .footer-copyright {
 	text-align: right;
-	padding-right: 100px; 
+	padding-right: 50px; 
 	padding-left: 0; 
+
+	@include media-query(max, small) {
+		padding: 0; 
+		text-align: left; 
+	}
 }
 
-#footer-rule {
-	width: 100%;
-	height: 50px;
-	margin-bottom: 20px;
-	background: lighten($color-accent, 50%)
-}
-
+//need to create a mixin for this nonsense
 #page-footer_content {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -264,4 +416,8 @@ footer {
 
 #footer-logo {
 	width: 120px;
+	
+	@include media-query(max, small) {
+		width: 100px; 
+	}
 }

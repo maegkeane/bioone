@@ -9,14 +9,15 @@
   <!-- css -->
 <link rel="stylesheet" type="text/css" href="stylesheets/css/bioone.css">
   <!-- js -->
+<link rel="script.js" ="text/js" href="min/bioone-min.js"> 
 </head>
 
 <body>
 	<header class="page-header">
 	<a href="#home"><img src="images/whitelogo.png" alt="BioOne Logo"></a>
-	
 	<nav>
-	<ul>
+	<a class="handle"></a>	
+	<ul id="top-nav">
 		<li class="has-children"><a href="#">Who We Are</a>
 			<ul class="children" >
 				<li><a href="#">Team</a></li>
@@ -136,8 +137,8 @@
 
 <footer>
 	<div id="footer-rule"></div>
-	<div id="page-footer_content">
-	<section>
+	<div class="page-footer_content">
+	<section class="flex_footer-logo">
 		<img id="footer-logo" src="images/logo.png" alt="logo" />
    	</section>	
    	<section>
@@ -154,12 +155,12 @@
     	<ul>
     		<li><a href="#">about.bioone.org</a></li>
     		<li><a href="#">hello@bioone.org</a></li>
-   			<li><img src="images/twitter.png" alt="twitter" /><img src="images/fb.png" alt="facebook" /><img src="images/linkedin.png" alt="linkedin" /><li>
+   			<li><a href="https://twitter.com/BioOneNews"><img src="images/twitter.png" alt="twitter" /></a><a href="https://www.facebook.com/bioone.org/"><img src="images/fb.png" alt="facebook" /></a><a href="https://www.linkedin.com/company/bioone-"><img src="images/linkedin.png" alt="linkedin" /></a><li>
    		</ul>
  	</section>
  	<section class="footer-copyright">
   		Copyright &copy; 2016<br/>
-   		<a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+   		<a href="http://www.bioone.org/page/terms_of_use">Terms of Use</a> | <a href="http://www.bioone.org/page/privacy_policy">Privacy Policy</a>
    	</section>
 	</div>
 </footer>
