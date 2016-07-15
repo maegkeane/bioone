@@ -11,6 +11,58 @@
   <!-- jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- js -->
+  <!-- 
+  	Ian's note:
+  	You're close, but the line below has several errors in it. Take a look at the script
+  	tag from Google above as an example.
+
+  	Here's what a proper script tag should look like:
+
+  	<script src="filename.js" type="text/javascript"></script>
+
+  	src
+  		The same as an <img> tag – it tells the browser where to find the file.
+  	type
+  		Entirely optional. These days most browsers are smart enough to
+  		know that a file with .js on the end is Javascript, so you don't need
+  		to define it. You'll see it pretty often, however, which is why I 
+  		mention it.
+
+  	If we look at your tag we see some problems:
+
+    <script rel="script.js" ="text/js" href="bioone.js"></script> 
+            ^               ^          ^        
+            A               B          C
+
+    A: the 'rel' attribute is used to define the relationship a <link>d file
+    (most often being a css file) has to a document. Above on line 10 you'll
+    see that your bioone_nav.css document has the relationship "stylesheet" to
+    this HTML document.
+
+    B: This is just a syntax error. You can't have ="whatever" without telling
+    the browser what "whatever" equals. Smart browsers will ignore it. Dumb
+    browsers will throw an error or break a page.
+
+    C: href is used for <link> but is not used in <script> tags. href and src
+    may be confusing at first, but they're easy to wrap your brain around if
+    you know what both mean. They cannot be used interchangeably.
+
+    src
+    	What this is actually telling the browser is, "take this file and embed it 
+    	in the page." So in this case, your Javascript is becoming part of the 
+    	page itself. When the browser is building the page and it sees a 
+    	src, it stops building, fetches the src file and then uses it to continue
+    	building the page. The same goes for images – when you use an <img src=".." /> 
+    	tag, you're literally embedding the image in the page. Javascript must be included
+    	using src.
+
+    href
+    	Hypertext REFerence. The browser doesn't stop building the page to load these,
+    	it just says, "oh, I'll need this for whatever reason in the future so I'll
+    	hang onto it." In the case of CSS we tell it, "use this as a stylesheet" with
+    	the rel attribute, so the browser says, "cool, when I finish building the page
+    	(after pausing and fetching each src), I'll use this referenced CSS file to add styles."
+  -->
 <script rel="script.js" ="text/js" href="bioone.js"></script> 
 </head>
 
