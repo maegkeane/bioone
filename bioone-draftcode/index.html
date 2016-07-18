@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About BioOne</title>
   <!-- css -->
- link rel="stylesheet" type="text/css" href="stylesheets/css/bioone.css">
+  <!-- 
+  	Ian's note:
+		
+		You have a bug on the next line.
+	-->
+ <link rel="stylesheet" type="text/css" href="stylesheets/css/bioone.css">
   <!-- jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- js -->
@@ -19,6 +24,17 @@
 	
 	<nav>
 	<a class="handle">
+		<!-- 
+			Ian's note: 
+			The markup you have for this handle works, but it's a LOT
+			of HTML for a simple button.
+
+			I'll bet you could code the entire thing to look exactly
+			the same as it does now with this markup:
+
+			<a class="handle"><span>Menu</span></a>
+
+		-->
 	<div class="handle-container">
 	    <span></span>
 	    <span></span>  

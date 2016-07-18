@@ -314,6 +314,9 @@ nav ul {
 			padding-left: 15px; 
 			padding-right: 0; 
 		} 
+
+		// Ian's note: 
+		// Remember to be careful with your tabs!
     
     	@include media-query(max, small) { 
 			display: block;
