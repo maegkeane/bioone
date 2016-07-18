@@ -82,7 +82,8 @@ address {
       background-image: none;
       position: relative;
       height: 60px;
-      border-bottom: #6E9934 solid 2px; } }
+      border-bottom: #6E9934 solid 2px;
+      padding: 25px 75px 0 50px; } }
   .page-header img {
     width: 130px;
     float: left; }
@@ -93,12 +94,11 @@ address {
     @media only screen and (max-width: 655px) {
       .page-header img {
         display: none; } }
-
-ul#top-nav {
-  padding-right: 35px; }
-  @media only screen and (max-width: 857px) {
-    ul#top-nav {
-      padding-top: 3px; } }
+  .page-header ul#top-nav {
+    padding-right: 35px; }
+    @media only screen and (max-width: 857px) {
+      .page-header ul#top-nav {
+        padding-top: 3px; } }
 
 @media only screen and (max-width: 655px) {
   nav {
@@ -119,15 +119,47 @@ ul#top-nav {
       left: -70px;
       cursor: pointer;
       border-left: 2px solid #6E9934;
-      border-right: 2px solid #6E9934; } }
+      border-right: 2px solid #6E9934; }
+    nav .handle-container {
+      width: 40px;
+      position: relative;
+      left: 13px; }
+      nav .handle-container span {
+        display: block;
+        position: relative;
+        background: #6E9934;
+        height: 3px; }
+        nav .handle-container span:nth-child(1) {
+          top: 12px; }
+        nav .handle-container span:nth-child(2) {
+          top: 17px; }
+        nav .handle-container span:nth-child(3) {
+          top: 22px; } }
+
+#nav-mobile-menu {
+  display: none; }
+  @media only screen and (max-width: 655px) {
+    #nav-mobile-menu {
+      display: block;
+      position: relative;
+      top: 13px;
+      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6E9934;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 2px; } }
 
 nav ul {
   position: relative;
   float: right; }
   @media only screen and (max-width: 655px) {
     nav ul {
-      border: 2px solid plum;
       background: #FFFFFF;
+      width: 250px;
+      border: 2px solid #6E9934;
+      border-radius: 3px;
       float: none; } }
   nav ul li {
     display: inline;
@@ -139,13 +171,15 @@ nav ul {
         padding-right: 0; } }
     @media only screen and (max-width: 655px) {
       nav ul li {
-        display: block; } }
+        display: block;
+        padding: 10px 0; } }
     nav ul li a {
       color: #FFFFFF;
       text-decoration: none; }
       @media only screen and (max-width: 655px) {
         nav ul li a {
-          color: #6E9934; } }
+          color: #6E9934;
+          padding-left: 10px; } }
     nav ul li:hover ul {
       display: block; }
     nav ul li ul {
@@ -157,6 +191,10 @@ nav ul {
       border: 2px solid #b6bdc4;
       border-radius: 3px;
       background: #FFFFFF; }
+      @media only screen and (max-width: 655px) {
+        nav ul li ul {
+          position: relative;
+          border: 0; } }
 
 nav .children {
   display: none;
@@ -169,7 +207,9 @@ nav .children {
       width: 190px; } }
   @media only screen and (max-width: 655px) {
     nav .children {
-      display: block; } }
+      display: block;
+      width: 100%;
+      left: 5px; } }
   nav .children li {
     display: inherit;
     padding: inherit; }
@@ -200,6 +240,10 @@ nav li.has-children > a:before {
   @media only screen and (max-width: 857px) {
     #nav-align-left {
       left: -85%; } }
+  @media only screen and (max-width: 655px) {
+    #nav-align-left {
+      left: 0;
+      width: 220px; } }
 
 ol, ul {
   padding: 0;

@@ -195,42 +195,43 @@ address {
 		position: relative; 
 		height: 60px; 
 		border-bottom: $color-brand solid 2px;
+   		padding: 25px 75px 0 50px; 
 	}
 		
 	img {
 		width: 130px;
 		float: left;
-
-		@include media-query(max, medium) {  
+    
+    	@include media-query(max, medium) {  
 			width: 110px;
 			padding-top: 2px; 
 		} 
 	
 		@include media-query(max, small) {
 			display: none;
-		}
+		}	
 	}
-}
 
-ul#top-nav {
-	padding-right: 35px; 
+	ul#top-nav {
+		padding-right: 35px; 
 
-	@include media-query(max, medium) {
-		padding-top: 3px; 	
+		@include media-query(max, medium) {
+			padding-top: 3px; 	
+		}
 	}	
 }
 
 // NAVIGATION JUST FOR MOBILE
 nav {
 	@include media-query(max, small) {
-    width: calc(100% - 70px);
+    	width: calc(100% - 70px);
 		height: 100%;
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 100%;
 		transition: right 200ms ease-in-out;	
-	
+  
 		&.open {
 			left: 70px; 
 		}
@@ -243,19 +244,67 @@ nav {
 			left: -70px;
 			cursor: pointer;
 			border-left: 2px solid $color-brand;
-			border-right: 2px solid $color-brand;	
+			border-right: 2px solid $color-brand;
+       	}
+
+	    .handle-container {
+	      width: 40px; 
+	      position: relative; 
+	      left: 13px; 
+  
+    		span {
+		        display: block; 
+		        position: relative; 
+		        background: $color-brand; 
+		        height: 3px; 
+        
+		        &:nth-child(1){
+		            top: 12px; 
+		        }
+		          
+		       	&:nth-child(2) {
+		        	top: 17px; 
+		        }
+		          
+		       	&:nth-child(3) {
+		       		top: 22px; 
+		        }
+        	}
+    	}
+  	}
+}
+
+#nav-mobile-menu {
+	display: none; 
+ 
+	@include media-query (max, small) {
+	    display: block; 
+	    position: relative;
+	    top: 13px; 
+	    font: {
+		    family: $font-sans; 
+		    size: 12px; 
+		    weight: 600; 
 		}
-	}
-}	
+		color: $color-brand;
+      	text: {
+	        transform: uppercase;
+	        align: center; 
+      	}
+    	letter-spacing: 2px; 
+    }
+}
 
 nav ul { 
 	position: relative;
 	float: right;
 	
 	@include media-query(max, small) {
-		border: 2px solid plum; 
 		background: $white;
-		float: none; 
+    	width: 250px; 
+    	border: 2px solid $color-brand; 
+    	border-radius: 3px;
+    	float: none;
 	} 
 
 	li {
@@ -269,8 +318,9 @@ nav ul {
 		} 
     
     	@include media-query(max, small) { 
-			display: block; 
-		} 
+			display: block;
+      		padding: 10px 0;
+     	} 
 
 		a {
 			color: $white;
@@ -278,33 +328,39 @@ nav ul {
 		
 			@include media-query(max, small) { 
         		color: $color-brand; 
+            	padding-left: 10px; 
       		}
-	  }
+	  	}
 
 //nav-dropdown styling starts here
 
-	  &:hover ul {
-		display: block;  
-	}
+	  	&:hover ul {
+			display: block;
+		}
 
-	ul {
-		padding: 10px;
-		position: absolute;
-		display: none;
-		left: 0;
-		top: 100%;
-		border: 2px solid lighten($color-light, 30%);
-		border-radius: 3px;
-		background: $white; 
-	}	
-}
+		ul {
+			padding: 10px;
+			position: absolute;
+			display: none;
+			left: 0;
+			top: 100%;
+			border: 2px solid lighten($color-light, 30%);
+			border-radius: 3px;
+			background: $white;
+
+	   		@include media-query(max, small) {
+		    	position: relative; 
+		     	border: 0;
+	  		}	
+		}
+	}
 }
 
 nav .children {
 	display: none; 
 	width: 210px; 
 	padding: 0; 
-  	left: 27%; 
+	left: 27%; 
 
   	@include media-query(max, medium) { 
     	left: 16%; 
@@ -313,24 +369,27 @@ nav .children {
 
   	@include media-query(max, small) { 
     	display: block; 
+    	width: 100%; 
+    	left: 5px; 
   	}
 
 	li {
-	display: inherit; 
-	padding: inherit; 
+		display: inherit; 
+		padding: inherit; 
 
 		a {
 		display: block; 
 		padding: 10px 20px; 
 		color: $color-light;
 		border-bottom: 2px solid lighten($color-light, 30%);  
+			
 			&:hover {
-			color: darken($color-light, 30%);
-			}
+				color: darken($color-light, 30%);
+				}
 		
-		@include media-query(max, medium) {
+			@include media-query(max, medium) {
  				padding: 10px 15px; 
- 			}
+    		}
 		}
 	}
 
@@ -338,6 +397,7 @@ nav .children {
 		border-bottom: 0; 
 	}
 }
+
   
 //nav-dropdown-arrow
 nav li.has-children > a:before {
@@ -351,12 +411,17 @@ nav li.has-children > a:before {
 
 //nav-contact-left
 #nav-align-left {
-		left: -40%;
-		width: 150px;
+	left: -40%;
+	width: 150px;
 		
-		@include media-query(max, medium) {
-			left: -85%; 
-		}
+	@include media-query(max, medium) {
+		left: -85%; 
+	}
+
+	@include media-query(max, small) {
+		left: 0; 
+		width: 220px; 
+	}
 }
 
 
