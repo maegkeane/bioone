@@ -59,9 +59,7 @@ $break-huge: 1280px;
   }
 }
 
-//mixin for flexbox
-
-
+//mixin for flexbox goes here
 
 
 //
@@ -221,7 +219,7 @@ address {
 	}	
 }
 
-// NAVIGATION JUST FOR MOBILE
+// navigation for mobile state
 nav {
 	@include media-query(max, small) {
     	width: calc(100% - 70px);
@@ -332,8 +330,6 @@ nav ul {
       		}
 	  	}
 
-//nav-dropdown styling starts here
-
 	  	&:hover ul {
 			display: block;
 		}
@@ -382,7 +378,7 @@ nav .children {
 		padding: 10px 20px; 
 		color: $color-light;
 		border-bottom: 2px solid lighten($color-light, 30%);  
-			
+		
 			&:hover {
 				color: darken($color-light, 30%);
 				}

@@ -1,5 +1,5 @@
 var toggleNav = function() {
- $('nav').toggleClass('.open');
+ $('nav').toggleClass('open');
 };
 
 $('.handle').click(function(){
