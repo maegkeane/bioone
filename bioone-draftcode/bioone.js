@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var toggleNav = function() {
-   $('nav').toggleClass('open');
+   $('nav ul').toggleClass('open');
   };
 
   $('.handle').click(function(){  
