@@ -257,122 +257,100 @@ a.btn {
 		border-bottom: $color-brand solid 2px;
    		padding: 25px 75px 0 50px; 
 	}
-		
+	
 	img {
-		width: 130px;
-		float: left;
-    
-    	@include media-query(max, medium) {  
-			width: 110px;
-			padding-top: 2px; 
-		} 
+		width: 130px; 
+		float: left; 
+		
+		@include media-query(max, medium) {
+	 		width: 110px; 
+	  		padding-top: 2px; 
+		}
 	
 		@include media-query(max, small) {
-			display: none;
-		}	
+			display: none; 
+		}
 	}
-
-	nav ul {
-		padding-right: 35px; 
-
-		@include media-query(max, medium) {
-			padding-top: 3px; 	
-		}
-
-		@include media-query(max, small){
-			padding: 0; 
-			margin: 0; 	
-		}
-	}	
 }
 
 // navigation for mobile state
 nav {
+	.handle span {
+		display: none;
+	}
+
 	@include media-query(max, small) {
 		width: calc(100% - 70px);
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 100%; 
-		transition: right 200ms ease-in-out;	
-  
-		&.open {
-			left: 70px; 
-		}
+		transition: right 200ms ease-in-out;		
 
 		.handle {
 			width: 70px;
 			height: 60px;
-			position: absolute;
+			position: fixed; 
 			top: 0;
-			left: -70px;
+			right: 0;
 			cursor: pointer;
 			border-left: 2px solid $color-brand;
+
+			&:before {
+				content: "";
+				position: absolute; 
+				top: 15px; 
+				right: 0; 
+				height: 3px; 
+				width: 40px;
+		        border-top: 9px double $color-brand; 
+		        border-bottom: 3px solid $color-brand;
+		        margin-right: 15px;    
+		    }
+
+			span {
+			    display: inherit;
+			    position: inherit; 
+			    top: 36px; 
+			    right: 0; 
+			    margin-right: 12px;    
+			    font: {
+				    family: $font-sans; 
+				    size: 12px; 
+				    weight: 600; 
+				}
+				color: $color-brand;
+		      	text: {
+			        transform: uppercase;
+			        align: center; 
+		      	}
+		    	letter-spacing: 2px; 
+		  	}
 		}
+	}
 
-	    .handle-container {
-	      width: 40px; 
-	      position: relative; 
-	      left: 13px; 
-  
-    		span {
-		        display: block; 
-		        position: relative; 
-		        background: $color-brand; 
-		        height: 3px; 
-        
-		        &:nth-child(1){
-		            top: 12px; 
-		        }
-		          
-		       	&:nth-child(2) {
-		        	top: 17px; 
-		        }
-		          
-		       	&:nth-child(3) {
-		       		top: 22px; 
-		        }
-        	}
-    	}
-  	}
-}
-
-#nav-mobile-menu {
-	display: none; 
- 
-	@include media-query (max, small) {
-	    display: inline; 
-	    position: relative;
-	    top: 23px; 
-	    font: {
-		    family: $font-sans; 
-		    size: 12px; 
-		    weight: 600; 
-		}
-		color: $color-brand;
-      	text: {
-	        transform: uppercase;
-	        align: center; 
-      	}
-    	letter-spacing: 2px; 
-    }
-}
-
-nav ul { 
+	ul { 
 	position: relative;
 	float: right;
-	
+	margin-right: 25px; 
+
 	@include media-query(max, small) {
+		float: none; 
+		padding: 0; 
+		margin: 0; 
+		width: 250px; 
 		background: $white;
-    	width: 250px; 
     	border: {
     		bottom: 2px solid $color-brand;
     		left: 2px solid $color-brand; 
  			right: 2px solid $color-brand; 
     		radius: 3px;
     	}
-    	float: none;
-	} 
+
+		&.open {
+			right: 70px; 
+		}
+	}
 
 	li {
 		display: inline;
@@ -419,6 +397,7 @@ nav ul {
 	  		}	
 		}
 	}
+}
 }
 
 nav .children {
