@@ -1,8 +1,8 @@
 //
 // BREAKPOINTS
 //
-$break-small: 655px;
-$break-medium: 857px;
+$break-small: 670px;
+$break-medium: 870px;
 $break-large: 1024px;
 $break-huge: 1280px;
 
@@ -106,7 +106,7 @@ article {
 }
 
 section {
-	margin-bottom: 35px;
+	margin-bottom: 5px;
 }
 
 p {
@@ -115,6 +115,8 @@ p {
 		size: 14px;
 	}
 	line-height: 20px;
+	margin-top: 2px;
+	margin-bottom: 20px;  
 }
 
 a {
@@ -142,14 +144,24 @@ h2 {
 
 h3 {
 	margin: 0;
+	padding-top: 10px; 
 	font: {
-		size: 14px;
-		weight: 600;
+		size: 16px;
+		weight: 100;
 	}
 	color: $color-brand;
 }
 
 h4 {
+	margin: 0;
+	font: {
+		size: 16px;
+		weight: 100; 
+	}
+	color: $color-main;
+}
+
+h5 {
 	padding: 0;
 	margin: 0;
 	font: {
@@ -165,6 +177,56 @@ address {
 	font-style: normal;
 }
 
+ol, ul {
+	padding: 0;
+	list-style-type: none;
+}
+ol li, ul li {
+	padding-bottom: 10px;
+}
+
+//buttons 
+a.btn {
+	display: inline-block; 
+	padding: 20px; 
+	font: {
+		family: $font-sans; 
+		size: 12px; 
+	}
+	text: {
+		transform: uppercase; 
+		align: center;
+		decoration: none;  
+	}
+	letter-spacing: 1px; 
+	margin: {
+		top: 10px; 
+		right: 10px; 
+		bottom: 10px; 
+	}
+
+	&--main {
+		background: $color-accent; 
+		color: $white; 
+
+		&:hover {
+			background: lighten($color-accent, 10%); 
+		}
+	}
+	
+	&--secondary { 
+		border: 1px solid $color-brand; 
+		border-radius: 3px;
+		color: $color-brand;
+		background: $white; 
+
+		&:hover {
+			border: lighten($color-brand, 10%);
+			color: lighten($color-brand, 10%);
+		} 
+	}
+}
+
 //NAVIGATION
 
 .page-header {
@@ -177,7 +239,7 @@ address {
 		family: $font-sans;
 		size: 11px;
 		weight: 500; 
-		}
+	}
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 
@@ -190,7 +252,7 @@ address {
 	
 	@include media-query(max, small) {
 		background-image: none; 
-		position: relative; 
+		//position: relative; 
 		height: 60px; 
 		border-bottom: $color-brand solid 2px;
    		padding: 25px 75px 0 50px; 
@@ -210,11 +272,16 @@ address {
 		}	
 	}
 
-	ul#top-nav {
+	nav ul {
 		padding-right: 35px; 
 
 		@include media-query(max, medium) {
 			padding-top: 3px; 	
+		}
+
+		@include media-query(max, small){
+			padding: 0; 
+			margin: 0; 	
 		}
 	}	
 }
@@ -222,12 +289,11 @@ address {
 // navigation for mobile state
 nav {
 	@include media-query(max, small) {
-    	width: calc(100% - 70px);
-		height: 100%;
+		width: calc(100% - 70px);
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		left: 100%;
+		left: 100%; 
 		transition: right 200ms ease-in-out;	
   
 		&.open {
@@ -242,8 +308,7 @@ nav {
 			left: -70px;
 			cursor: pointer;
 			border-left: 2px solid $color-brand;
-			border-right: 2px solid $color-brand;
-       	}
+		}
 
 	    .handle-container {
 	      width: 40px; 
@@ -276,9 +341,9 @@ nav {
 	display: none; 
  
 	@include media-query (max, small) {
-	    display: block; 
+	    display: inline; 
 	    position: relative;
-	    top: 13px; 
+	    top: 23px; 
 	    font: {
 		    family: $font-sans; 
 		    size: 12px; 
@@ -300,8 +365,12 @@ nav ul {
 	@include media-query(max, small) {
 		background: $white;
     	width: 250px; 
-    	border: 2px solid $color-brand; 
-    	border-radius: 3px;
+    	border: {
+    		bottom: 2px solid $color-brand;
+    		left: 2px solid $color-brand; 
+ 			right: 2px solid $color-brand; 
+    		radius: 3px;
+    	}
     	float: none;
 	} 
 
@@ -365,8 +434,7 @@ nav .children {
 
   	@include media-query(max, small) { 
     	display: block; 
-    	width: 100%; 
-    	left: 5px; 
+    	left: 7px; 
   	}
 
 	li {
@@ -420,16 +488,109 @@ nav li.has-children > a:before {
 	}
 }
 
+//CONTENT FLEX
+.flex-container {
+  	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	-webkit-justify-content: "space-between";
+	-moz-justify-content: "space-between"; 
+ 	justify-content: "space-between";
+ 	-webkit-box-align: "baseline";
+ 	-ms-flex-align: "baseline";
+ 	-webkit-align-items: "baseline";
+ 	-moz-align-items: "baseline";
+ 	align-items: "baseline";
+ 	padding-right: 5px;
 
-//CONTENT
+ 	@include media-query(max, small) {
+  		flex-direction: column; 	
+  	} 
 
-//should define these list types
-ol, ul {
-	padding: 0;
-	list-style-type: none;
-}
-ol li, ul li {
-	padding-bottom: 10px;
+	.flex-twocols_leftborder {
+		border-left: 2px solid $color-brand; 
+  		padding-left: 30px;  
+  		max-width: 40%;
+
+  		li {
+		padding-bottom: 5px;
+		
+			img {
+				width: 35px;
+				margin-right: 15px;
+			}
+
+		}
+
+  		@include media-query(max, small) {
+  			border: 0; 
+  			margin: 0; 
+  			padding: 0;
+  		} 
+	}
+
+	.flex-twocols_no-border {
+  		padding: 0 30px; 
+  		max-width: 30%; 
+
+  		li {
+		padding-bottom: 5px;
+		
+			img {
+				width: 35px;
+				margin-right: 15px;
+			}
+
+		}
+
+  		@include media-query(max, small) {
+  			border: 0; 
+  			margin: 0; 
+  			padding: 0; 
+  		} 
+	}
+	
+	.flex-1stcols {
+		margin-right: 30px;  
+		max-width: 60%; 
+
+		@include media-query(max, small) {
+  			flex-direction: column;
+  			align-items: center; 
+  			max-width: 100%; 
+  			margin: 0;  	
+  		} 
+
+	}
+
+//come back to this. this is weird. the name and it might be a little redundant
+	.flex-twocols {
+ 		display: flex; 
+ 		justify-content: space-between;
+
+ 		@include media-query(max, small) {
+  			flex-direction: column;
+  			align-items: center;  	
+  		} 
+		
+		img.notb1-logo {
+			display: inline; 
+			max-height: 55px;
+			margin-bottom: 30px;
+
+			@include media-query (max, medium) {
+				max-height: 45px; 
+			}
+
+			@include media-query(max, small) {
+  				max-width: 200px; 
+  				max-height: none; 
+  			}	
+		}
+	}
 }
 
 //FOOTER
@@ -453,7 +614,20 @@ footer {
 }
 
 .page-footer_content {
-	display: flex; 
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	-webkit-justify-content: "space-around";
+	-moz-justify-content: "space-around"; 
+ 	justify-content: "space-around";
+ 	-webkit-box-align: "baseline";
+ 	-ms-flex-align: "baseline";
+ 	-webkit-align-items: "baseline";
+ 	-moz-align-items: "baseline";
+ 	align-items: "baseline";
 	justify-content: space-around; 
 	max-width: 1100px;  	
 
@@ -495,24 +669,6 @@ footer {
 		padding: 0; 
 		text-align: left; 
 	}
-}
-
-//need to create a mixin for this nonsense
-#page-footer_content {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: distribute;
-	-webkit-justify-content: "space-around";
-	-moz-justify-content: "space-around"; 
- 	justify-content: "space-around";
- 	-webkit-box-align: "baseline";
- 	-ms-flex-align: "baseline";
- 	-webkit-align-items: "baseline";
- 	-moz-align-items: "baseline";
- 	align-items: "baseline";
 }
 
 #footer-logo {

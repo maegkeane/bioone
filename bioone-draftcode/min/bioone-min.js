@@ -1,1 +1,1 @@
-var toggleNav=function(){$("nav").toggleClass("open")};$(".handle").click(function(){toggleNav()});
+$(document).ready(function(){var n=function(){$("nav").toggleClass("open")};$(".handle").click(function(){n()})});
