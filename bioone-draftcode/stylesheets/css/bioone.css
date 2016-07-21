@@ -140,7 +140,6 @@ nav .handle span {
   display: none; }
 @media only screen and (max-width: 670px) {
   nav {
-    width: calc(100% - 70px);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -153,7 +152,9 @@ nav .handle span {
       top: 0;
       right: 0;
       cursor: pointer;
-      border-left: 2px solid #6E9934; }
+      border-left: 2px solid #6E9934;
+      border-bottom: 2px solid #6E9934;
+      background: #FFFFFF; }
       nav .handle:before {
         content: "";
         position: absolute;
@@ -193,7 +194,7 @@ nav ul {
       border-right: 2px solid #6E9934;
       border-radius: 3px; }
       nav ul.open {
-        right: 70px; } }
+        right: calc(250px + 70px - 3px); } }
   nav ul li {
     display: inline;
     position: relative;

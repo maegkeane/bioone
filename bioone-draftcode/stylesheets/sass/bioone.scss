@@ -252,7 +252,6 @@ a.btn {
 	
 	@include media-query(max, small) {
 		background-image: none; 
-		//position: relative; 
 		height: 60px; 
 		border-bottom: $color-brand solid 2px;
    		padding: 25px 75px 0 50px; 
@@ -280,7 +279,6 @@ nav {
 	}
 
 	@include media-query(max, small) {
-		width: calc(100% - 70px);
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -295,6 +293,8 @@ nav {
 			right: 0;
 			cursor: pointer;
 			border-left: 2px solid $color-brand;
+			border-bottom: 2px solid $color-brand; 
+			background: $white; 
 
 			&:before {
 				content: "";
@@ -348,7 +348,7 @@ nav {
     	}
 
 		&.open {
-			right: 70px; 
+			right: calc(250px + 70px - 3px); 
 		}
 	}
 
