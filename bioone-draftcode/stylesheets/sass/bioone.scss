@@ -348,7 +348,7 @@ nav {
     	}
 
 		&.open {
-			right: calc(250px + 70px - 3px); 
+			right: calc(250px + 70px - 4px); 
 		}
 	}
 
@@ -488,30 +488,48 @@ nav li.has-children > a:before {
  	@include media-query(max, small) {
   		flex-direction: column; 	
   	} 
+	
+	.flex-1stcol {
+		margin-right: 30px;  
+		max-width: 60%; 
 
-	.flex-twocols_leftborder {
-		border-left: 2px solid $color-brand; 
-  		padding-left: 30px;  
-  		max-width: 40%;
-
-  		li {
-		padding-bottom: 5px;
-		
-			img {
-				width: 35px;
-				margin-right: 15px;
-			}
-
-		}
-
-  		@include media-query(max, small) {
-  			border: 0; 
-  			margin: 0; 
-  			padding: 0;
+		@include media-query(max, small) {
+  			flex-direction: column;
+  			align-items: center; 
+  			max-width: 100%; 
+  			margin: 0;  	
   		} 
+
 	}
 
-	.flex-twocols_no-border {
+	.flex-nested-row {
+ 		display: flex; 
+ 		justify-content: space-between;
+
+ 		@include media-query(max, small) {
+  			flex-direction: column;
+  			align-items: center;  
+  			margin-bottom: 10px; 	
+  		} 
+		
+		img.notb1-logo {
+			display: inline; 
+			max-height: 55px;
+			margin-bottom: 30px;
+
+			@include media-query (max, medium) {
+				max-height: 40px; 
+			}
+
+			@include media-query(max, small) {
+  				max-width: 200px; 
+  				max-height: none; 
+  				margin-top: 20px; 
+  			}	
+		}
+	}
+
+	.flex-2ndcol_no-border {
   		padding: 0 30px; 
   		max-width: 30%; 
 
@@ -531,44 +549,27 @@ nav li.has-children > a:before {
   			padding: 0; 
   		} 
 	}
-	
-	.flex-1stcols {
-		margin-right: 30px;  
-		max-width: 60%; 
 
-		@include media-query(max, small) {
-  			flex-direction: column;
-  			align-items: center; 
-  			max-width: 100%; 
-  			margin: 0;  	
-  		} 
+	.flex-2ndcol_leftborder {
+		border-left: 2px solid $color-brand; 
+  		padding-left: 30px;  
+  		max-width: 40%;
 
-	}
-
-//come back to this. this is weird. the name and it might be a little redundant
-	.flex-twocols {
- 		display: flex; 
- 		justify-content: space-between;
-
- 		@include media-query(max, small) {
-  			flex-direction: column;
-  			align-items: center;  	
-  		} 
+  		li {
+		padding-bottom: 5px;
 		
-		img.notb1-logo {
-			display: inline; 
-			max-height: 55px;
-			margin-bottom: 30px;
-
-			@include media-query (max, medium) {
-				max-height: 45px; 
+			img {
+				width: 35px;
+				margin-right: 15px;
 			}
 
-			@include media-query(max, small) {
-  				max-width: 200px; 
-  				max-height: none; 
-  			}	
 		}
+
+  		@include media-query(max, small) {
+  			border: 0; 
+  			margin: 0; 
+  			padding: 0;
+  		} 
 	}
 }
 
