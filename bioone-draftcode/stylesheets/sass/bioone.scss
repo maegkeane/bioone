@@ -1,3 +1,10 @@
+// TO DO
+// want the navigation to be fixed; right now, only the handle is fixed
+// green border showing of nav ul. need it move over when closed. 
+// buttons
+// styling menu: gray lines all the way across and beneath parent list items, heavier font weight)
+
+
 //
 // BREAKPOINTS
 //
@@ -186,44 +193,56 @@ ol li, ul li {
 }
 
 //buttons 
-a.btn {
-	display: inline-block; 
+.btn-main {
+	display: inline; 
+	background: $color-accent; 
+	padding: 15px;
+	margin: {
+	    top: 20px; 
+	    right: 10px; 
+	    bottom: 20px; 
+	}
+  	border-radius: 3px; 
+  	font: {
+	    family: $font-sans; 
+	    size: 12px; 
+	  }
+  	text: {
+	    transform: uppercase;
+	    align: center; 
+	  }
+  	letter-spacing: 1.5px; 
+  	color: $white; 
+  
+  	&:hover {
+	    background: darken($color-accent, 10%);
+	 }
+}
+ 
+.btn-secondary {
+	display: inline; 
+	border: 2px solid $color-accent; 
 	padding: 20px; 
+    margin: {
+	    top: 10px; 
+	    right: 10px; 
+	    bottom: 10px; 
+	}
+	border-radius: 3px; 
 	font: {
-		family: $font-sans; 
-		size: 12px; 
+	    family: $font-sans; 
+	    size: 12px; 
 	}
 	text: {
-		transform: uppercase; 
-		align: center;
-		decoration: none;  
+	    transform: uppercase;
+	    align: center; 
 	}
-	letter-spacing: 1px; 
-	margin: {
-		top: 10px; 
-		right: 10px; 
-		bottom: 10px; 
-	}
-
-	&--main {
-		background: $color-accent; 
-		color: $white; 
-
-		&:hover {
-			background: lighten($color-accent, 10%); 
-		}
-	}
-	
-	&--secondary { 
-		border: 1px solid $color-brand; 
-		border-radius: 3px;
-		color: $color-brand;
-		background: $white; 
-
-		&:hover {
-			border: lighten($color-brand, 10%);
-			color: lighten($color-brand, 10%);
-		} 
+	letter-spacing: 1.5px; 
+	color: $color-accent; 
+  
+  	&:hover {
+	    border: 2px solid darken($color-accent, 10%);
+	    color: darken($color-accent, 10%);
 	}
 }
 
