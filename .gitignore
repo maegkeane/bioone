@@ -1,3 +1,4 @@
 wp-config.php
 sftp-config.json
 config.codekit
+*.scssc

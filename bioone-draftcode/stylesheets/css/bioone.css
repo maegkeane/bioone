@@ -222,14 +222,16 @@ nav ul {
     @media only screen and (max-width: 670px) {
       nav ul li {
         display: block;
-        padding: 10px 0; } }
+        padding: 0; } }
     nav ul li a {
       color: #FFFFFF;
       text-decoration: none; }
       @media only screen and (max-width: 670px) {
         nav ul li a {
+          display: block;
+          padding: 10px 20px 10px 10px;
+          border-bottom: 2px solid #b6bdc4;
           color: #6E9934;
-          padding-left: 10px;
           font-weight: 600; }
           nav ul li a:hover {
             color: #537327; } }
@@ -249,6 +251,9 @@ nav ul {
           position: relative;
           border: 0; } }
 
+nav > ul > li:last-of-type li:last-of-type a {
+  border-bottom: 0; }
+
 nav .children {
   display: none;
   width: 210px;
@@ -262,7 +267,7 @@ nav .children {
   @media only screen and (max-width: 670px) {
     nav .children {
       display: block;
-      left: 7px; } }
+      left: 0; } }
   nav .children li {
     display: inherit;
     padding: inherit; }
@@ -273,16 +278,13 @@ nav .children {
       border-bottom: 2px solid #b6bdc4; }
       @media only screen and (max-width: 870px) {
         nav .children li a {
-          padding: 10px 15px; } }
+          padding: 10px 15px 10px 22px; } }
       @media only screen and (max-width: 670px) {
         nav .children li a {
           width: 246px;
-          font-weight: 600;
-          left: 0px; } }
+          font-weight: 600; } }
       nav .children li a:hover {
         color: #202428; }
-  nav .children li:last-of-type a {
-    border-bottom: 0; }
 
 nav li.has-children > a:before {
   content: "\25bc";

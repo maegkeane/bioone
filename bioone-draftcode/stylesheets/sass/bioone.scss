@@ -379,6 +379,8 @@ nav {
 		}
 	}
 
+
+
 	li {
 		display: inline;
 		position: relative;
@@ -390,8 +392,8 @@ nav {
 		} 
     
     	@include media-query(max, small) { 
-			display: block;
-      		padding: 10px 0;
+				display: block;
+      	padding: 0;
      	} 
 
 		a {
@@ -399,9 +401,12 @@ nav {
 			text-decoration: none;
 		
 			@include media-query(max, small) { 
-        		color: $color-brand; 
-            	padding-left: 10px; 
-            	font-weight: 600;
+				display: block; 
+        padding: 10px 20px 10px 10px;
+
+        border-bottom: 2px solid lighten($color-light, 30%);
+        color: $color-brand; 
+        font-weight: 600;
 
             	&:hover {
             		color: darken($color-brand, 10%);				}  
@@ -431,6 +436,10 @@ nav {
 }
 }
 
+nav > ul > li:last-of-type li:last-of-type a {
+	border-bottom: 0;
+}
+
 nav .children {
 	display: none; 
 	width: 210px; 
@@ -438,44 +447,39 @@ nav .children {
 	left: 27%;
 	font-weight: 600;  
 
-  	@include media-query(max, medium) { 
-    	left: 16%; 
-    	width: 190px; 
-  	}
+	@include media-query(max, medium) { 
+  	left: 16%; 
+  	width: 190px; 
+	}
 
-  	@include media-query(max, small) { 
-    	display: block; 
-    	left: 7px;
-  	}
+	@include media-query(max, small) { 
+  	display: block; 
+  	left: 0;
+	}
 
 	li {
 		display: inherit; 
 		padding: inherit; 
 
 		a {
-		display: block; 
-		padding: 10px 20px; 
-		color: $color-light;
-		border-bottom: 2px solid lighten($color-light, 30%);  
+			display: block; 
+			padding: 10px 20px; 
+			color: $color-light;
+			border-bottom: 2px solid lighten($color-light, 30%);  
 		
 			@include media-query(max, medium) {
-	 			padding: 10px 15px; 
+	 			padding: 10px 15px 10px 22px; 
 	    	}
 
     		@include media-query(max, small) {
  				width: 246px;
  				font-weight: 600;
- 				left: 0px; 
     		}
 
 			&:hover {
 				color: darken($color-light, 30%);
 			}
 		}
-	}
-
-	li:last-of-type a {
-		border-bottom: 0; 
 	}
 }
   
