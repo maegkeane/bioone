@@ -296,10 +296,6 @@ ol li, ul li {
 	 		width: 110px; 
 	  		padding-top: 2px; 
 		}
-	
-		//@include media-query(max, small) {
-		//	display: none; 
-		//}
 	}
 }
 
@@ -310,7 +306,7 @@ nav {
 	}
 
 	@include media-query(max, small) {
-		position: absolute;
+		position: fixed; 
 		top: 0;
 		bottom: 0;
 		left: 100%; 
