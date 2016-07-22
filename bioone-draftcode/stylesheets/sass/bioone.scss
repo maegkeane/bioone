@@ -194,13 +194,12 @@ ol li, ul li {
 
 //buttons 
 .btn-main {
-	display: inline; 
+	display: inline-block; 
 	background: $color-accent; 
 	padding: 15px;
 	margin: {
-	    top: 20px; 
 	    right: 10px; 
-	    bottom: 20px; 
+	    bottom: 25px; 
 	}
   	border-radius: 3px; 
   	font: {
@@ -209,7 +208,8 @@ ol li, ul li {
 	  }
   	text: {
 	    transform: uppercase;
-	    align: center; 
+	    align: center;
+	    decoration: none;  
 	  }
   	letter-spacing: 1.5px; 
   	color: $white; 
@@ -220,13 +220,12 @@ ol li, ul li {
 }
  
 .btn-secondary {
-	display: inline; 
+	display: inline-block; 
 	border: 2px solid $color-accent; 
-	padding: 20px; 
+	padding: 15px; 
     margin: {
-	    top: 10px; 
 	    right: 10px; 
-	    bottom: 10px; 
+	    bottom: 25px; 
 	}
 	border-radius: 3px; 
 	font: {
@@ -236,6 +235,7 @@ ol li, ul li {
 	text: {
 	    transform: uppercase;
 	    align: center; 
+	    decoration: none; 
 	}
 	letter-spacing: 1.5px; 
 	color: $color-accent; 
