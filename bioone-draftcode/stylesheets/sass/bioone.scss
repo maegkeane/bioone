@@ -465,6 +465,7 @@ nav .children {
     		@include media-query(max, small) {
  				width: 246px;
  				font-weight: 600;
+ 				left: 0px; 
     		}
 
 			&:hover {
