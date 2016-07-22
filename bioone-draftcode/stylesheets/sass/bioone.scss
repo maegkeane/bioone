@@ -287,6 +287,20 @@ ol li, ul li {
 			display: none; 
 		}
 	}
+
+	picture {
+		width: 130px; 
+		float: left; 
+		
+		@include media-query(max, medium) {
+	 		width: 110px; 
+	  		padding-top: 2px; 
+		}
+	
+		//@include media-query(max, small) {
+		//	display: none; 
+		//}
+	}
 }
 
 // navigation for mobile state

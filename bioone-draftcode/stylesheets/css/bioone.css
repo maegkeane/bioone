@@ -144,6 +144,13 @@ ol li, ul li {
     @media only screen and (max-width: 670px) {
       .page-header img {
         display: none; } }
+  .page-header picture {
+    width: 130px;
+    float: left; }
+    @media only screen and (max-width: 870px) {
+      .page-header picture {
+        width: 110px;
+        padding-top: 2px; } }
 
 nav .handle span {
   display: none; }
