@@ -222,7 +222,10 @@ nav ul {
       @media only screen and (max-width: 670px) {
         nav ul li a {
           color: #6E9934;
-          padding-left: 10px; } }
+          padding-left: 10px;
+          font-weight: 600; }
+          nav ul li a:hover {
+            color: #537327; } }
     nav ul li:hover ul {
       display: block; }
     nav ul li ul {
@@ -243,7 +246,8 @@ nav .children {
   display: none;
   width: 210px;
   padding: 0;
-  left: 27%; }
+  left: 27%;
+  font-weight: 600; }
   @media only screen and (max-width: 870px) {
     nav .children {
       left: 16%;
@@ -260,11 +264,15 @@ nav .children {
       padding: 10px 20px;
       color: #64717D;
       border-bottom: 2px solid #b6bdc4; }
-      nav .children li a:hover {
-        color: #202428; }
       @media only screen and (max-width: 870px) {
         nav .children li a {
           padding: 10px 15px; } }
+      @media only screen and (max-width: 670px) {
+        nav .children li a {
+          width: 246px;
+          font-weight: 600; } }
+      nav .children li a:hover {
+        color: #202428; }
   nav .children li:last-of-type a {
     border-bottom: 0; }
 
@@ -285,7 +293,7 @@ nav li.has-children > a:before {
   @media only screen and (max-width: 670px) {
     #nav-align-left {
       left: 0;
-      width: 220px; } }
+      width: 246px; } }
 
 .flex-container {
   display: -webkit-box;
@@ -366,11 +374,12 @@ nav li.has-children > a:before {
 img.pub-logo {
   display: inline;
   max-width: 200px;
+  margin-top: 20px;
   margin-bottom: 10px; }
   @media only screen and (max-width: 670px) {
     img.pub-logo {
       max-width: 200px;
-      margin-top: 20px; } }
+      margin-top: 30px; } }
 
 footer {
   width: 100%;

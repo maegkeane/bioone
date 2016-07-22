@@ -1,7 +1,5 @@
 // TO DO
 // want the navigation to be fixed; right now, only the handle is fixed
-// green border showing of nav ul. need it move over when closed. 
-// buttons
 // styling menu: gray lines all the way across and beneath parent list items, heavier font weight)
 
 
@@ -307,7 +305,7 @@ nav {
 		.handle {
 			width: 70px;
 			height: 60px;
-			position: fixed; 
+			position: fixed;
 			top: 0;
 			right: 0;
 			cursor: pointer;
@@ -367,7 +365,7 @@ nav {
     	}
 
 		&.open {
-			right: calc(250px + 70px - 4px); 
+			right: calc(250px + 70px - 4px);  
 		}
 	}
 
@@ -393,7 +391,11 @@ nav {
 			@include media-query(max, small) { 
         		color: $color-brand; 
             	padding-left: 10px; 
-      		}
+            	font-weight: 600;
+
+            	&:hover {
+            		color: darken($color-brand, 10%);				}  
+      			}
 	  	}
 
 	  	&:hover ul {
@@ -423,7 +425,8 @@ nav .children {
 	display: none; 
 	width: 210px; 
 	padding: 0; 
-	left: 27%; 
+	left: 27%;
+	font-weight: 600;  
 
   	@include media-query(max, medium) { 
     	left: 16%; 
@@ -432,7 +435,7 @@ nav .children {
 
   	@include media-query(max, small) { 
     	display: block; 
-    	left: 7px; 
+    	left: 7px;
   	}
 
 	li {
@@ -445,13 +448,18 @@ nav .children {
 		color: $color-light;
 		border-bottom: 2px solid lighten($color-light, 30%);  
 		
+			@include media-query(max, medium) {
+	 			padding: 10px 15px; 
+	    	}
+
+    		@include media-query(max, small) {
+ 				width: 246px;
+ 				font-weight: 600;
+    		}
+
 			&:hover {
 				color: darken($color-light, 30%);
-				}
-		
-			@include media-query(max, medium) {
- 				padding: 10px 15px; 
-    		}
+			}
 		}
 	}
 
@@ -459,7 +467,6 @@ nav .children {
 		border-bottom: 0; 
 	}
 }
-
   
 //nav-dropdown-arrow
 nav li.has-children > a:before {
@@ -482,7 +489,7 @@ nav li.has-children > a:before {
 
 	@include media-query(max, small) {
 		left: 0; 
-		width: 220px; 
+		width: 246px; 
 	}
 }
 
@@ -597,11 +604,12 @@ nav li.has-children > a:before {
 img.pub-logo {
 	display: inline; 
 	max-width: 200px;
+	margin-top: 20px; 
 	margin-bottom: 10px;
 
 	@include media-query(max, small) {
   		max-width: 200px; 
-  		margin-top: 20px; 
+  		margin-top: 30px; 
   	}	
 }
 
