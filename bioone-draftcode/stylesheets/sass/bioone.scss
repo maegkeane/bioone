@@ -95,7 +95,7 @@ body {
 }
 
 article {
-	max-width: 900px;
+	max-width: 800px;
 	margin: {
 		top: 30px;
 		left: 80px;
@@ -196,7 +196,7 @@ ol li, ul li {
 .btn-main {
 	display: inline-block; 
 	background: $color-accent; 
-	padding: 15px;
+	padding: 15px 30px;
 	margin: {
 	    right: 10px; 
 	    bottom: 25px; 
@@ -222,7 +222,7 @@ ol li, ul li {
 .btn-secondary {
 	display: inline-block; 
 	border: 2px solid $color-accent; 
-	padding: 15px; 
+	padding: 15px 30px; 
     margin: {
 	    right: 10px; 
 	    bottom: 25px; 
@@ -486,7 +486,8 @@ nav li.has-children > a:before {
 	}
 }
 
-//CONTENT FLEX
+//CONTENT 
+//flex
 .flex-container {
   	display: -webkit-box;
 	display: -webkit-flex;
@@ -590,6 +591,18 @@ nav li.has-children > a:before {
   			padding: 0;
   		} 
 	}
+}
+
+//images
+img.pub-logo {
+	display: inline; 
+	max-width: 200px;
+	margin-bottom: 10px;
+
+	@include media-query(max, small) {
+  		max-width: 200px; 
+  		margin-top: 20px; 
+  	}	
 }
 
 //FOOTER
