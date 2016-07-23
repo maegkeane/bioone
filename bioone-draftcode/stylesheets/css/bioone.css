@@ -134,7 +134,7 @@ ol li, ul li {
       height: 75px;
       border-bottom: #6E9934 solid 2px;
       padding: 25px 75px 0 25px;
-      font-size: 12px; } }
+      font-size: 10px; } }
   .page-header img {
     width: 130px;
     float: left; }
@@ -169,19 +169,19 @@ nav .handle span {
       nav .handle:before {
         content: "";
         position: absolute;
-        top: 22px;
+        top: 20px;
         right: 0;
         height: 3px;
         width: 40px;
         border-top: 9px double #6E9934;
         border-bottom: 3px solid #6E9934;
-        margin-right: 20px; }
+        margin-right: 19px; }
       nav .handle span {
         display: inherit;
         position: inherit;
-        top: 45px;
+        top: 42px;
         right: 0;
-        margin-right: 18px;
+        margin-right: 17px;
         font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 12px;
         font-weight: 600;
@@ -196,7 +196,7 @@ nav ul {
   @media only screen and (max-width: 670px) {
     nav ul {
       float: none;
-      padding-top: 1px;
+      padding-top: 6.5px;
       margin: 0;
       width: 250px;
       background: #FFFFFF;
@@ -240,7 +240,9 @@ nav ul {
       display: none;
       left: 0;
       top: 100%;
-      border: 2px solid #b6bdc4;
+      border-top: 2px solid #b6bdc4;
+      border-left: 2px solid #b6bdc4;
+      border-right: 2px solid #b6bdc4;
       border-radius: 3px;
       background: #FFFFFF; }
       @media only screen and (max-width: 670px) {
@@ -279,7 +281,9 @@ nav .children {
       @media only screen and (max-width: 670px) {
         nav .children li a {
           width: 246px;
-          font-weight: 100; } }
+          font-weight: 600; }
+          nav .children li a:last-of-type {
+            border-bottom: 2px solid #b6bdc4; } }
       nav .children li a:hover {
         color: #202428; }
 
@@ -304,14 +308,16 @@ nav li.has-children > a:before {
 
 #nav-align-left {
   left: -40%;
-  width: 150px; }
+  width: 150px;
+  border-bottom: 2px solid #b6bdc4; }
   @media only screen and (max-width: 870px) {
     #nav-align-left {
       left: -85%; } }
   @media only screen and (max-width: 670px) {
     #nav-align-left {
       left: 0;
-      width: 246px; } }
+      width: 246px;
+      border-bottom: 0; } }
 
 .flex-container {
   display: -webkit-box;
