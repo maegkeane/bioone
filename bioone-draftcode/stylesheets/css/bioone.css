@@ -133,7 +133,8 @@ ol li, ul li {
       background-image: none;
       height: 60px;
       border-bottom: #6E9934 solid 2px;
-      padding: 25px 75px 0 50px; } }
+      padding: 25px 75px 0 50px;
+      font-size: 12px; } }
   .page-header img {
     width: 130px;
     float: left; }
@@ -215,6 +216,8 @@ nav ul {
     display: inline;
     position: relative;
     padding-left: 35px; }
+    nav ul li:last-of-type {
+      border-bottom: 0; }
     @media only screen and (max-width: 870px) {
       nav ul li {
         padding-left: 15px;
@@ -229,7 +232,7 @@ nav ul {
       @media only screen and (max-width: 670px) {
         nav ul li a {
           display: block;
-          padding: 10px 20px 10px 10px;
+          padding: 10px 20px 10px 15px;
           border-bottom: 2px solid #b6bdc4;
           color: #6E9934;
           font-weight: 600; }
@@ -258,8 +261,7 @@ nav .children {
   display: none;
   width: 210px;
   padding: 0;
-  left: 27%;
-  font-weight: 600; }
+  left: 27%; }
   @media only screen and (max-width: 870px) {
     nav .children {
       left: 16%;
@@ -278,11 +280,11 @@ nav .children {
       border-bottom: 2px solid #b6bdc4; }
       @media only screen and (max-width: 870px) {
         nav .children li a {
-          padding: 10px 15px 10px 22px; } }
+          padding: 10px 15px 10px 25px; } }
       @media only screen and (max-width: 670px) {
         nav .children li a {
           width: 246px;
-          font-weight: 600; } }
+          font-weight: 100; } }
       nav .children li a:hover {
         color: #202428; }
 
@@ -293,6 +295,17 @@ nav li.has-children > a:before {
   margin-right: 5px;
   top: -2px;
   font-size: 80%; }
+  @media only screen and (max-width: 670px) {
+    nav li.has-children > a:before {
+      display: none; } }
+@media only screen and (max-width: 670px) {
+  nav li.has-children > a:after {
+    content: "\25bc";
+    display: inline;
+    position: relative;
+    margin-left: 5px;
+    top: -2px;
+    font-size: 80%; } }
 
 #nav-align-left {
   left: -40%;

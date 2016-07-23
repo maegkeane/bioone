@@ -17,40 +17,40 @@ $break-huge: 1280px;
 
 //mixin for breakpoints
 @mixin media-query($type,$size) {
-	@if $type == min { 
-	@if $size == small {
-		@media only screen and (min-width: $break-small) { @content; }
+    @if $type == min { 
+    @if $size == small {
+        @media only screen and (min-width: $break-small) { @content; }
     }
     @else if $size == medium {
-    	@media only screen and (min-width: $break-medium + 1) { @content; }
+        @media only screen and (min-width: $break-medium + 1) { @content; }
     }
     @else if $size == large {
-    	@media only screen and (min-width: $break-large) { @content; }
+        @media only screen and (min-width: $break-large) { @content; }
     }
     @else if $size == huge {
-    	@media only screen and (min-width: $break-huge) { @content; }
+        @media only screen and (min-width: $break-huge) { @content; }
     }
   }
  
-	@else if $type == max {
-	@if $size == small {
-		@media only screen and (max-width: $break-small) { @content; }
+    @else if $type == max {
+    @if $size == small {
+        @media only screen and (max-width: $break-small) { @content; }
     }
     @else if $size == medium {
-		@media only screen and (max-width: $break-medium) { @content; }
+        @media only screen and (max-width: $break-medium) { @content; }
     }
 
     @else if $size == large {
-		@media only screen and (max-width: $break-large) { @content; }
+        @media only screen and (max-width: $break-large) { @content; }
     }
     @else if $size == huge {
-		@media only screen and (max-width: $break-huge) { @content; }
+        @media only screen and (max-width: $break-huge) { @content; }
     }
   }
  
-	@else if $type == only {
-	@if $size == small {
-		@media only screen and (max-width: $break-small) { @content; }
+    @else if $type == only {
+    @if $size == small {
+        @media only screen and (max-width: $break-small) { @content; }
     }
     @else if $size == medium {
       @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
@@ -88,628 +88,646 @@ $font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 //base styles
 body {
-	margin: 0;
-	padding: 0; 
+    margin: 0;
+    padding: 0; 
 }
 
 article {
-	max-width: 800px;
-	margin: {
-		top: 30px;
-		left: 80px;
-		}
-	font: {
-		family: $font-serif;
-		size: 14px;
-		}
-	@include media-query(max,medium) {
-		margin: 0 40px; 
-	}
-	@include media-query(max,small) {
-		margin: 0 40px; 
-	}
+    max-width: 800px;
+    margin: {
+        top: 30px;
+        left: 80px;
+        }
+    font: {
+        family: $font-serif;
+        size: 14px;
+        }
+    @include media-query(max,medium) {
+        margin: 0 40px; 
+    }
+    @include media-query(max,small) {
+        margin: 0 40px; 
+    }
 }
 
 section {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 p {
-	font: {
-		family: $font-serif; 
-		size: 14px;
-	}
-	line-height: 20px;
-	margin-top: 2px;
-	margin-bottom: 20px;  
+    font: {
+        family: $font-serif; 
+        size: 14px;
+    }
+    line-height: 20px;
+    margin-top: 2px;
+    margin-bottom: 20px;  
 }
 
 a {
-	color: $color-accent;
+    color: $color-accent;
 }
 
 h1 {
-	font: {
-		family: $font-sans;
-		size: 28px;
-		weight: 400;
-	}
-	color: $color-brand;
+    font: {
+        family: $font-sans;
+        size: 28px;
+        weight: 400;
+    }
+    color: $color-brand;
 }
 
 h2 {
-	font: {
-		size: 18px;
-		weight: 100;
-		}
-	a {
-	color: $color-accent;
-	}
+    font: {
+        size: 18px;
+        weight: 100;
+        }
+    a {
+    color: $color-accent;
+    }
 }
 
 h3 {
-	margin: 0;
-	padding-top: 10px; 
-	font: {
-		size: 16px;
-		weight: 100;
-	}
-	color: $color-brand;
+    margin: 0;
+    padding-top: 10px; 
+    font: {
+        size: 16px;
+        weight: 100;
+    }
+    color: $color-brand;
 }
 
 h4 {
-	margin: 0;
-	font: {
-		size: 16px;
-		weight: 100; 
-	}
-	color: $color-main;
+    margin: 0;
+    font: {
+        size: 16px;
+        weight: 100; 
+    }
+    color: $color-main;
 }
 
 h5 {
-	padding: 0;
-	margin: 0;
-	font: {
-		style: italic;
-		weight: 100;
-		}
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    font: {
+        style: italic;
+        weight: 100;
+        }
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    list-style-type: none; 
 } 
 
 address {
-	font-style: normal;
+    font-style: normal;
 }
 
 ol, ul {
-	padding: 0;
-	list-style-type: none;
+    padding: 0;
+    list-style-type: none;
 }
 ol li, ul li {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 //buttons 
 .btn-main {
-	display: inline-block; 
-	background: $color-accent; 
-	padding: 15px 30px;
-	margin: {
-	    right: 10px; 
-	    bottom: 25px; 
-	}
-  	border-radius: 3px; 
-  	font: {
-	    family: $font-sans; 
-	    size: 12px; 
-	  }
-  	text: {
-	    transform: uppercase;
-	    align: center;
-	    decoration: none;  
-	  }
-  	letter-spacing: 1.5px; 
-  	color: $white; 
+    display: inline-block; 
+    background: $color-accent; 
+    padding: 15px 30px;
+    margin: {
+        right: 10px; 
+        bottom: 25px; 
+    }
+    border-radius: 3px; 
+    font: {
+        family: $font-sans; 
+        size: 12px; 
+      }
+    text: {
+        transform: uppercase;
+        align: center;
+        decoration: none;  
+      }
+    letter-spacing: 1.5px; 
+    color: $white; 
   
-  	&:hover {
-	    background: darken($color-accent, 10%);
-	 }
+    &:hover {
+        background: darken($color-accent, 10%);
+     }
 }
  
 .btn-secondary {
-	display: inline-block; 
-	border: 2px solid $color-accent; 
-	padding: 15px 30px; 
+    display: inline-block; 
+    border: 2px solid $color-accent; 
+    padding: 15px 30px; 
     margin: {
-	    right: 10px; 
-	    bottom: 25px; 
-	}
-	border-radius: 3px; 
-	font: {
-	    family: $font-sans; 
-	    size: 12px; 
-	}
-	text: {
-	    transform: uppercase;
-	    align: center; 
-	    decoration: none; 
-	}
-	letter-spacing: 1.5px; 
-	color: $color-accent; 
+        right: 10px; 
+        bottom: 25px; 
+    }
+    border-radius: 3px; 
+    font: {
+        family: $font-sans; 
+        size: 12px; 
+    }
+    text: {
+        transform: uppercase;
+        align: center; 
+        decoration: none; 
+    }
+    letter-spacing: 1.5px; 
+    color: $color-accent; 
   
-  	&:hover {
-	    border: 2px solid darken($color-accent, 10%);
-	    color: darken($color-accent, 10%);
-	}
+    &:hover {
+        border: 2px solid darken($color-accent, 10%);
+        color: darken($color-accent, 10%);
+    }
 }
 
 //NAVIGATION
 
 .page-header {
-	width: 100%;
-	height: 90px; 
-	padding: 25px 25px 0 50px;
-	margin: 0;
-	position: relative;
-	font: {
-		family: $font-sans;
-		size: 11px;
-		weight: 500; 
-	}
-	letter-spacing: 1.5px;
-	text-transform: uppercase;
+    width: 100%;
+    height: 90px; 
+    padding: 25px 25px 0 50px;
+    margin: 0;
+    position: relative;
+    font: {
+        family: $font-sans;
+        size: 11px;
+        weight: 500; 
+    }
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 
-	background-image: url("../../images/headerbg.png");
+    background-image: url("../../images/headerbg.png");
 
-	@include media-query(max, medium) {
-	 	font-size: 10px;
-	  	padding: 25px 0 0 25px; 
-	}
-	
-	@include media-query(max, small) {
-		background-image: none; 
-		height: 60px; 
-		border-bottom: $color-brand solid 2px;
-   		padding: 25px 75px 0 50px; 
-	}
-	
-	img {
-		width: 130px; 
-		float: left; 
-		
-		@include media-query(max, medium) {
-	 		width: 110px; 
-	  		padding-top: 2px; 
-		}
-	
-		@include media-query(max, small) {
-			display: none; 
-		}
-	}
+    @include media-query(max, medium) {
+        font-size: 10px;
+        padding: 25px 0 0 25px; 
+    }
+    
+    @include media-query(max, small) {
+        background-image: none; 
+        height: 60px; 
+        border-bottom: $color-brand solid 2px;
+        padding: 25px 75px 0 50px; 
+        font-size: 12px; 
+    }
+    
+    img {
+        width: 130px; 
+        float: left; 
+        
+        @include media-query(max, medium) {
+            width: 110px; 
+            padding-top: 2px; 
+        }
+    
+        @include media-query(max, small) {
+            display: none; 
+        }
+    }
 
-	picture {
-		width: 130px; 
-		float: left; 
-		
-		@include media-query(max, medium) {
-	 		width: 110px; 
-	  		padding-top: 2px; 
-		}
-	}
+    picture {
+        width: 130px; 
+        float: left; 
+        
+        @include media-query(max, medium) {
+            width: 110px; 
+            padding-top: 2px; 
+        }
+    }
 }
 
 // navigation for mobile state
 nav {
-	.handle span {
-		display: none;
-	}
+    .handle span {
+        display: none;
+    }
 
-	@include media-query(max, small) {
-		position: fixed; 
-		top: 0;
-		bottom: 0;
-		left: 100%; 
-		transition: right 200ms ease-in-out;		
+    @include media-query(max, small) {
+        position: fixed; 
+        top: 0;
+        bottom: 0;
+        left: 100%; 
+        transition: right 200ms ease-in-out;        
 
-		.handle {
-			width: 70px;
-			height: 60px;
-			position: fixed;
-			top: 0;
-			right: 0;
-			cursor: pointer;
-			border-left: 2px solid $color-brand;
-			border-bottom: 2px solid $color-brand; 
-			background: $white; 
+        .handle {
+            width: 70px;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            border-left: 2px solid $color-brand;
+            border-bottom: 2px solid $color-brand; 
+            background: $white; 
 
-			&:before {
-				content: "";
-				position: absolute; 
-				top: 15px; 
-				right: 0; 
-				height: 3px; 
-				width: 40px;
-		        border-top: 9px double $color-brand; 
-		        border-bottom: 3px solid $color-brand;
-		        margin-right: 15px;    
-		    }
+            &:before {
+                content: "";
+                position: absolute; 
+                top: 15px; 
+                right: 0; 
+                height: 3px; 
+                width: 40px;
+                border-top: 9px double $color-brand; 
+                border-bottom: 3px solid $color-brand;
+                margin-right: 15px;    
+            }
 
-			span {
-			    display: inherit;
-			    position: inherit; 
-			    top: 36px; 
-			    right: 0; 
-			    margin-right: 12px;    
-			    font: {
-				    family: $font-sans; 
-				    size: 12px; 
-				    weight: 600; 
-				}
-				color: $color-brand;
-		      	text: {
-			        transform: uppercase;
-			        align: center; 
-		      	}
-		    	letter-spacing: 2px; 
-		  	}
-		}
-	}
+            span {
+                display: inherit;
+                position: inherit; 
+                top: 36px; 
+                right: 0; 
+                margin-right: 12px;    
+                font: {
+                    family: $font-sans; 
+                    size: 12px; 
+                    weight: 600; 
+                }
+                color: $color-brand;
+                text: {
+                    transform: uppercase;
+                    align: center; 
+                }
+                letter-spacing: 2px; 
+            }
+        }
+    }
 
-	ul { 
-	position: relative;
-	float: right;
-	margin-right: 25px; 
+    ul { 
+    position: relative;
+    float: right;
+    margin-right: 25px; 
 
-	@include media-query(max, small) {
-		float: none; 
-		padding: 0; 
-		margin: 0; 
-		width: 250px; 
-		background: $white;
-    	border: {
-    		bottom: 2px solid $color-brand;
-    		left: 2px solid $color-brand; 
- 			right: 2px solid $color-brand; 
-    		radius: 3px;
-    	}
+    @include media-query(max, small) {
+        float: none; 
+        padding: 0; 
+        margin: 0; 
+        width: 250px; 
+        background: $white;
+        border: {
+            bottom: 2px solid $color-brand;
+            left: 2px solid $color-brand; 
+            right: 2px solid $color-brand; 
+            radius: 3px;
+        }
 
-		&.open {
-			right: calc(250px + 70px - 4px);  
-		}
-	}
+        &.open {
+            right: calc(250px + 70px - 4px);  
+        }
+    }
 
 
 
-	li {
-		display: inline;
-		position: relative;
-		padding-left: 35px;
-	
-		@include media-query(max, medium) { 
-			padding-left: 15px; 
-			padding-right: 0; 
-		} 
+    li {
+        display: inline;
+        position: relative;
+        padding-left: 35px;
+
+        &:last-of-type {
+            border-bottom: 0; 
+        }
+        
+        @include media-query(max, medium) { 
+            padding-left: 15px; 
+            padding-right: 0; 
+        } 
     
-    	@include media-query(max, small) { 
-				display: block;
-      	padding: 0;
-     	} 
+        @include media-query(max, small) { 
+            display: block;
+            padding: 0;
+        } 
 
-		a {
-			color: $white;
-			text-decoration: none;
-		
-			@include media-query(max, small) { 
-				display: block; 
-        padding: 10px 20px 10px 10px;
+        a {
+            color: $white;
+            text-decoration: none;
+        
+            @include media-query(max, small) { 
+                display: block; 
+                padding: 10px 20px 10px 15px;
+                border-bottom: 2px solid lighten($color-light, 30%);
+                color: $color-brand; 
+                font-weight: 600;
 
-        border-bottom: 2px solid lighten($color-light, 30%);
-        color: $color-brand; 
-        font-weight: 600;
+                &:hover {
+                    color: darken($color-brand, 10%);               }  
+                }
+        }
 
-            	&:hover {
-            		color: darken($color-brand, 10%);				}  
-      			}
-	  	}
+        &:hover ul {
+            display: block;
+        }
 
-	  	&:hover ul {
-			display: block;
-		}
+        ul {
+            padding: 10px;
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 100%;
+            border: 2px solid lighten($color-light, 30%);
+            border-radius: 3px;
+            background: $white;
 
-		ul {
-			padding: 10px;
-			position: absolute;
-			display: none;
-			left: 0;
-			top: 100%;
-			border: 2px solid lighten($color-light, 30%);
-			border-radius: 3px;
-			background: $white;
-
-	   		@include media-query(max, small) {
-		    	position: relative; 
-		     	border: 0;
-	  		}	
-		}
-	}
+            @include media-query(max, small) {
+                position: relative; 
+                border: 0;
+            }   
+        }
+    }
 }
 }
 
 nav > ul > li:last-of-type li:last-of-type a {
-	border-bottom: 0;
+    border-bottom: 0;
 }
 
 nav .children {
-	display: none; 
-	width: 210px; 
-	padding: 0; 
-	left: 27%;
-	font-weight: 600;  
+    display: none; 
+    width: 210px; 
+    padding: 0; 
+    left: 27%; 
 
-	@include media-query(max, medium) { 
-  	left: 16%; 
-  	width: 190px; 
-	}
+    @include media-query(max, medium) { 
+    left: 16%; 
+    width: 190px; 
+    }
 
-	@include media-query(max, small) { 
-  	display: block; 
-  	left: 0;
-	}
+    @include media-query(max, small) { 
+    display: block; 
+    left: 0;
+    }
 
-	li {
-		display: inherit; 
-		padding: inherit; 
+    li {
+        display: inherit; 
+        padding: inherit; 
 
-		a {
-			display: block; 
-			padding: 10px 20px; 
-			color: $color-light;
-			border-bottom: 2px solid lighten($color-light, 30%);  
-		
-			@include media-query(max, medium) {
-	 			padding: 10px 15px 10px 22px; 
-	    	}
+        a {
+            display: block; 
+            padding: 10px 20px; 
+            color: $color-light;
+            border-bottom: 2px solid lighten($color-light, 30%);  
+        
+            @include media-query(max, medium) {
+                padding: 10px 15px 10px 25px; 
+            }
 
-    		@include media-query(max, small) {
- 				width: 246px;
- 				font-weight: 600;
-    		}
+            @include media-query(max, small) {
+                width: 246px;
+                font-weight: 100;
+            }
 
-			&:hover {
-				color: darken($color-light, 30%);
-			}
-		}
-	}
+            &:hover {
+                color: darken($color-light, 30%);
+            }
+        }
+    }
 }
   
 //nav-dropdown-arrow
-nav li.has-children > a:before {
-	content: "\25bc";
-	display: inline; 
-	position: relative; 
-	margin-right: 5px;
-	top: -2px; 
-	font-size: 80%; 
+nav li.has-children {
+    > a:before {
+        content: "\25bc";
+        display: inline; 
+        position: relative; 
+        margin-right: 5px;
+        top: -2px; 
+        font-size: 80%;
+        @include media-query(max, small) {
+            display: none;
+        } 
+    }
+    @include media-query(max, small) {
+        > a:after {
+            content: "\25bc";
+            display: inline; 
+            position: relative; 
+            margin-left: 5px;
+            top: -2px; 
+            font-size: 80%;
+        }
+    }
 }
 
 //nav-contact-left
 #nav-align-left {
-	left: -40%;
-	width: 150px;
-		
-	@include media-query(max, medium) {
-		left: -85%; 
-	}
+    left: -40%;
+    width: 150px;
+        
+    @include media-query(max, medium) {
+        left: -85%; 
+    }
 
-	@include media-query(max, small) {
-		left: 0; 
-		width: 246px; 
-	}
+    @include media-query(max, small) {
+        left: 0; 
+        width: 246px; 
+    }
 }
 
 //CONTENT 
 //flex
 .flex-container {
-  	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: distribute;
-	-webkit-justify-content: "space-between";
-	-moz-justify-content: "space-between"; 
- 	justify-content: "space-between";
- 	-webkit-box-align: "baseline";
- 	-ms-flex-align: "baseline";
- 	-webkit-align-items: "baseline";
- 	-moz-align-items: "baseline";
- 	align-items: "baseline";
- 	padding-right: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: "space-between";
+    -moz-justify-content: "space-between"; 
+    justify-content: "space-between";
+    -webkit-box-align: "baseline";
+    -ms-flex-align: "baseline";
+    -webkit-align-items: "baseline";
+    -moz-align-items: "baseline";
+    align-items: "baseline";
+    padding-right: 5px;
 
- 	@include media-query(max, small) {
-  		flex-direction: column; 	
-  	} 
-	
-	.flex-1stcol {
-		margin-right: 30px;  
-		max-width: 60%; 
+    @include media-query(max, small) {
+        flex-direction: column;     
+    } 
+    
+    .flex-1stcol {
+        margin-right: 30px;  
+        max-width: 60%; 
 
-		@include media-query(max, small) {
-  			flex-direction: column;
-  			align-items: center; 
-  			max-width: 100%; 
-  			margin: 0;  	
-  		} 
+        @include media-query(max, small) {
+            flex-direction: column;
+            align-items: center; 
+            max-width: 100%; 
+            margin: 0;      
+        } 
 
-	}
+    }
 
-	.flex-nested-row {
- 		display: flex; 
- 		justify-content: space-between;
+    .flex-nested-row {
+        display: flex; 
+        justify-content: space-between;
 
- 		@include media-query(max, small) {
-  			flex-direction: column;
-  			align-items: center;  
-  			margin-bottom: 10px; 	
-  		} 
-		
-		img.notb1-logo {
-			display: inline; 
-			max-height: 55px;
-			margin-bottom: 30px;
+        @include media-query(max, small) {
+            flex-direction: column;
+            align-items: center;  
+            margin-bottom: 10px;    
+        } 
+        
+        img.notb1-logo {
+            display: inline; 
+            max-height: 55px;
+            margin-bottom: 30px;
 
-			@include media-query (max, medium) {
-				max-height: 40px; 
-			}
+            @include media-query (max, medium) {
+                max-height: 40px; 
+            }
 
-			@include media-query(max, small) {
-  				max-width: 200px; 
-  				max-height: none; 
-  				margin-top: 20px; 
-  			}	
-		}
-	}
+            @include media-query(max, small) {
+                max-width: 200px; 
+                max-height: none; 
+                margin-top: 20px; 
+            }   
+        }
+    }
 
-	.flex-2ndcol_no-border {
-  		padding: 0 30px; 
-  		max-width: 30%; 
+    .flex-2ndcol_no-border {
+        padding: 0 30px; 
+        max-width: 30%; 
 
-  		li {
-		padding-bottom: 5px;
-		
-			img {
-				width: 35px;
-				margin-right: 15px;
-			}
+        li {
+        padding-bottom: 5px;
+        
+            img {
+                width: 35px;
+                margin-right: 15px;
+            }
 
-		}
+        }
 
-  		@include media-query(max, small) {
-  			border: 0; 
-  			margin: 0; 
-  			padding: 0; 
-  		} 
-	}
+        @include media-query(max, small) {
+            border: 0; 
+            margin: 0; 
+            padding: 0; 
+        } 
+    }
 
-	.flex-2ndcol_leftborder {
-		border-left: 2px solid $color-brand; 
-  		padding-left: 30px;  
-  		max-width: 40%;
+    .flex-2ndcol_leftborder {
+        border-left: 2px solid $color-brand; 
+        padding-left: 30px;  
+        max-width: 40%;
 
-  		li {
-		padding-bottom: 5px;
-		
-			img {
-				width: 35px;
-				margin-right: 15px;
-			}
+        li {
+        padding-bottom: 5px;
+        
+            img {
+                width: 35px;
+                margin-right: 15px;
+            }
 
-		}
+        }
 
-  		@include media-query(max, small) {
-  			border: 0; 
-  			margin: 0; 
-  			padding: 0;
-  		} 
-	}
+        @include media-query(max, small) {
+            border: 0; 
+            margin: 0; 
+            padding: 0;
+        } 
+    }
 }
 
 //images
 img.pub-logo {
-	display: inline; 
-	max-width: 200px;
-	margin-top: 20px; 
-	margin-bottom: 10px;
+    display: inline; 
+    max-width: 200px;
+    margin-top: 20px; 
+    margin-bottom: 10px;
 
-	@include media-query(max, small) {
-  		max-width: 200px; 
-  		margin-top: 30px; 
-  	}	
+    @include media-query(max, small) {
+        max-width: 200px; 
+        margin-top: 30px; 
+    }   
 }
 
 //FOOTER
 footer {
-	width: 100%;
-	padding: {
-		top: 50px;
-		bottom: 50px;
-	}
-	font: {
-		family: $font-serif;
-		size: 12px;
-		} 
-	}	
+    width: 100%;
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    }
+    font: {
+        family: $font-serif;
+        size: 12px;
+        } 
+    }   
 
 #footer-rule {
-	width: 100%;
-	height: 50px;
-	margin-bottom: 20px;
-	background: lighten($color-accent, 50%)
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background: lighten($color-accent, 50%)
 }
 
 .page-footer_content {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: distribute;
-	-webkit-justify-content: "space-around";
-	-moz-justify-content: "space-around"; 
- 	justify-content: "space-around";
- 	-webkit-box-align: "baseline";
- 	-ms-flex-align: "baseline";
- 	-webkit-align-items: "baseline";
- 	-moz-align-items: "baseline";
- 	align-items: "baseline";
-	justify-content: space-around; 
-	max-width: 1100px;  	
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: "space-around";
+    -moz-justify-content: "space-around"; 
+    justify-content: "space-around";
+    -webkit-box-align: "baseline";
+    -ms-flex-align: "baseline";
+    -webkit-align-items: "baseline";
+    -moz-align-items: "baseline";
+    align-items: "baseline";
+    justify-content: space-around; 
+    max-width: 1100px;      
 
-	@include media-query(max,small) {
-		flex-direction: column; 
-		padding-left: 40px;
-	}
+    @include media-query(max,small) {
+        flex-direction: column; 
+        padding-left: 40px;
+    }
 
-	section { 
-		@include media-query(max, small) {
-			margin: 0 0 15px 0;
-		}
-	}
+    section { 
+        @include media-query(max, small) {
+            margin: 0 0 15px 0;
+        }
+    }
 
-	ul {
-		padding: 0;
-		margin: 0;
-	}
+    ul {
+        padding: 0;
+        margin: 0;
+    }
 
-	li {
-		padding-bottom: 5px;
-		
-		img {
-			width: 25px;
-			margin: {
-				right: 5px;
-				top: 5px;
-			}
-		}
-	}
+    li {
+        padding-bottom: 5px;
+        
+        img {
+            width: 25px;
+            margin: {
+                right: 5px;
+                top: 5px;
+            }
+        }
+    }
 }
 
 .footer-copyright {
-	text-align: right;
-	padding-right: 50px; 
-	padding-left: 0; 
+    text-align: right;
+    padding-right: 50px; 
+    padding-left: 0; 
 
-	@include media-query(max, small) {
-		padding: 0; 
-		text-align: left; 
-	}
+    @include media-query(max, small) {
+        padding: 0; 
+        text-align: left; 
+    }
 }
 
 #footer-logo {
-	width: 120px;
-	
-	@include media-query(max, small) {
-		width: 100px; 
-	}
+    width: 120px;
+    
+    @include media-query(max, small) {
+        width: 100px; 
+    }
 }
