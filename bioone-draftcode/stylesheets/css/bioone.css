@@ -369,7 +369,14 @@ nav li.has-children > a:before {
           margin-top: 20px; } }
   .flex-container .flex-2ndcol_no-border {
     padding: 0 30px;
-    max-width: 30%; }
+    max-width: 100%; }
+    .flex-container .flex-2ndcol_no-border img.screenshot {
+      max-width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+      -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); }
     .flex-container .flex-2ndcol_no-border li {
       padding-bottom: 5px; }
       .flex-container .flex-2ndcol_no-border li img {
