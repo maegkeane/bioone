@@ -271,6 +271,7 @@ nav .children {
       display: block;
       padding: 10px 20px;
       color: #64717D;
+      font-weight: 600;
       border-bottom: 2px solid #b6bdc4; }
       @media only screen and (max-width: 870px) {
         nav .children li a {

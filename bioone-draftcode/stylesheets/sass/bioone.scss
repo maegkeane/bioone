@@ -459,15 +459,16 @@ nav .children {
             display: block; 
             padding: 10px 20px; 
             color: $color-light;
+            font-weight: 600; 
             border-bottom: 2px solid lighten($color-light, 30%);  
-        
+            
             @include media-query(max, medium) {
                 padding: 10px 15px 10px 25px; 
             }
 
             @include media-query(max, small) {
                 width: 246px;
-                font-weight: 100;
+                font-weight: 100; 
             }
 
             &:hover {
