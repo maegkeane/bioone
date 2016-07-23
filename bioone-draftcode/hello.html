@@ -15,7 +15,19 @@
 
 <body>
 	<header class="page-header">
-	<a href="#home"><img src="images/whitelogo.png" alt="BioOne Logo"></a>
+	<a href="#home">
+	<picture>
+    	<source 
+	    	media="(min-width: 671px)"
+	    	srcset="images/whitelogo.png">
+    	<source  
+    		media="(max-width: 670px)"
+    		srcset="images/logo.png">
+    	<img 
+    	src="images/whitelogo.png" 
+    	alt="BioOne Logo">
+	</picture>
+	</a>
 	
 	<nav>
 	<a class="handle">
