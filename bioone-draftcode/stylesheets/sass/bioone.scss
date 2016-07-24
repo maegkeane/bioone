@@ -255,7 +255,7 @@ ol li, ul li {
     position: relative;
     font: {
         family: $font-sans;
-        size: 10px;
+        size: 11px;
         weight: 500; 
     }
     letter-spacing: 1.5px;
@@ -442,7 +442,7 @@ nav > ul > li:last-of-type li:last-of-type a {
 
 nav .children {
     display: none; 
-    width: 210px; 
+    width: 221px; 
     padding: 0; 
     left: 27%; 
 
@@ -514,7 +514,7 @@ nav li.has-children {
 //nav-contact-left
 #nav-align-left {
     left: -40%;
-    width: 150px;
+    width: 160px;
     border-bottom: 2px solid lighten($color-light, 30%);  
 
 
