@@ -645,6 +645,35 @@ nav li.has-children {
     }
 }
 
+.flex-grid {
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 10px 0; 
+
+    .bio-list-item {
+        display: flex; 
+        margin-right: 20px; 
+        flex-direction: column; 
+     
+        .bio-list-item_image {
+            width: 150px; 
+            height: 150px; 
+            margin-top: 10px;
+        }
+
+        p.bio-list-item_info {
+            width: 150px; 
+            margin-top: 10px;
+            font-size: 12px; 
+            line-height: 18px;
+          
+            span.bio-list-item_name {
+                font-weight: 600; 
+            }
+        }
+    }
+}
+
 //images
 img.pub-logo {
     display: inline; 
