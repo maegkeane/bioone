@@ -409,15 +409,15 @@ nav li.has-children > a:before {
 .flex-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 0; }
+  margin-bottom: 20px; }
   .flex-grid .bio-list-item {
     display: flex;
-    margin-right: 20px;
+    margin-right: 40px;
     flex-direction: column; }
     .flex-grid .bio-list-item .bio-list-item_image {
       width: 150px;
       height: 150px;
-      margin-top: 10px; }
+      margin-top: 20px; }
     .flex-grid .bio-list-item p.bio-list-item_info {
       width: 150px;
       margin-top: 10px;
