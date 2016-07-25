@@ -7,28 +7,35 @@ body {
   margin: 0;
   padding: 0; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul {
+  margin: 10px 0px; }
+
 article {
   max-width: 800px;
-  margin-top: 30px;
   margin-left: 80px;
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px; }
   @media only screen and (max-width: 870px) {
     article {
       margin: 0 40px; } }
-  @media only screen and (max-width: 670px) {
-    article {
-      margin: 0 40px; } }
 
 section {
-  margin-bottom: 5px; }
+  margin-bottom: 35px; }
 
 p {
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px;
-  line-height: 20px;
-  margin-top: 2px;
-  margin-bottom: 20px; }
+  line-height: 22px;
+  margin-bottom: 10px; }
 
 a {
   color: #3B4991; }
@@ -36,42 +43,40 @@ a {
     color: #5c6cbd; }
 
 h1 {
-  margin-top: 50px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 100;
   color: #6E9934; }
+
+header {
+  margin-top: 40px; }
 
 h2 {
+  font-family: "Tisa Pro", Georgia, serif;
   font-size: 18px;
-  font-weight: 100;
-  margin-bottom: 20px; }
-  h2 a {
-    color: #3B4991; }
-    h2 a:hover {
-      color: #5c6cbd; }
+  font-weight: 100; }
 
 h3 {
-  margin: 10px 0 0 0;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 400;
   color: #6E9934; }
+  h3 a {
+    color: #3B4991; }
+    h3 a:hover {
+      color: #5c6cbd; }
 
 h4 {
-  margin: 10px 0 5px 0;
-  font-size: 16px;
-  font-weight: 100;
-  color: #000000; }
-
-h5 {
-  margin: 10px 0 0 0;
+  margin-top: 15px;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  color: #6E9934; }
+  font-weight: 400;
+  color: #000000; }
 
 h6 {
   padding: 0;
   margin: 0;
+  font-family: "Tisa Pro", Georgia, serif;
   font-style: italic;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -86,6 +91,11 @@ ol, ul {
 
 ol li, ul li {
   padding-bottom: 10px; }
+
+hr {
+  border-bottom: 4px solid #6E9934;
+  width: 200px;
+  text-align: center; }
 
 .btn-main {
   display: inline-block;
@@ -446,14 +456,12 @@ nav li.has-children > a:before {
       .flex-grid .news-item {
         width: 50%; } }
 
-ol.three-columns {
+.three-columns {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
-  column-gap: 10px;
   list-style-type: none; }
-  ol.three-columns .event-list-item {
-    overflow: hidden;
+  .three-columns .event-list-item {
     white-space: nowrap; }
 
 img.pub-logo {

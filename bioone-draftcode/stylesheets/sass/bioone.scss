@@ -78,12 +78,22 @@ body {
     padding: 0; 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul {
+  margin: 10px 0px;
+}
+
 article {
     max-width: 800px;
-    margin: {
-        top: 30px;
-        left: 80px;
-    }
+    margin-left: 80px;
     font: {
         family: $font-serif;
         size: 14px;
@@ -91,13 +101,10 @@ article {
     @include media-query(max,medium) {
         margin: 0 40px; 
     }
-    @include media-query(max,small) {
-        margin: 0 40px; 
-    }
 }
 
 section {
-    margin-bottom: 5px;
+    margin-bottom: 35px;
 }
 
 p {
@@ -105,9 +112,8 @@ p {
         family: $font-serif; 
         size: 14px;
     }
-    line-height: 20px;
-    margin-top: 2px;
-    margin-bottom: 20px;  
+    line-height: 22px;
+    margin-bottom: 10px; 
 }
 
 a {
@@ -119,21 +125,35 @@ a {
 }
 
 h1 {
-    margin-top: 50px; 
     font: {
         family: $font-sans;
         size: 28px;
-        weight: 400;
+        weight: 100;
     }
     color: $color-brand;
 }
 
-h2 {
+header {
+    margin-top: 40px; 
+}
+
+
+h2 { 
     font: {
+        family: $font-serif; 
         size: 18px;
         weight: 100;
     }
-    margin-bottom: 20px; 
+}
+
+h3 {
+    font: {
+        family: $font-sans;
+        size: 16px;
+        weight: 400; 
+    }
+    color: $color-brand;
+
     a {
         color: $color-accent;
         
@@ -143,39 +163,32 @@ h2 {
     }
 }
 
-h3 {
-    margin: 10px 0 0 0;
-    font: {
-        size: 16px;
-        weight: 100; 
-    }
-    color: $color-brand;
-}
-
 h4 {
-    margin: 10px 0 5px 0; 
+    margin-top: 15px; 
     font: {
-        size: 16px;
-        weight: 100; 
+        family: $font-sans; 
+        size: 14px;
+        weight: 400; 
     }
     color: $color-main; 
 }
 
-h5 {
-    margin: 10px 0 0 0;
-    font: {
-        size: 14px;
-        weight: 600;
-    }
-    color: $color-brand;
-}
+//h5 {
+//    margin: 10px 0 0 0;
+//    font: {
+//        size: 14px;
+//        weight: 600;
+//    }
+//    color: $color-brand;
+//}
 
 h6 {
     padding: 0;
     margin: 0;
     font: {
+        family: $font-serif; 
         style: italic;
-        }
+    }
     letter-spacing: 1px;
     text-transform: uppercase;
     list-style-type: none; 
@@ -193,6 +206,12 @@ ol li, ul li {
     padding-bottom: 10px;
 }
 
+hr {
+    border-bottom: 4px solid $color-brand; 
+    width: 200px; 
+    text-align: center;  
+}
+
 //buttons 
 .btn-main {
     display: inline-block; 
@@ -206,19 +225,19 @@ ol li, ul li {
     font: {
         family: $font-sans; 
         size: 12px; 
-      }
+    }
     text: {
         transform: uppercase;
         align: center;
         decoration: none;  
-      }
+    }
     letter-spacing: 1.5px; 
     color: $white; 
   
     &:hover {
         background: lighten($color-accent, 20%);
         color: $white; 
-     }
+    }
 }
  
 .btn-secondary {
@@ -691,19 +710,14 @@ nav li.has-children {
     }
 }
 
-ol.three-columns {
+//columns
+.three-columns {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3; 
-    column-gap: 10px; 
     list-style-type: none; 
 
-    //@include media-query(max, small) {
-    //
-    //}
-
     .event-list-item {
-        overflow: hidden; 
         white-space: nowrap;
     }
 }
