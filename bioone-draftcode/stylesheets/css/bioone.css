@@ -234,6 +234,8 @@ nav ul {
     nav ul li a {
       color: #FFFFFF;
       text-decoration: none; }
+      nav ul li a:hover {
+        color: #FFFFFF; }
       @media only screen and (max-width: 670px) {
         nav ul li a {
           display: block;
