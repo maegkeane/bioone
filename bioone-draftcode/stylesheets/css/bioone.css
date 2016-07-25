@@ -45,29 +45,26 @@ h1 {
 h2 {
   font-size: 18px;
   font-weight: 100;
-  margin-bottom: 0; }
+  margin-bottom: 20px; }
   h2 a {
     color: #3B4991; }
     h2 a:hover {
       color: #1e2549; }
 
 h3 {
-  margin: 0;
-  padding-top: 20px;
+  margin: 10px 0 0 0;
   font-size: 16px;
   font-weight: 100;
   color: #6E9934; }
 
 h4 {
-  margin: 0;
-  padding-top: 20px;
+  margin: 10px 0 5px 0;
   font-size: 16px;
   font-weight: 100;
   color: #000000; }
 
 h5 {
-  margin: 0;
-  padding-top: 10px;
+  margin: 10px 0 0 0;
   font-size: 14px;
   font-weight: 600;
   color: #6E9934; }
@@ -94,7 +91,7 @@ ol li, ul li {
 .btn-main {
   display: inline-block;
   background: #3B4991;
-  padding: 15px 40px;
+  padding: 15px 30px;
   margin-right: 10px;
   margin-bottom: 25px;
   border-radius: 3px;
@@ -112,7 +109,7 @@ ol li, ul li {
 .btn-secondary {
   display: inline-block;
   border: 2px solid #3B4991;
-  padding: 13px 40px;
+  padding: 13px 30px;
   margin-right: 10px;
   margin-bottom: 25px;
   border-radius: 3px;

@@ -97,11 +97,11 @@ article {
     margin: {
         top: 30px;
         left: 80px;
-        }
+    }
     font: {
         family: $font-serif;
         size: 14px;
-        }
+    }
     @include media-query(max,medium) {
         margin: 0 40px; 
     }
@@ -126,6 +126,7 @@ p {
 
 a {
     color: $color-accent;
+    
     &:hover {
         color: darken($color-accent, 20%);
     }
@@ -146,7 +147,7 @@ h2 {
         size: 18px;
         weight: 100;
         }
-    margin-bottom: 0; 
+    margin-bottom: 20px; 
     a {
         color: $color-accent;
         &:hover {
@@ -156,8 +157,7 @@ h2 {
 }
 
 h3 {
-    margin: 0;
-    padding-top: 20px; 
+    margin: 10px 0 0 0;
     font: {
         size: 16px;
         weight: 100; 
@@ -166,8 +166,7 @@ h3 {
 }
 
 h4 {
-    margin: 0;
-    padding-top: 20px; 
+    margin: 10px 0 5px 0; 
     font: {
         size: 16px;
         weight: 100; 
@@ -176,8 +175,7 @@ h4 {
 }
 
 h5 {
-    margin: 0;
-    padding-top: 10px; 
+    margin: 10px 0 0 0;
     font: {
         size: 14px;
         weight: 600;
@@ -213,7 +211,7 @@ ol li, ul li {
 .btn-main {
     display: inline-block; 
     background: $color-accent; 
-    padding: 15px 40px; 
+    padding: 15px 30px; 
     margin: {
         right: 10px; 
         bottom: 25px; 
@@ -240,7 +238,7 @@ ol li, ul li {
 .btn-secondary {
     display: inline-block; 
     border: 2px solid $color-accent; 
-    padding: 13px 40px; 
+    padding: 13px 30px; 
     margin: {
         right: 10px; 
         bottom: 25px; 
