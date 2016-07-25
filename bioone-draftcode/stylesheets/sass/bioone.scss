@@ -114,7 +114,7 @@ a {
     color: $color-accent;
     
     &:hover {
-        color: darken($color-accent, 20%);
+        color: lighten($color-accent, 15%);
     }
 }
 
@@ -138,7 +138,7 @@ h2 {
         color: $color-accent;
         
         &:hover {
-            color: darken($color-accent, 20%);
+            color: lighten($color-accent, 15%);
         }
     }
 }
@@ -681,7 +681,8 @@ nav li.has-children {
     
     .news-item {
         width: 240px;
-        margin-right: 40px; 
+        margin-right: 25px;
+        font-size: 13px;  
         line-height: 16px;  
 
         @include media-query(max, medium) {
@@ -690,18 +691,20 @@ nav li.has-children {
     }
 }
 
-.flex-grid_columns {
-    display: flex; 
-    flex-direction: column; 
-    flex-wrap: wrap; 
+ol.three-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; 
+    column-gap: 10px; 
+    list-style-type: none; 
 
-    @include media-query(max, small) {
-        flex-direction: row; 
-    }
+    //@include media-query(max, small) {
+    //
+    //}
 
-    .flex-event-list-item {
-        width: 30%;
-        margin-right: 30px; 
+    .event-list-item {
+        overflow: hidden; 
+        white-space: nowrap;
     }
 }
 
