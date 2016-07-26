@@ -380,8 +380,8 @@ nav li.has-children > a:before {
         margin-bottom: 10px; } }
     .flex-container .flex-nested-row img.notb1-logo {
       display: inline;
-      max-height: 55px;
-      margin-bottom: 30px; }
+      margin-top: 10px;
+      max-height: 48px; }
       @media only screen and (max-width: 870px) {
         .flex-container .flex-nested-row img.notb1-logo {
           max-height: 40px; } }
@@ -425,8 +425,10 @@ nav li.has-children > a:before {
     @media only screen and (max-width: 670px) {
       .flex-container .flex-2ndcol_leftborder {
         border: 0;
-        margin: 0;
-        padding: 0; } }
+        margin: 20px 0 0 0;
+        padding: 0;
+        max-width: 100%;
+        text-align: center; } }
 
 .flex-grid {
   display: flex;

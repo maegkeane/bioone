@@ -1,3 +1,7 @@
+//  ISSUES
+//DW program logos need better spacing
+//Secondary nav doesn't stay open when hovering (if you try to go from upper nav to lower, it goes away)
+
 // BREAKPOINTS
 $break-small: 670px;
 $break-medium: 870px;
@@ -600,9 +604,9 @@ nav li.has-children {
         
         img.notb1-logo {
             display: inline; 
-            max-height: 55px;
-            margin-bottom: 30px;
-
+            margin-top: 10px; 
+            max-height: 48px;
+            
             @include media-query (max, medium) {
                 max-height: 40px; 
             }
@@ -664,8 +668,10 @@ nav li.has-children {
 
         @include media-query(max, small) {
             border: 0; 
-            margin: 0; 
+            margin: 20px 0 0 0; 
             padding: 0;
+            max-width: 100%;
+            text-align: center; 
         } 
     }
 }
