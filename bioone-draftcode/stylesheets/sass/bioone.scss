@@ -1,5 +1,4 @@
 //  ISSUES
-//DW program logos need better spacing
 //Secondary nav doesn't stay open when hovering (if you try to go from upper nav to lower, it goes away)
 
 // BREAKPOINTS
@@ -117,6 +116,7 @@ p {
         size: 14px;
     }
     line-height: 22px;
+    margin-top: 0; 
     margin-bottom: 10px; 
 }
 
@@ -177,18 +177,21 @@ h4 {
     color: $color-main; 
 }
 
-//h5 {
-//    margin: 10px 0 0 0;
-//    font: {
-//        size: 14px;
-//        weight: 600;
-//    }
-//    color: $color-brand;
-//}
+h5 {
+    margin: 0; 
+    font: {
+        size: 12px; 
+        weight: 600; 
+        family: $font-sans; 
+    }
+    color: $color-brand;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+
+}
 
 h6 {
     padding: 0;
-    margin: 0;
     font: {
         family: $font-serif; 
         style: italic;
@@ -717,11 +720,23 @@ nav li.has-children {
 }
 
 //columns
-.three-columns {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3; 
+.event-list-three-columns {
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3; 
     list-style-type: none; 
+
+    @include media-query(max, medium) {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;     
+    }
+
+    @include media-query(max, small) {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;     
+    }  
 
     .event-list-item {
         white-space: nowrap;

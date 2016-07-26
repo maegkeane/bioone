@@ -35,6 +35,7 @@ p {
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px;
   line-height: 22px;
+  margin-top: 0;
   margin-bottom: 10px; }
 
 a {
@@ -73,9 +74,17 @@ h4 {
   font-weight: 400;
   color: #000000; }
 
+h5 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #6E9934;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 h6 {
   padding: 0;
-  margin: 0;
   font-family: "Tisa Pro", Georgia, serif;
   font-style: italic;
   letter-spacing: 1px;
@@ -458,12 +467,22 @@ nav li.has-children > a:before {
       .flex-grid .news-item {
         width: 50%; } }
 
-.three-columns {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
+.event-list-three-columns {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
   list-style-type: none; }
-  .three-columns .event-list-item {
+  @media only screen and (max-width: 870px) {
+    .event-list-three-columns {
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2; } }
+  @media only screen and (max-width: 670px) {
+    .event-list-three-columns {
+      -webkit-columns: 1;
+      -moz-columns: 1;
+      columns: 1; } }
+  .event-list-three-columns .event-list-item {
     white-space: nowrap; }
 
 img.pub-logo {
