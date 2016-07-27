@@ -17,7 +17,7 @@ p,
 blockquote,
 ol,
 ul {
-  margin: 10px 0px; }
+  margin: 1rem 0px; }
 
 article {
   max-width: 800px;
@@ -85,6 +85,8 @@ h5 {
 
 h6 {
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 2px;
   font-family: "Tisa Pro", Georgia, serif;
   font-style: italic;
   letter-spacing: 1px;
@@ -102,14 +104,18 @@ ol li, ul li {
   padding-bottom: 10px; }
 
 hr {
-  border-bottom: 4px solid #6E9934;
-  width: 200px;
-  text-align: center; }
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0;
+  max-width: 20%;
+  height: 1px;
+  border-top: 3px solid #6E9934; }
 
 .btn-main {
   display: inline-block;
   background: #3B4991;
   padding: 15px 30px;
+  margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 25px;
   border-radius: 3px;
@@ -446,6 +452,7 @@ nav li.has-children > a:before {
   .flex-grid .bio-list-item {
     display: flex;
     margin-right: 40px;
+    margin-bottom: 20px;
     flex-direction: column; }
     .flex-grid .bio-list-item .bio-list-item_image {
       width: 150px;
@@ -468,27 +475,30 @@ nav li.has-children > a:before {
         width: 50%; } }
 
 .event-list-three-columns {
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
+  margin: 0;
+  padding: 0;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
   list-style-type: none; }
   @media only screen and (max-width: 870px) {
     .event-list-three-columns {
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      columns: 2; } }
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
   @media only screen and (max-width: 670px) {
     .event-list-three-columns {
-      -webkit-columns: 1;
-      -moz-columns: 1;
-      columns: 1; } }
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
   .event-list-three-columns .event-list-item {
-    white-space: nowrap; }
+    display: inline-block;
+    width: 100%; }
 
 img.pub-logo {
   display: inline;
   max-width: 200px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 10px; }
   @media only screen and (max-width: 670px) {
     img.pub-logo {
