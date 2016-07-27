@@ -248,7 +248,7 @@ hr {
     color: $white; 
   
     &:hover {
-        background: lighten($color-accent, 20%);
+        background: lighten($color-accent, 5%);
         color: $white; 
     }
 }
@@ -515,8 +515,9 @@ nav .children {
             }
 
             @include media-query(max, small) {
+                padding-left: 25px; 
                 width: 246px;
-                font-weight: 600; 
+                font-weight: 600;
                 &:last-of-type {
                     border-bottom: 2px solid lighten($color-light, 30%);  
                 }
@@ -832,6 +833,12 @@ footer {
                     right: 5px;
                     top: 5px;
                 }
+                
+                @include media-query(max, small) {
+                    width: 30px; 
+                    margin-right: 10px;
+                }
+            
             }
         }
     }

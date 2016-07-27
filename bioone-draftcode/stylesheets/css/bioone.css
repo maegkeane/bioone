@@ -127,7 +127,7 @@ hr {
   letter-spacing: 1.5px;
   color: #FFFFFF; }
   .btn-main:hover {
-    background: #6e7cc4;
+    background: #4252a3;
     color: #FFFFFF; }
 
 .btn-secondary {
@@ -322,6 +322,7 @@ nav .children {
           padding: 10px 15px 10px 15px; } }
       @media only screen and (max-width: 670px) {
         nav .children li a {
+          padding-left: 25px;
           width: 246px;
           font-weight: 600; }
           nav .children li a:last-of-type {
@@ -551,6 +552,10 @@ footer {
         width: 25px;
         margin-right: 5px;
         margin-top: 5px; }
+        @media only screen and (max-width: 670px) {
+          footer .page-footer_content li img {
+            width: 30px;
+            margin-right: 10px; } }
   footer .footer-copyright {
     text-align: right;
     padding-right: 50px;
