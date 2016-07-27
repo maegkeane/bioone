@@ -474,7 +474,7 @@ nav li.has-children > a:before {
       .flex-grid .news-item {
         width: 50%; } }
 
-.event-list-three-columns {
+ol.event-list-three-columns {
   margin: 0;
   padding: 0;
   -webkit-column-count: 3;
@@ -482,16 +482,16 @@ nav li.has-children > a:before {
   column-count: 3;
   list-style-type: none; }
   @media only screen and (max-width: 870px) {
-    .event-list-three-columns {
+    ol.event-list-three-columns {
       -webkit-column-count: 2;
       -moz-column-count: 2;
       column-count: 2; } }
   @media only screen and (max-width: 670px) {
-    .event-list-three-columns {
+    ol.event-list-three-columns {
       -webkit-column-count: 1;
       -moz-column-count: 1;
       column-count: 1; } }
-  .event-list-three-columns .event-list-item {
+  ol.event-list-three-columns .event-list-item {
     display: inline-block;
     width: 100%; }
 
