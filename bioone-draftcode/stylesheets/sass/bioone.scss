@@ -387,7 +387,8 @@ nav {
     ul { 
     position: relative;
     float: right;
-    margin-right: 25px; 
+    margin-right: 25px;
+    margin-top: 12px;  
 
     @include media-query(max, small) {
         float: none; 
@@ -451,6 +452,7 @@ nav {
         }
 
         ul {
+            margin: 0; 
             padding: 10px;
             position: absolute;
             display: none;
@@ -509,7 +511,7 @@ nav .children {
             }
 
             @include media-query(max, medium) {
-                padding: 10px 15px 10px 25px; 
+                padding: 10px 15px 10px 15px; 
             }
 
             @include media-query(max, small) {
