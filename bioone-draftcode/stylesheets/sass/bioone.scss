@@ -773,6 +773,10 @@ nav li.has-children {
             @include media-query(max, medium) { 
                 max-width: 70px; 
             }
+
+             @include media-query(max, small) { 
+                max-width: 90px; 
+            }
         } 
     }
 
@@ -792,7 +796,15 @@ nav li.has-children {
                 margin-bottom: 5px;  
             }
             font-size: 13px; 
-        } 
+        }
+
+        @include media-query(max, small) {
+            max-width: 80%;
+            h3 {
+                font-size: 16px; 
+            } 
+            font-size: 16px;
+        }  
     }
 }
 

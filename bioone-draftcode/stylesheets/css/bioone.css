@@ -509,6 +509,9 @@ nav li.has-children > a:before {
     @media only screen and (max-width: 870px) {
       .homepage-flex .homepage-flex-icon img {
         max-width: 70px; } }
+    @media only screen and (max-width: 670px) {
+      .homepage-flex .homepage-flex-icon img {
+        max-width: 90px; } }
   .homepage-flex .homepage-flex-content {
     max-width: 40%;
     margin-right: 20px; }
@@ -522,6 +525,12 @@ nav li.has-children > a:before {
         .homepage-flex .homepage-flex-content h3 {
           font-size: 14px;
           margin-bottom: 5px; } }
+    @media only screen and (max-width: 670px) {
+      .homepage-flex .homepage-flex-content {
+        max-width: 80%;
+        font-size: 16px; }
+        .homepage-flex .homepage-flex-content h3 {
+          font-size: 16px; } }
 
 ol.event-list-three-columns {
   margin: 0;
