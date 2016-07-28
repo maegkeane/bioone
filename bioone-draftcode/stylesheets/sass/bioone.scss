@@ -1,6 +1,5 @@
 //  TO DO
 //  X transform for mobile nav handle
-//  homepage columns & icons
 //  homepage different navigation style and hero image
 //  sign-up form
 
@@ -326,6 +325,55 @@ hr {
         }
     }
 }
+
+//homepage header
+.page-header_homepage {
+    width: 100%;
+    padding: 25px 25px 0 50px;
+    margin: 0;
+    position: relative;
+    height: 400px;
+    font: {
+        family: $font-sans;
+        size: 11px;
+        weight: 500; 
+    }
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    background-image: url("../../images/headerbg_homepage.jpg");
+    background-repeat: no-repeat; 
+    border-bottom: 15px solid $color-brand; 
+
+    @include media-query(max, medium) {
+        font-size: 10px;
+        padding: 25px 0 0 25px; 
+    }
+    
+    @include media-query(max, small) {
+        background-image: none; 
+        height: 75px; 
+        border-bottom: $color-brand solid 2px;
+        padding: 25px 75px 0 25px; 
+        font-size: 10px; 
+    }
+    
+    img {
+        width: 130px; 
+        float: left; 
+        
+        @include media-query(max, medium) {
+            width: 110px; 
+            padding-top: 2px; 
+        }
+    
+        @include media-query(max, small) {
+            width: 110px; 
+            padding-top: 0;  
+        }
+    }
+}
+
 
 // navigation for mobile state
 nav {

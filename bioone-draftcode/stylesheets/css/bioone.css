@@ -180,6 +180,43 @@ hr {
         width: 110px;
         padding-top: 0; } }
 
+.page-header_homepage {
+  width: 100%;
+  padding: 25px 25px 0 50px;
+  margin: 0;
+  position: relative;
+  height: 400px;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-image: url("../../images/headerbg_homepage.jpg");
+  background-repeat: no-repeat;
+  border-bottom: 15px solid #6E9934; }
+  @media only screen and (max-width: 870px) {
+    .page-header_homepage {
+      font-size: 10px;
+      padding: 25px 0 0 25px; } }
+  @media only screen and (max-width: 670px) {
+    .page-header_homepage {
+      background-image: none;
+      height: 75px;
+      border-bottom: #6E9934 solid 2px;
+      padding: 25px 75px 0 25px;
+      font-size: 10px; } }
+  .page-header_homepage img {
+    width: 130px;
+    float: left; }
+    @media only screen and (max-width: 870px) {
+      .page-header_homepage img {
+        width: 110px;
+        padding-top: 2px; } }
+    @media only screen and (max-width: 670px) {
+      .page-header_homepage img {
+        width: 110px;
+        padding-top: 0; } }
+
 nav .handle span {
   display: none; }
 @media only screen and (max-width: 670px) {
