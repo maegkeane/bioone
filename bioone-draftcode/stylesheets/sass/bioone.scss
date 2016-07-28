@@ -391,6 +391,12 @@ nav {
                 }
                 letter-spacing: 2px; 
             }
+
+        }
+
+        > ul {
+            overflow-y: scroll;
+            max-height: 80vh; 
         }
     }
 
@@ -404,18 +410,17 @@ nav {
             float: none; 
             padding-top: 6.5px; 
             margin: 0; 
-            width: 250px; 
+            //width: 250px; 
             background: $white;
             border: {
                 bottom: 2px solid $color-brand;
                 left: 2px solid $color-brand; 
                 right: 2px solid $color-brand; 
                 radius: 3px;
-            }
-            overflow-y: scroll;
+            }    
 
             &.open {
-                right: calc(250px + 80px - 4px);
+                right: calc(265px + 80px - 4px);
             }
         }
 
@@ -498,7 +503,7 @@ nav .children {
 
     @include media-query(max, medium) { 
         left: 16%; 
-        width: 190px; 
+        width: 190px;
     }
 
     @include media-query(max, small) { 

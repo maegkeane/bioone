@@ -229,7 +229,10 @@ nav .handle span {
         color: #6E9934;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 2px; } }
+        letter-spacing: 2px; }
+    nav > ul {
+      overflow-y: scroll;
+      max-height: 80vh; } }
 nav ul {
   position: relative;
   float: right;
@@ -240,15 +243,13 @@ nav ul {
       float: none;
       padding-top: 6.5px;
       margin: 0;
-      width: 250px;
       background: #FFFFFF;
       border-bottom: 2px solid #6E9934;
       border-left: 2px solid #6E9934;
       border-right: 2px solid #6E9934;
-      border-radius: 3px;
-      overflow-y: scroll; }
+      border-radius: 3px; }
       nav ul.open {
-        right: calc(250px + 80px - 4px); } }
+        right: calc(265px + 80px - 4px); } }
   nav ul li {
     display: inline;
     position: relative;
