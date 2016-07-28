@@ -21,7 +21,7 @@ ul {
 
 article {
   max-width: 800px;
-  margin-left: 80px;
+  margin-left: 100px;
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px; }
   @media only screen and (max-width: 870px) {
@@ -100,9 +100,6 @@ ol, ul {
   padding: 0;
   list-style-type: none; }
 
-ol li, ul li {
-  padding-bottom: 10px; }
-
 hr {
   display: block;
   margin: 3rem auto;
@@ -139,7 +136,6 @@ hr {
   border-radius: 3px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
@@ -249,7 +245,8 @@ nav ul {
       border-bottom: 2px solid #6E9934;
       border-left: 2px solid #6E9934;
       border-right: 2px solid #6E9934;
-      border-radius: 3px; }
+      border-radius: 3px;
+      overflow-y: scroll; }
       nav ul.open {
         right: calc(250px + 80px - 4px); } }
   nav ul li {
@@ -485,6 +482,24 @@ nav li.has-children > a:before {
     @media only screen and (max-width: 870px) {
       .flex-grid .news-item {
         width: 50%; } }
+
+.homepage-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: "space-between";
+  -moz-justify-content: "space-between";
+  justify-content: "space-between";
+  -webkit-box-align: "baseline";
+  -ms-flex-align: "baseline";
+  -webkit-align-items: "baseline";
+  -moz-align-items: "baseline";
+  align-items: "baseline"; }
+  .homepage-flex .homepage-flex-icon {
+    width: 240px; }
 
 ol.event-list-three-columns {
   margin: 0;
