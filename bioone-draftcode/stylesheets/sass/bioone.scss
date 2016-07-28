@@ -410,7 +410,6 @@ nav {
             float: none; 
             padding-top: 6.5px; 
             margin: 0; 
-            //width: 250px; 
             background: $white;
             border: {
                 bottom: 2px solid $color-brand;
@@ -453,7 +452,7 @@ nav {
             
                 @include media-query(max, small) { 
                     display: block; 
-                    padding: 10px 20px 10px 15px;
+                    padding: 10px 0 10px 15px;
                     border-bottom: 2px solid lighten($color-light, 30%);
                     color: $color-brand; 
                     font-weight: 600;
@@ -761,12 +760,39 @@ nav li.has-children {
     -moz-align-items: "baseline";
     align-items: "baseline";
 
+    @include media-query(max, small) { 
+        flex-direction: column; 
+    }
+    
     .homepage-flex-icon {
-        width: 240px; 
+       img {
+            max-width: 80px;
+            margin-right: 20px;
+            margin-top: 20px;  
+
+            @include media-query(max, medium) { 
+                max-width: 70px; 
+            }
+        } 
     }
 
     .homepage-flex-content {
+        max-width: 40%; 
+        margin-right: 20px;
+        h3 {
+            margin-bottom: 5px; 
+        }
 
+        @include media-query(max, medium) { 
+            ol {
+                margin-bottom: 20px; 
+            }
+            h3 {
+                font-size: 14px;
+                margin-bottom: 5px;  
+            }
+            font-size: 13px; 
+        } 
     }
 }
 

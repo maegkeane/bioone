@@ -272,7 +272,7 @@ nav ul {
       @media only screen and (max-width: 670px) {
         nav ul li a {
           display: block;
-          padding: 10px 20px 10px 15px;
+          padding: 10px 0 10px 15px;
           border-bottom: 2px solid #b6bdc4;
           color: #6E9934;
           font-weight: 600; }
@@ -499,8 +499,29 @@ nav li.has-children > a:before {
   -webkit-align-items: "baseline";
   -moz-align-items: "baseline";
   align-items: "baseline"; }
-  .homepage-flex .homepage-flex-icon {
-    width: 240px; }
+  @media only screen and (max-width: 670px) {
+    .homepage-flex {
+      flex-direction: column; } }
+  .homepage-flex .homepage-flex-icon img {
+    max-width: 80px;
+    margin-right: 20px;
+    margin-top: 20px; }
+    @media only screen and (max-width: 870px) {
+      .homepage-flex .homepage-flex-icon img {
+        max-width: 70px; } }
+  .homepage-flex .homepage-flex-content {
+    max-width: 40%;
+    margin-right: 20px; }
+    .homepage-flex .homepage-flex-content h3 {
+      margin-bottom: 5px; }
+    @media only screen and (max-width: 870px) {
+      .homepage-flex .homepage-flex-content {
+        font-size: 13px; }
+        .homepage-flex .homepage-flex-content ol {
+          margin-bottom: 20px; }
+        .homepage-flex .homepage-flex-content h3 {
+          font-size: 14px;
+          margin-bottom: 5px; } }
 
 ol.event-list-three-columns {
   margin: 0;
