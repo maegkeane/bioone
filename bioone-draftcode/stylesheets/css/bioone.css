@@ -309,7 +309,7 @@ nav ul {
       border-right: 2px solid #6E9934;
       border-radius: 3px; }
       nav ul.open {
-        right: calc(253px + 80px - 3px); } }
+        right: calc(253px + 80px - 6px); } }
   nav ul li {
     display: inline;
     position: relative;
