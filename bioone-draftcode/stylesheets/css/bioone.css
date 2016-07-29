@@ -194,6 +194,26 @@ hr {
   background-image: url("../../images/headerbg_homepage.jpg");
   background-repeat: no-repeat;
   border-bottom: 15px solid #6E9934; }
+  .page-header_homepage .hero-text-container {
+    max-width: 900px;
+    margin-top: 125px;
+    margin-right: 125px;
+    margin-left: 50px; }
+    .page-header_homepage .hero-text-container .hero-header {
+      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      font-size: 32px;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #FFFFFF; }
+    .page-header_homepage .hero-text-container .hero-subheader {
+      margin-top: 25px;
+      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      font-size: 22px;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #FFFFFF; }
   @media only screen and (max-width: 870px) {
     .page-header_homepage {
       font-size: 10px;
