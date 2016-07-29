@@ -194,6 +194,28 @@ hr {
   background-image: url("../../images/headerbg_homepage.jpg");
   background-repeat: no-repeat;
   border-bottom: 15px solid #6E9934; }
+  @media only screen and (max-width: 870px) {
+    .page-header_homepage {
+      font-size: 10px;
+      padding: 25px 0 0 25px; } }
+  @media only screen and (max-width: 670px) {
+    .page-header_homepage {
+      background-image: none;
+      height: 75px;
+      border-bottom: #6E9934 solid 2px;
+      padding: 25px 75px 0 25px;
+      font-size: 10px; } }
+  .page-header_homepage img {
+    width: 130px;
+    float: left; }
+    @media only screen and (max-width: 870px) {
+      .page-header_homepage img {
+        width: 110px;
+        padding-top: 2px; } }
+    @media only screen and (max-width: 670px) {
+      .page-header_homepage img {
+        width: 110px;
+        padding-top: 0; } }
   .page-header_homepage .hero-text-container {
     max-width: 900px;
     margin-top: 115px;
@@ -217,28 +239,6 @@ hr {
       text-transform: none;
       letter-spacing: 0;
       color: #FFFFFF; }
-  @media only screen and (max-width: 870px) {
-    .page-header_homepage {
-      font-size: 10px;
-      padding: 25px 0 0 25px; } }
-  @media only screen and (max-width: 670px) {
-    .page-header_homepage {
-      background-image: none;
-      height: 75px;
-      border-bottom: #6E9934 solid 2px;
-      padding: 25px 75px 0 25px;
-      font-size: 10px; } }
-  .page-header_homepage img {
-    width: 130px;
-    float: left; }
-    @media only screen and (max-width: 870px) {
-      .page-header_homepage img {
-        width: 110px;
-        padding-top: 2px; } }
-    @media only screen and (max-width: 670px) {
-      .page-header_homepage img {
-        width: 110px;
-        padding-top: 0; } }
 
 nav .handle span {
   display: none; }
@@ -309,7 +309,7 @@ nav ul {
       border-right: 2px solid #6E9934;
       border-radius: 3px; }
       nav ul.open {
-        right: calc(265px + 80px - 4px); } }
+        right: calc(253px + 80px - 3px); } }
   nav ul li {
     display: inline;
     position: relative;

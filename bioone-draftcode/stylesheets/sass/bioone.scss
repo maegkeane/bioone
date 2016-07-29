@@ -345,6 +345,34 @@ hr {
     background-repeat: no-repeat; 
     border-bottom: 15px solid $color-brand; 
 
+    @include media-query(max, medium) {
+        font-size: 10px;
+        padding: 25px 0 0 25px; 
+    }
+    
+    @include media-query(max, small) {
+        background-image: none; 
+        height: 75px; 
+        border-bottom: $color-brand solid 2px;
+        padding: 25px 75px 0 25px; 
+        font-size: 10px; 
+    }
+    
+    img {
+        width: 130px; 
+        float: left; 
+        
+        @include media-query(max, medium) {
+            width: 110px; 
+            padding-top: 2px; 
+        }
+    
+        @include media-query(max, small) {
+            width: 110px; 
+            padding-top: 0;  
+        }
+    }
+    
     .hero-text-container {
         max-width: 900px; 
         margin: {
@@ -376,34 +404,6 @@ hr {
             text-transform: none; 
             letter-spacing: 0;
             color: $white;
-        }
-    }
-
-    @include media-query(max, medium) {
-        font-size: 10px;
-        padding: 25px 0 0 25px; 
-    }
-    
-    @include media-query(max, small) {
-        background-image: none; 
-        height: 75px; 
-        border-bottom: $color-brand solid 2px;
-        padding: 25px 75px 0 25px; 
-        font-size: 10px; 
-    }
-    
-    img {
-        width: 130px; 
-        float: left; 
-        
-        @include media-query(max, medium) {
-            width: 110px; 
-            padding-top: 2px; 
-        }
-    
-        @include media-query(max, small) {
-            width: 110px; 
-            padding-top: 0;  
         }
     }
 }
@@ -501,7 +501,7 @@ nav {
             }    
 
             &.open {
-                right: calc(265px + 80px - 4px);
+                right: calc(253px + 80px - 3px);
             }
         }
 
