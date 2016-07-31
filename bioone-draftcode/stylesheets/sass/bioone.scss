@@ -2,6 +2,7 @@
 //  X transform for mobile nav handle
 //  homepage different navigation style and hero image
 //  sign-up form
+//  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 
 // BREAKPOINTS
 $break-small: 670px;
@@ -92,7 +93,9 @@ h6,
 p,
 blockquote,
 ol,
-ul {
+ul, 
+aside, 
+{
   margin: 1rem 0px;
 }
 
@@ -110,6 +113,23 @@ article {
 
 section {
     margin-bottom: 35px;
+}
+
+aside {
+    display: inline-block; 
+    font: {
+        family: $font-serif; 
+        size: 16px; 
+        style: italic; 
+    }
+    color: $color-brand; 
+    line-height: 24px; 
+    border-top: 2px solid $color-brand; 
+    padding-top: 5px; 
+
+    @include media-query(max, small) {
+        max-width: 250px; 
+    } 
 }
 
 p {
@@ -887,6 +907,42 @@ nav li.has-children {
             } 
             font-size: 16px;
         }  
+    }
+}
+
+.timeline-flex {
+  display: flex;
+  height: 2080px; 
+  justify-content: center;
+  margin-bottom: 100px;  
+  
+    .timeline-rule {
+        margin-top: 20px; 
+        height: 100%; 
+        width: 12px; 
+        background-color: lighten($color-accent, 50%);
+    }
+
+    .timeline-item-container {
+        display: flex; 
+        flex-direction: column; 
+  
+        .timeline-item { 
+            max-width: 300px; 
+        
+            h1 {
+                padding-left: 20px; 
+                margin-bottom: 10px; 
+            }
+        
+            p {
+              padding: 13px 20px 80px 20px; 
+              color: $color-brand;
+              font-size: 14px;
+              line-height: 22px;
+              border-top: 3px solid $color-accent;
+            }
+        }
     }
 }
 
