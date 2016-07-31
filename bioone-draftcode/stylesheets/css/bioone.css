@@ -276,7 +276,7 @@ nav .handle span {
       nav .handle:before {
         content: "";
         position: absolute;
-        top: 20px;
+        top: 18px;
         right: 0;
         height: 3px;
         width: 40px;
@@ -285,7 +285,7 @@ nav .handle span {
       nav .handle:after {
         content: "";
         position: absolute;
-        top: 27px;
+        top: 25px;
         right: 0;
         height: 3px;
         width: 40px;
@@ -294,7 +294,7 @@ nav .handle span {
       nav .handle span {
         display: inherit;
         position: inherit;
-        top: 42px;
+        top: 45px;
         right: 0;
         margin-right: 17px;
         font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -304,6 +304,15 @@ nav .handle span {
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 2px; }
+        nav .handle span:before {
+          content: "";
+          position: absolute;
+          bottom: 22px;
+          right: 0;
+          height: 3px;
+          width: 40px;
+          border-bottom: 3px solid #6E9934;
+          margin-right: 2px; }
     nav > ul {
       overflow-y: scroll;
       max-height: 80vh; } }
@@ -560,8 +569,7 @@ nav li.has-children > a:before {
 
 body.bio nav.x-bio {
   float: right;
-  padding-right: 100px;
-  border: goldenrod 2px solid; }
+  padding-right: 100px; }
   body.bio nav.x-bio:before {
     content: "";
     position: absolute;

@@ -5,6 +5,7 @@
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 //  our story page: layout of text, logos, charter supporters
 //  could do more with the timeline
+//  bio pop-out not even close to there yet
 
 // BREAKPOINTS
 $break-small: 670px;
@@ -458,7 +459,7 @@ nav {
             &:before {
                 content: "";
                 position: absolute; 
-                top: 20px; 
+                top: 18px; 
                 right: 0; 
                 height: 3px; 
                 width: 40px; 
@@ -469,7 +470,7 @@ nav {
             &:after {
                 content: "";
                 position: absolute; 
-                top: 27px; 
+                top: 25px; 
                 right: 0; 
                 height: 3px; 
                 width: 40px; 
@@ -480,7 +481,7 @@ nav {
             span {
                 display: inherit;
                 position: inherit; 
-                top: 42px; 
+                top: 45px; 
                 right: 0; 
                 margin-right: 17px;    
                 font: {
@@ -494,6 +495,18 @@ nav {
                     align: center; 
                 }
                 letter-spacing: 2px; 
+            
+                &:before {
+                    content: "";
+                    position: absolute; 
+                    bottom: 22px; 
+                    right: 0; 
+                    height: 3px; 
+                    width: 40px; 
+                    border-bottom: 3px solid $color-brand;
+                    margin-right: 2px;   
+                }
+
             }
 
         }
@@ -853,7 +866,6 @@ body.bio {
     nav.x-bio {
         float: right; 
         padding-right: 100px; 
-        border: goldenrod 2px solid; 
 
         &:before {
             content: "";
