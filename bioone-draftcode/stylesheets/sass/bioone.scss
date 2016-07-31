@@ -1,8 +1,10 @@
 //  TO DO
 //  X transform for mobile nav handle
-//  homepage different navigation style and hero image
+//  missing third bar for mobile nav handle
 //  sign-up form
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
+//  our story page: layout of text, logos, charter supporters
+//  could do more with the timeline
 
 // BREAKPOINTS
 $break-small: 670px;
@@ -846,6 +848,75 @@ nav li.has-children {
     }
 }
 
+body.bio {
+    
+    nav.x-bio {
+        float: right; 
+        padding-right: 100px; 
+        border: goldenrod 2px solid; 
+
+        &:before {
+            content: "";
+            position: absolute; 
+            top: 20px; 
+            right: 0; 
+            height: 3px; 
+            width: 30px; 
+            border-bottom: 3px solid $color-brand;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        &:after { 
+            content: "";
+            position: absolute; 
+            top: 20px; 
+            right: 0; 
+            height: 3px; 
+            width: 30px; 
+            border-bottom: 3px solid $color-brand;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);   
+        }
+    }
+
+    a.btn-main {
+        margin-left: 229px; 
+    
+        @include media-query(max, medium) {
+            margin-left: 48px;  
+        } 
+
+    } 
+}
+
+.bio-flex {
+    display: flex; 
+    padding: 40px 50px 25px 50px; 
+    
+    @include media-query(max, medium) {
+        flex-direction: column; 
+    } 
+    
+    .bio-flex-image {
+        margin-right: 30px; 
+
+        img {
+            border: 2px solid $color-brand; 
+            max-width: 150px; 
+            margin-bottom: 10px; 
+        }
+    }
+
+    .bio-flex-info {
+
+    }
+}
+
 .homepage-flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -912,7 +983,7 @@ nav li.has-children {
 
 .timeline-flex {
   display: flex;
-  height: 2080px; 
+  height: 2350px; 
   justify-content: center;
   margin-bottom: 100px;  
   
@@ -934,13 +1005,20 @@ nav li.has-children {
                 padding-left: 20px; 
                 margin-bottom: 10px; 
             }
+
+            h5 {
+                padding: 17px 20px 0 20px; 
+                border-top: 3px solid $color-accent;
+            }
         
             p {
               padding: 13px 20px 80px 20px; 
-              color: $color-brand;
               font-size: 14px;
               line-height: 22px;
-              border-top: 3px solid $color-accent;
+            }
+
+            .timeline-item-year {
+                font-weight: 400; 
             }
         }
     }

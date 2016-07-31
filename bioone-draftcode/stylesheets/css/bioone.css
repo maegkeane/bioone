@@ -558,6 +558,53 @@ nav li.has-children > a:before {
       .flex-grid .news-item {
         width: 50%; } }
 
+body.bio nav.x-bio {
+  float: right;
+  padding-right: 100px;
+  border: goldenrod 2px solid; }
+  body.bio nav.x-bio:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 3px;
+    width: 30px;
+    border-bottom: 3px solid #6E9934;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  body.bio nav.x-bio:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 3px;
+    width: 30px;
+    border-bottom: 3px solid #6E9934;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+body.bio a.btn-main {
+  margin-left: 229px; }
+  @media only screen and (max-width: 870px) {
+    body.bio a.btn-main {
+      margin-left: 48px; } }
+
+.bio-flex {
+  display: flex;
+  padding: 40px 50px 25px 50px; }
+  @media only screen and (max-width: 870px) {
+    .bio-flex {
+      flex-direction: column; } }
+  .bio-flex .bio-flex-image {
+    margin-right: 30px; }
+    .bio-flex .bio-flex-image img {
+      border: 2px solid #6E9934;
+      max-width: 150px;
+      margin-bottom: 10px; }
+
 .homepage-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -608,7 +655,7 @@ nav li.has-children > a:before {
 
 .timeline-flex {
   display: flex;
-  height: 2080px;
+  height: 2350px;
   justify-content: center;
   margin-bottom: 100px; }
   .timeline-flex .timeline-rule {
@@ -624,12 +671,15 @@ nav li.has-children > a:before {
       .timeline-flex .timeline-item-container .timeline-item h1 {
         padding-left: 20px;
         margin-bottom: 10px; }
+      .timeline-flex .timeline-item-container .timeline-item h5 {
+        padding: 17px 20px 0 20px;
+        border-top: 3px solid #3B4991; }
       .timeline-flex .timeline-item-container .timeline-item p {
         padding: 13px 20px 80px 20px;
-        color: #6E9934;
         font-size: 14px;
-        line-height: 22px;
-        border-top: 3px solid #3B4991; }
+        line-height: 22px; }
+      .timeline-flex .timeline-item-container .timeline-item .timeline-item-year {
+        font-weight: 400; }
 
 ol.event-list-three-columns {
   margin: 0;
