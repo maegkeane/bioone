@@ -32,18 +32,41 @@ article {
 section {
   margin-bottom: 35px; }
 
-aside {
+aside.left {
+  position: relative;
+  float: left;
   display: inline-block;
+  max-width: 200px;
   font-family: "Tisa Pro", Georgia, serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
   color: #6E9934;
   line-height: 24px;
   border-top: 2px solid #6E9934;
+  margin: 20px 30px 50px 0;
   padding-top: 5px; }
   @media only screen and (max-width: 670px) {
-    aside {
-      max-width: 250px; } }
+    aside.left {
+      float: none;
+      margin: 20px 0 30px 0; } }
+
+aside.right {
+  position: relative;
+  float: right;
+  display: inline-block;
+  max-width: 200px;
+  font-family: "Tisa Pro", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #6E9934;
+  line-height: 24px;
+  border-top: 2px solid #6E9934;
+  margin: 20px 0 50px 30px;
+  padding-top: 5px; }
+  @media only screen and (max-width: 670px) {
+    aside.right {
+      float: none;
+      margin: 20px 0 30px 0; } }
 
 p {
   font-family: "Tisa Pro", Georgia, serif;
@@ -315,7 +338,7 @@ nav .handle span {
           margin-right: 2px; }
     nav > ul {
       overflow-y: scroll;
-      max-height: 80vh; } }
+      max-height: 90vh; } }
 nav ul {
   position: relative;
   float: right;
@@ -456,15 +479,6 @@ nav li.has-children > a:before {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: "space-between";
-  -moz-justify-content: "space-between";
-  justify-content: "space-between";
-  -webkit-box-align: "baseline";
-  -ms-flex-align: "baseline";
-  -webkit-align-items: "baseline";
-  -moz-align-items: "baseline";
-  align-items: "baseline";
   padding-right: 5px; }
   @media only screen and (max-width: 670px) {
     .flex-container {
@@ -497,7 +511,7 @@ nav li.has-children > a:before {
         .flex-container .flex-nested-row img.notb1-logo {
           max-width: 200px;
           max-height: none;
-          margin-top: 20px; } }
+          margin-bottom: 30px; } }
   .flex-container .flex-2ndcol_no-border {
     padding: 0 30px;
     max-width: 100%; }
@@ -537,6 +551,17 @@ nav li.has-children > a:before {
         padding: 0;
         max-width: 100%;
         text-align: center; } }
+
+.story-founder-logos {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px; }
+  @media only screen and (max-width: 670px) {
+    .story-founder-logos {
+      flex-direction: column;
+      align-items: flex-start; } }
+  .story-founder-logos img {
+    max-width: 160px; }
 
 .flex-grid {
   display: flex;

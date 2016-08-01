@@ -1,11 +1,11 @@
 //  TO DO
 //  X transform for mobile nav handle
-//  missing third bar for mobile nav handle
 //  sign-up form
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
-//  our story page: layout of text, logos, charter supporters
-//  could do more with the timeline
+//  our story page: layout of text, charter supporters
 //  bio pop-out not even close to there yet
+//  could do more with the timeline
+//  one-column flexbox for the "story" page — not responsive really
 
 // BREAKPOINTS
 $break-small: 670px;
@@ -118,20 +118,47 @@ section {
     margin-bottom: 35px;
 }
 
-aside {
+aside.left {
+    position: relative; 
+    float: left; 
     display: inline-block; 
+    max-width: 200px;
     font: {
         family: $font-serif; 
-        size: 16px; 
+        size: 18px; 
         style: italic; 
     }
     color: $color-brand; 
     line-height: 24px; 
     border-top: 2px solid $color-brand; 
+    margin: 20px 30px 50px 0; 
     padding-top: 5px; 
 
     @include media-query(max, small) {
-        max-width: 250px; 
+        float: none;
+        margin: 20px 0 30px 0; 
+    } 
+}
+
+aside.right {
+    position: relative; 
+    float: right; 
+    display: inline-block; 
+    max-width: 200px;
+    font: {
+        family: $font-serif; 
+        size: 18px; 
+        style: italic; 
+    }
+    color: $color-brand; 
+    line-height: 24px; 
+    border-top: 2px solid $color-brand; 
+    margin: 20px 0 50px 30px; 
+    padding-top: 5px;  
+
+    @include media-query(max, small) {
+        float: none;
+        margin: 20px 0 30px 0;
     } 
 }
 
@@ -513,7 +540,7 @@ nav {
 
         > ul {
             overflow-y: scroll;
-            max-height: 80vh; 
+            max-height: 90vh; 
         }
     }
 
@@ -709,21 +736,13 @@ nav li.has-children {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: "space-between";
-    -moz-justify-content: "space-between"; 
-    justify-content: "space-between";
-    -webkit-box-align: "baseline";
-    -ms-flex-align: "baseline";
-    -webkit-align-items: "baseline";
-    -moz-align-items: "baseline";
-    align-items: "baseline";
     padding-right: 5px;
 
     @include media-query(max, small) {
         flex-direction: column;     
     } 
     
+    //2-column flexbox
     .flex-1stcol {
         margin-right: 30px;  
         max-width: 60%; 
@@ -758,7 +777,7 @@ nav li.has-children {
             @include media-query(max, small) {
                 max-width: 200px; 
                 max-height: none; 
-                margin-top: 20px; 
+                margin-bottom: 30px;     
             }   
         }
     }
@@ -817,6 +836,22 @@ nav li.has-children {
             max-width: 100%;
             text-align: center; 
         } 
+    }
+}
+
+//one column flexbox
+.story-founder-logos {
+    display: flex; 
+    align-items: center; 
+    padding-bottom: 30px; 
+
+    @include media-query(max, small) {
+        flex-direction: column; 
+        align-items: flex-start;
+    } 
+
+    img {
+        max-width: 160px;
     }
 }
 
