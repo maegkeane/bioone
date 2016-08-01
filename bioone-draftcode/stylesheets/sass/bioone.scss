@@ -118,50 +118,6 @@ section {
     margin-bottom: 35px;
 }
 
-aside.left {
-    position: relative; 
-    float: left; 
-    display: inline-block; 
-    max-width: 200px;
-    font: {
-        family: $font-serif; 
-        size: 18px; 
-        style: italic; 
-    }
-    color: $color-brand; 
-    line-height: 24px; 
-    border-top: 2px solid $color-brand; 
-    margin: 20px 30px 50px 0; 
-    padding-top: 5px; 
-
-    @include media-query(max, small) {
-        float: none;
-        margin: 20px 0 30px 0; 
-    } 
-}
-
-aside.right {
-    position: relative; 
-    float: right; 
-    display: inline-block; 
-    max-width: 200px;
-    font: {
-        family: $font-serif; 
-        size: 18px; 
-        style: italic; 
-    }
-    color: $color-brand; 
-    line-height: 24px; 
-    border-top: 2px solid $color-brand; 
-    margin: 20px 0 50px 30px; 
-    padding-top: 5px;  
-
-    @include media-query(max, small) {
-        float: none;
-        margin: 20px 0 30px 0;
-    } 
-}
-
 p {
     font: {
         family: $font-serif; 
@@ -266,11 +222,12 @@ ol, ul {
 
 hr {
     display: block; 
-    margin: 3rem auto; 
+    margin: 4rem auto; 
     padding: 0; 
-    max-width: 15%; 
+    max-width: 25%; 
     height: 1px; 
-    border-top: 3px solid $color-brand; 
+    border-top: 3px solid $color-brand;
+    border-radius: none;  
 }
 
 //buttons 
@@ -737,6 +694,7 @@ nav li.has-children {
     display: -ms-flexbox;
     display: flex;
     padding-right: 5px;
+    order: 1; 
 
     @include media-query(max, small) {
         flex-direction: column;     
@@ -836,6 +794,54 @@ nav li.has-children {
             max-width: 100%;
             text-align: center; 
         } 
+    }
+
+    aside.left {
+        display: inline-block; 
+        min-width: 200px;
+        font: {
+            family: $font-serif; 
+            size: 18px; 
+            style: italic; 
+        }
+        color: $color-brand; 
+        line-height: 24px; 
+        border-top: 2px solid $color-brand; 
+        margin: 20px 30px 50px 0; 
+        padding-top: 5px; 
+
+        @include media-query(max, small) {
+            float: none;
+            margin: 20px 0 30px 0;
+            max-width: 200px;  
+        } 
+    }
+
+    aside.right {
+        display: inline-block; 
+        min-width: 200px;
+        font: {
+            family: $font-serif; 
+            size: 18px; 
+            style: italic; 
+        }
+        color: $color-brand; 
+        line-height: 24px; 
+        border-top: 2px solid $color-brand; 
+        margin: 30px 0 50px 30px; 
+        padding-top: 5px;  
+        order: 2; 
+
+        @include media-query(max, small) {
+            margin: 20px 0 30px 0;
+            max-width: 200px;
+            order: 0;
+        } 
+    }
+
+    .flex-aside-text-container {
+        display: flex;
+        flex-direction: column; 
     }
 }
 

@@ -32,42 +32,6 @@ article {
 section {
   margin-bottom: 35px; }
 
-aside.left {
-  position: relative;
-  float: left;
-  display: inline-block;
-  max-width: 200px;
-  font-family: "Tisa Pro", Georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-  color: #6E9934;
-  line-height: 24px;
-  border-top: 2px solid #6E9934;
-  margin: 20px 30px 50px 0;
-  padding-top: 5px; }
-  @media only screen and (max-width: 670px) {
-    aside.left {
-      float: none;
-      margin: 20px 0 30px 0; } }
-
-aside.right {
-  position: relative;
-  float: right;
-  display: inline-block;
-  max-width: 200px;
-  font-family: "Tisa Pro", Georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-  color: #6E9934;
-  line-height: 24px;
-  border-top: 2px solid #6E9934;
-  margin: 20px 0 50px 30px;
-  padding-top: 5px; }
-  @media only screen and (max-width: 670px) {
-    aside.right {
-      float: none;
-      margin: 20px 0 30px 0; } }
-
 p {
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px;
@@ -139,11 +103,12 @@ ol, ul {
 
 hr {
   display: block;
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 0;
-  max-width: 15%;
+  max-width: 25%;
   height: 1px;
-  border-top: 3px solid #6E9934; }
+  border-top: 3px solid #6E9934;
+  border-radius: none; }
 
 .btn-main {
   display: inline-block;
@@ -479,7 +444,8 @@ nav li.has-children > a:before {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 5px; }
+  padding-right: 5px;
+  order: 1; }
   @media only screen and (max-width: 670px) {
     .flex-container {
       flex-direction: column; } }
@@ -551,6 +517,42 @@ nav li.has-children > a:before {
         padding: 0;
         max-width: 100%;
         text-align: center; } }
+  .flex-container aside.left {
+    display: inline-block;
+    min-width: 200px;
+    font-family: "Tisa Pro", Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #6E9934;
+    line-height: 24px;
+    border-top: 2px solid #6E9934;
+    margin: 20px 30px 50px 0;
+    padding-top: 5px; }
+    @media only screen and (max-width: 670px) {
+      .flex-container aside.left {
+        float: none;
+        margin: 20px 0 30px 0;
+        max-width: 200px; } }
+  .flex-container aside.right {
+    display: inline-block;
+    min-width: 200px;
+    font-family: "Tisa Pro", Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #6E9934;
+    line-height: 24px;
+    border-top: 2px solid #6E9934;
+    margin: 30px 0 50px 30px;
+    padding-top: 5px;
+    order: 2; }
+    @media only screen and (max-width: 670px) {
+      .flex-container aside.right {
+        margin: 20px 0 30px 0;
+        max-width: 200px;
+        order: 0; } }
+  .flex-container .flex-aside-text-container {
+    display: flex;
+    flex-direction: column; }
 
 .story-founder-logos {
   display: flex;
