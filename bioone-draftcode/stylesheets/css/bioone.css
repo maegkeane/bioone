@@ -486,6 +486,20 @@ nav li.has-children > a:before {
       width: 246px;
       border-bottom: 0; } }
 
+#mc_embed_signup input {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #3B4991;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 3px; }
+  #mc_embed_signup input:focus {
+    outline: 0;
+    outline-offset: 0; }
+#mc_embed_signup .btn-main {
+  display: inline;
+  font-size: 12px; }
+
 .flex-container {
   display: -webkit-box;
   display: -webkit-flex;

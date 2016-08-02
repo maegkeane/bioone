@@ -2,7 +2,6 @@
 //  X transform for mobile nav handle
 //  sign-up form
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
-//  our story page: layout of text, charter supporters
 //  bio pop-out not even close to there yet
 //  one-column flexbox for the "story" page — not responsive really
 //  mobile state homepage has some flexbox issues
@@ -754,6 +753,28 @@ nav li.has-children {
 }
 
 //CONTENT 
+//mailchimp form 
+#mc_embed_signup {
+    input {
+        margin-top: 10px; 
+        padding: 10px 20px;
+        border: 1px solid $color-accent; 
+        font-family: $font-sans; 
+        font-size: 14px; 
+        border-radius: 3px; 
+
+        &:focus {
+            outline: 0;
+            outline-offset: 0; 
+        }
+    }
+
+    .btn-main {
+        display: inline; 
+        font-size: 12px; 
+    }
+}
+
 //flex
 .flex-container {
     display: -webkit-box;
