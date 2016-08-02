@@ -541,7 +541,7 @@ nav li.has-children > a:before {
     color: #6E9934;
     line-height: 24px;
     border-top: 2px solid #6E9934;
-    margin: 30px 0 50px 30px;
+    margin: 60px 0 50px 30px;
     padding-top: 5px;
     order: 2; }
     @media only screen and (max-width: 670px) {
@@ -552,6 +552,8 @@ nav li.has-children > a:before {
   .flex-container .flex-aside-text-container {
     display: flex;
     flex-direction: column; }
+    .flex-container .flex-aside-text-container h2.flex-aside-text-container-today {
+      margin-top: 0; }
 
 .story-founder-logos {
   display: flex;
@@ -703,12 +705,15 @@ body.bio a.btn-main {
     .timeline-flex .timeline-item-container .timeline-item {
       max-width: 300px; }
       .timeline-flex .timeline-item-container .timeline-item h3 {
-        font-size: 18px;
         padding-left: 20px;
-        margin-bottom: 10px; }
-      .timeline-flex .timeline-item-container .timeline-item h1 {
+        margin-bottom: 10px;
+        font-size: 16px; }
+      .timeline-flex .timeline-item-container .timeline-item h2 {
+        color: #6E9934;
+        font-size: 22px;
+        font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 17px 20px 0 20px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         border-top: 3px solid #3B4991; }
       .timeline-flex .timeline-item-container .timeline-item p {
         padding: 13px 20px 60px 20px;

@@ -829,7 +829,7 @@ nav li.has-children {
         color: $color-brand; 
         line-height: 24px; 
         border-top: 2px solid $color-brand; 
-        margin: 30px 0 50px 30px; 
+        margin: 60px 0 50px 30px; 
         padding-top: 5px;  
         order: 2; 
 
@@ -843,6 +843,10 @@ nav li.has-children {
     .flex-aside-text-container {
         display: flex;
         flex-direction: column; 
+
+        h2.flex-aside-text-container-today {
+            margin-top: 0; 
+        }
     }
 }
 
@@ -1056,15 +1060,17 @@ body.bio {
             max-width: 300px; 
         
             h3 {
-                font-size: 18px; 
                 padding-left: 20px; 
                 margin-bottom: 10px;
-
+                font-size: 16px; 
             }
 
-            h1 {
+            h2 {
+                color: $color-brand; 
+                font-size: 22px; 
+                font-family: $font-sans; 
                 padding: 17px 20px 0 20px;
-                margin-bottom: 5px;  
+                margin-bottom: 0;  
                 border-top: 3px solid $color-accent;
             }
         
