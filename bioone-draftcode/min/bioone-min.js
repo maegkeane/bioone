@@ -1,1 +1,1 @@
-$(document).ready(function(){var n=function(){$("nav").toggleClass("open")};$(".handle").click(function(){n()})});
+$(document).ready(function(){var n=function(){$("nav ul").toggleClass("open")};$(".handle").click(function(){n()});var c=function(){$("#charter-supporters-container").toggleClass("open")};$(".btn-secondary-charter").click(function(){c()})});

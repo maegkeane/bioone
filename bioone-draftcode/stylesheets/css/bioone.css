@@ -110,6 +110,10 @@ hr {
   border-top: 3px solid #6E9934;
   border-radius: none; }
 
+.purple {
+  color: #3B4991;
+  font-weight: 600; }
+
 .btn-main {
   display: inline-block;
   background: #3B4991;
@@ -146,6 +150,50 @@ hr {
   .btn-secondary:hover {
     border: 2px solid #6e7cc4;
     color: #6e7cc4; }
+
+.btn-secondary-charter {
+  display: inline-block;
+  border: 2px solid #3B4991;
+  padding: 10px 25px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: #3B4991; }
+  .btn-secondary-charter:hover {
+    border: 2px solid #6e7cc4;
+    color: #6e7cc4; }
+
+#charter-supporters-container {
+  display: none; }
+  #charter-supporters-container.open {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+    #charter-supporters-container.open ul {
+      margin-top: 0;
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      list-style-type: none; }
+      @media only screen and (max-width: 870px) {
+        #charter-supporters-container.open ul {
+          -webkit-column-count: 2;
+          -moz-column-count: 2;
+          column-count: 2; } }
+      @media only screen and (max-width: 670px) {
+        #charter-supporters-container.open ul {
+          -webkit-column-count: 1;
+          -moz-column-count: 1;
+          column-count: 1; } }
+      #charter-supporters-container.open ul .list-item {
+        display: inline-block;
+        width: 100%; }
 
 .page-header {
   width: 100%;

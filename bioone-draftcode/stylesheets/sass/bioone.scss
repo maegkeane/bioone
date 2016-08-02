@@ -231,6 +231,11 @@ hr {
     border-radius: none;  
 }
 
+.purple {
+    color: $color-accent;
+    font-weight: 600; 
+}
+
 //buttons 
 .btn-main {
     display: inline-block; 
@@ -284,6 +289,68 @@ hr {
     &:hover {
         border: 2px solid lighten($color-accent, 20%);
         color: lighten($color-accent, 20%);
+    }
+}
+
+.btn-secondary-charter {
+    display: inline-block; 
+    border: 2px solid $color-accent; 
+    padding: 10px 25px; 
+    margin: {
+        right: 10px; 
+        bottom: 25px; 
+    }
+    border-radius: 3px; 
+    font: {
+        family: $font-sans; 
+        size: 12px; 
+    }
+    text: {
+        transform: uppercase;
+        align: center; 
+        decoration: none; 
+    }
+    letter-spacing: 1.5px; 
+    color: $color-accent; 
+  
+    &:hover {
+        border: 2px solid lighten($color-accent, 20%);
+        color: lighten($color-accent, 20%);
+    }
+}
+
+#charter-supporters-container {
+  display:none; 
+
+    &.open {
+        display: inline;
+        margin: 0; 
+        padding: 0;  
+    
+        ul {
+            margin-top: 0; 
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3; 
+            list-style-type: none;
+
+            @include media-query(max, medium) {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;     
+            }
+
+            @include media-query(max, small) {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;     
+            }  
+
+            .list-item {
+                display: inline-block;
+                width: 100%; 
+            }
+        }
     }
 }
 
