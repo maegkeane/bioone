@@ -515,8 +515,7 @@ nav li.has-children > a:before {
         border: 0;
         margin: 20px 0 0 0;
         padding: 0;
-        max-width: 100%;
-        text-align: center; } }
+        max-width: 100%; } }
   .flex-container aside.left {
     display: inline-block;
     min-width: 200px;
@@ -526,7 +525,7 @@ nav li.has-children > a:before {
     color: #6E9934;
     line-height: 24px;
     border-top: 2px solid #6E9934;
-    margin: 20px 30px 50px 0;
+    margin: 10px 30px 30px 0;
     padding-top: 5px; }
     @media only screen and (max-width: 670px) {
       .flex-container aside.left {
@@ -690,7 +689,7 @@ body.bio a.btn-main {
 
 .timeline-flex {
   display: flex;
-  height: 2350px;
+  height: 2450px;
   justify-content: center;
   margin-bottom: 100px; }
   .timeline-flex .timeline-rule {
@@ -703,14 +702,16 @@ body.bio a.btn-main {
     flex-direction: column; }
     .timeline-flex .timeline-item-container .timeline-item {
       max-width: 300px; }
-      .timeline-flex .timeline-item-container .timeline-item h1 {
+      .timeline-flex .timeline-item-container .timeline-item h3 {
+        font-size: 18px;
         padding-left: 20px;
         margin-bottom: 10px; }
-      .timeline-flex .timeline-item-container .timeline-item h5 {
+      .timeline-flex .timeline-item-container .timeline-item h1 {
         padding: 17px 20px 0 20px;
+        margin-bottom: 5px;
         border-top: 3px solid #3B4991; }
       .timeline-flex .timeline-item-container .timeline-item p {
-        padding: 13px 20px 80px 20px;
+        padding: 13px 20px 60px 20px;
         font-size: 14px;
         line-height: 22px; }
       .timeline-flex .timeline-item-container .timeline-item .timeline-item-year {

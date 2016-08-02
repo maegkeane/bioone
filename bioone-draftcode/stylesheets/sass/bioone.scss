@@ -4,8 +4,9 @@
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 //  our story page: layout of text, charter supporters
 //  bio pop-out not even close to there yet
-//  could do more with the timeline
 //  one-column flexbox for the "story" page — not responsive really
+//  mobile state homepage has some flexbox issues
+
 
 // BREAKPOINTS
 $break-small: 670px;
@@ -792,7 +793,7 @@ nav li.has-children {
             margin: 20px 0 0 0; 
             padding: 0;
             max-width: 100%;
-            text-align: center; 
+            //text-align: center; 
         } 
     }
 
@@ -807,7 +808,7 @@ nav li.has-children {
         color: $color-brand; 
         line-height: 24px; 
         border-top: 2px solid $color-brand; 
-        margin: 20px 30px 50px 0; 
+        margin: 10px 30px 30px 0; 
         padding-top: 5px; 
 
         @include media-query(max, small) {
@@ -1036,7 +1037,7 @@ body.bio {
 
 .timeline-flex {
   display: flex;
-  height: 2350px; 
+  height: 2450px; 
   justify-content: center;
   margin-bottom: 100px;  
   
@@ -1054,18 +1055,21 @@ body.bio {
         .timeline-item { 
             max-width: 300px; 
         
-            h1 {
+            h3 {
+                font-size: 18px; 
                 padding-left: 20px; 
-                margin-bottom: 10px; 
+                margin-bottom: 10px;
+
             }
 
-            h5 {
-                padding: 17px 20px 0 20px; 
+            h1 {
+                padding: 17px 20px 0 20px;
+                margin-bottom: 5px;  
                 border-top: 3px solid $color-accent;
             }
         
             p {
-              padding: 13px 20px 80px 20px; 
+              padding: 13px 20px 60px 20px; 
               font-size: 14px;
               line-height: 22px;
             }
