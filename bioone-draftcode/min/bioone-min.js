@@ -1,1 +1,1 @@
-$(document).ready(function(){var n=function(){$("nav ul").toggleClass("open")};$(".handle").click(function(){n()});var c=function(){$("#charter-supporters-container").toggleClass("open")};$(".btn-secondary-charter").click(function(){c()})});
+$(document).ready(function(){var t=function(){$("nav ul").toggleClass("open")};$(".handle").click(function(){t()});var n=function(){$("#charter-supporters-container").toggleClass("open")};$(".btn-secondary-charter").click(function(){return n(),$(this).text("Show list"===$(this).text()?"Close list":"Show list"),!1})});

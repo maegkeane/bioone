@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 var toggleNav = function() {
 $('nav ul').toggleClass('open');
@@ -12,8 +13,15 @@ $('#charter-supporters-container').toggleClass('open');
 };
 
 $('.btn-secondary-charter').click(function() {
-toggleCharterButton();	
-}); 
+toggleCharterButton();	 
+ 
+$(this).text($(this).text() === 'Show list' ? 'Close list' : 'Show list');
+return false;
+   });
+});
 
-}); 
+
+
+
+
 
