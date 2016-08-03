@@ -413,8 +413,11 @@ hr {
     letter-spacing: 1.5px;
     text-transform: uppercase;
 
-    background-image: url("../../images/headerbg_homepage.jpg");
-    background-repeat: no-repeat; 
+    background: {
+        image: url("../../images/headerbg_homepage.jpg");
+        size: cover; 
+        position: center; 
+    }
     border-bottom: 15px solid $color-brand; 
 
     @include media-query(max, medium) {
