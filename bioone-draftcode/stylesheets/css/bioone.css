@@ -350,11 +350,31 @@ nav .handle span {
           width: 40px;
           border-bottom: 3px solid #6E9934;
           margin-right: 2px; }
+    nav.open .handle:before {
+      margin: 0;
+      top: 30px;
+      right: 24px;
+      width: 30px;
+      border-bottom: 4px solid #6E9934;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    nav.open .handle:after {
+      margin: 0;
+      top: 30px;
+      right: 25px;
+      width: 30px;
+      border-bottom: 4px solid #6E9934;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    nav.open .handle span {
+      display: none; }
     nav > ul {
       overflow-y: scroll;
-      max-height: 90vh; } }
-nav.open ul {
-  right: calc(265px + 80px - 2px); }
+      max-height: 90vh; }
+    nav.open ul {
+      right: calc(265px + 80px - 2px); } }
 nav ul {
   position: relative;
   float: right;

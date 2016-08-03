@@ -516,7 +516,7 @@ nav {
                 height: 3px; 
                 width: 40px; 
                 border-bottom: 3px solid $color-brand;
-                margin-right: 19px;
+                margin-right: 19px;    
             }
 
             &:after {
@@ -562,15 +562,45 @@ nav {
             }
 
         }
+    
+        &.open {
+            .handle {
+                &:before {
+                    margin: 0; 
+                    top: 30px;
+                    right: 24px; 
+                    width: 30px; 
+                    border-bottom: 4px solid $color-brand;
+                    -webkit-transform:rotate(45deg);
+                    -moz-transform:rotate(45deg);
+                    transform:rotate(45deg);
+                }
+
+                &:after {
+                    margin: 0; 
+                    top: 30px;
+                    right: 25px; 
+                    width: 30px; 
+                    border-bottom: 4px solid $color-brand;
+                    -webkit-transform:rotate(-45deg);
+                    -moz-transform:rotate(-45deg);
+                    transform:rotate(-45deg);
+                }
+
+                span {
+                    display: none;
+                } 
+            }   
+        } 
 
         > ul {
             overflow-y: scroll;
             max-height: 90vh; 
         }
-    }
 
-    &.open ul {
-        right: calc(265px + 80px - 2px);
+        &.open ul {
+            right: calc(265px + 80px - 2px);
+        }
     }
 
     ul { 
