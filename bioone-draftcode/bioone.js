@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 var toggleNav = function() {
-$('nav ul').toggleClass('open');
+$('nav').toggleClass('open');
 };
 
 $('.handle').click(function(){  

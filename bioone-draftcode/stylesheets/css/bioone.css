@@ -352,6 +352,8 @@ nav .handle span {
     nav > ul {
       overflow-y: scroll;
       max-height: 90vh; } }
+nav.open ul {
+  right: calc(265px + 80px - 2px); }
 nav ul {
   position: relative;
   float: right;
@@ -366,9 +368,7 @@ nav ul {
       border-bottom: 2px solid #6E9934;
       border-left: 2px solid #6E9934;
       border-right: 2px solid #6E9934;
-      border-radius: 3px; }
-      nav ul.open {
-        right: calc(253px + 80px - 6px); } }
+      border-radius: 3px; } }
   nav ul li {
     display: inline;
     position: relative;
@@ -617,15 +617,16 @@ nav li.has-children > a:before {
     .flex-container .flex-aside-text-container h2.flex-aside-text-container-today {
       margin-top: 0; }
 
-.story-founder-logos {
+#story-founder-logos {
+  margin: 0;
   display: flex;
   align-items: center;
   padding-bottom: 30px; }
   @media only screen and (max-width: 670px) {
-    .story-founder-logos {
+    #story-founder-logos {
       flex-direction: column;
       align-items: flex-start; } }
-  .story-founder-logos img {
+  #story-founder-logos img {
     max-width: 160px; }
 
 .flex-grid {

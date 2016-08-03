@@ -3,8 +3,7 @@
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 //  bio pop-out not even close to there yet
 //  one-column flexbox for the "story" page — not responsive really
-//  mobile state homepage has some flexbox issues
-
+//  mailchimp form — not sure if it will work and can't seem to format it the way I'd like
 
 // BREAKPOINTS
 $break-small: 670px;
@@ -567,6 +566,10 @@ nav {
         }
     }
 
+    &.open ul {
+        right: calc(265px + 80px - 2px);
+    }
+
     ul { 
         position: relative;
         float: right;
@@ -584,10 +587,6 @@ nav {
                 right: 2px solid $color-brand; 
                 radius: 3px;
             }    
-
-            &.open {
-                right: calc(253px + 80px - 6px);
-            }
         }
 
         li {
@@ -938,10 +937,11 @@ nav li.has-children {
 }
 
 //one column flexbox
-.story-founder-logos {
-    display: flex; 
+#story-founder-logos {
+    margin: 0;
+    display: flex;
     align-items: center; 
-    padding-bottom: 30px; 
+    padding-bottom: 30px;  
 
     @include media-query(max, small) {
         flex-direction: column; 
@@ -1147,6 +1147,7 @@ img.pub-logo {
         margin-top: 30px; 
     }   
 }
+
 
 //FOOTER
 footer {
