@@ -700,7 +700,7 @@ nav li.has-children > a:before {
           margin-bottom: 5px; } }
     @media only screen and (max-width: 670px) {
       .homepage-flex .homepage-flex-content {
-        max-width: 80%;
+        max-width: 100%;
         font-size: 16px; }
         .homepage-flex .homepage-flex-content h3 {
           font-size: 16px; } }
