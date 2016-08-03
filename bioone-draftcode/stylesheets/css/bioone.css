@@ -657,52 +657,6 @@ nav li.has-children > a:before {
       .flex-grid .news-item {
         width: 50%; } }
 
-body.bio nav.x-bio {
-  float: right;
-  padding-right: 100px; }
-  body.bio nav.x-bio:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 0;
-    height: 3px;
-    width: 30px;
-    border-bottom: 3px solid #6E9934;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  body.bio nav.x-bio:after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 0;
-    height: 3px;
-    width: 30px;
-    border-bottom: 3px solid #6E9934;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-body.bio a.btn-main {
-  margin-left: 229px; }
-  @media only screen and (max-width: 870px) {
-    body.bio a.btn-main {
-      margin-left: 48px; } }
-
-.bio-flex {
-  display: flex;
-  padding: 40px 50px 25px 50px; }
-  @media only screen and (max-width: 870px) {
-    .bio-flex {
-      flex-direction: column; } }
-  .bio-flex .bio-flex-image {
-    margin-right: 30px; }
-    .bio-flex .bio-flex-image img {
-      border: 2px solid #6E9934;
-      max-width: 150px;
-      margin-bottom: 10px; }
-
 .homepage-flex {
   display: -webkit-box;
   display: -webkit-flex;

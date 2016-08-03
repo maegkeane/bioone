@@ -1,6 +1,5 @@
 //  TO DO
 //  X transform for mobile nav handle
-//  sign-up form
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 //  bio pop-out not even close to there yet
 //  one-column flexbox for the "story" page — not responsive really
@@ -992,74 +991,6 @@ nav li.has-children {
         @include media-query(max, medium) {
             width: 50%;
         } 
-    }
-}
-
-body.bio {
-    
-    nav.x-bio {
-        float: right; 
-        padding-right: 100px; 
-
-        &:before {
-            content: "";
-            position: absolute; 
-            top: 20px; 
-            right: 0; 
-            height: 3px; 
-            width: 30px; 
-            border-bottom: 3px solid $color-brand;
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-
-        &:after { 
-            content: "";
-            position: absolute; 
-            top: 20px; 
-            right: 0; 
-            height: 3px; 
-            width: 30px; 
-            border-bottom: 3px solid $color-brand;
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);   
-        }
-    }
-
-    a.btn-main {
-        margin-left: 229px; 
-    
-        @include media-query(max, medium) {
-            margin-left: 48px;  
-        } 
-
-    } 
-}
-
-.bio-flex {
-    display: flex; 
-    padding: 40px 50px 25px 50px; 
-    
-    @include media-query(max, medium) {
-        flex-direction: column; 
-    } 
-    
-    .bio-flex-image {
-        margin-right: 30px; 
-
-        img {
-            border: 2px solid $color-brand; 
-            max-width: 150px; 
-            margin-bottom: 10px; 
-        }
-    }
-
-    .bio-flex-info {
-
     }
 }
 
