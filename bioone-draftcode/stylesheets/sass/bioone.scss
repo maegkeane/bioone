@@ -1,7 +1,6 @@
 //  TO DO
-//  X transform for mobile nav handle
 //  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
-//  bio pop-out not even close to there yet
+//  modal window needs to be positioned in the window properly
 //  one-column flexbox for the "story" page — not responsive really
 //  mailchimp form — not sure if it will work and can't seem to format it the way I'd like
 
@@ -1021,17 +1020,27 @@ nav li.has-children {
 
     .bio-list-item_modal {
         display: none; 
-        padding: 20px; 
+        padding: 40px; 
         position: absolute; 
-        left: 25%; 
-        right: 25%; 
-        top: 0; 
+        left: 20%; 
+        right: 20%; 
         z-index: 1000;
         background: white; 
         border: 2px solid $color-brand;
 
         &.visible {
             display: block; 
+
+            h2 {
+                margin-top: 0; 
+                margin-bottom: 0;
+                color: $color-brand;
+            }
+
+            h4 {
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
         }
 
         .close {
@@ -1039,8 +1048,8 @@ nav li.has-children {
             width: 20px; 
             height: 20px; 
             position: absolute; 
-            top: 5px; 
-            right: 5px; 
+            top: 15px; 
+            right: 15px; 
             color: $color-brand;
             cursor: pointer; 
             text-align: center;
