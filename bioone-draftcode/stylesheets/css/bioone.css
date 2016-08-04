@@ -673,36 +673,36 @@ nav li.has-children > a:before {
       line-height: 18px; }
       .flex-grid .bio-list-item p.bio-list-item_info span.bio-list-item_name {
         font-weight: 600; }
-  .flex-grid .bio-list-item_modal {
-    display: none;
-    padding: 40px;
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    z-index: 1000;
-    background: white;
-    border: 2px solid #6E9934; }
-    .flex-grid .bio-list-item_modal.visible {
-      display: block; }
-      .flex-grid .bio-list-item_modal.visible h2 {
-        margin-top: 0;
-        margin-bottom: 0;
-        color: #6E9934; }
-      .flex-grid .bio-list-item_modal.visible h4 {
-        margin-top: 0;
-        margin-bottom: 20px; }
-    .flex-grid .bio-list-item_modal .close {
-      display: block;
-      width: 20px;
-      height: 20px;
+    .flex-grid .bio-list-item .bio-list-item_modal {
+      display: none;
+      padding: 40px;
       position: absolute;
-      top: 15px;
-      right: 15px;
-      color: #6E9934;
-      cursor: pointer;
-      text-align: center;
-      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 20px; }
+      left: 20%;
+      right: 20%;
+      z-index: 1000;
+      background: white;
+      border: 2px solid #6E9934; }
+      .flex-grid .bio-list-item .bio-list-item_modal.visible {
+        display: block; }
+        .flex-grid .bio-list-item .bio-list-item_modal.visible h2 {
+          margin-top: 0;
+          margin-bottom: 0;
+          color: #6E9934; }
+        .flex-grid .bio-list-item .bio-list-item_modal.visible h4 {
+          margin-top: 0;
+          margin-bottom: 20px; }
+      .flex-grid .bio-list-item .bio-list-item_modal .close {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #6E9934;
+        cursor: pointer;
+        text-align: center;
+        font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 20px; }
   .flex-grid .overlay {
     position: fixed;
     top: 0;
@@ -710,7 +710,7 @@ nav li.has-children > a:before {
     bottom: 0;
     left: 0;
     z-index: 500;
-    background: rgba(0, 0, 0, 0.2); }
+    background: rgba(0, 0, 0, 0.3); }
   .flex-grid .news-item {
     width: 240px;
     margin-right: 25px;
