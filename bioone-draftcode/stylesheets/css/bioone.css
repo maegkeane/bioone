@@ -272,6 +272,9 @@ hr {
     margin-top: 115px;
     margin-right: 125px;
     margin-left: 50px; }
+    @media only screen and (max-width: 870px) {
+      .page-header_homepage .hero-text-container {
+        margin-top: 100px; } }
     @media only screen and (max-width: 670px) {
       .page-header_homepage .hero-text-container {
         display: none; } }
@@ -670,6 +673,38 @@ nav li.has-children > a:before {
       line-height: 18px; }
       .flex-grid .bio-list-item p.bio-list-item_info span.bio-list-item_name {
         font-weight: 600; }
+  .flex-grid .bio-list-item_modal {
+    display: none;
+    padding: 20px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border: 2px solid #6E9934; }
+    .flex-grid .bio-list-item_modal.visible {
+      display: block; }
+    .flex-grid .bio-list-item_modal .close {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: #6E9934;
+      cursor: pointer;
+      text-align: center;
+      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 20px; }
+  .flex-grid .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.2); }
   .flex-grid .news-item {
     width: 240px;
     margin-right: 25px;
@@ -760,6 +795,14 @@ nav li.has-children > a:before {
       .timeline-flex .timeline-item-container .timeline-item .timeline-item-year {
         font-weight: 400; }
 
+#map {
+  display: block;
+  max-width: 100%;
+  height: 380px;
+  background-image: url("../../images/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
 ol.event-list-three-columns {
   margin: 0;
   padding: 0;
@@ -780,6 +823,12 @@ ol.event-list-three-columns {
   ol.event-list-three-columns .event-list-item {
     display: inline-block;
     width: 100%; }
+    ol.event-list-three-columns .event-list-item h5 {
+      margin-top: 15px;
+      margin-bottom: 5px; }
+    ol.event-list-three-columns .event-list-item p {
+      margin-top: 0;
+      line-height: 20px; }
 
 img.pub-logo {
   display: inline;
