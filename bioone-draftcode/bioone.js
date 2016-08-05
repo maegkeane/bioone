@@ -30,8 +30,8 @@ $(document).ready(function() {
    		}
    	});
 
-   	$('body').on('click', '.close, .overlay', function() {
-   		var $listItem = $(this).closest('.bio-list-item');
+   	$('body').on('click', '.close, .overlay', function() { 
+   		var $listItem = $(this).closest('.bio-list-item'); 
    		$listItem.find('.bio-list-item_modal').removeClass('visible');
    		$listItem.find('.overlay').remove(); 
    	});

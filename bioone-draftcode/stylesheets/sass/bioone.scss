@@ -226,7 +226,7 @@ hr {
     border-radius: none;  
 }
 
-.purple {
+.indigo {
     color: $color-accent;
     font-weight: 600; 
 }
@@ -349,7 +349,7 @@ hr {
     }
 }
 
-//NAVIGATION
+//HEADER
 
 .page-header {
     width: 100%;
@@ -486,7 +486,7 @@ hr {
     }
 }
 
-
+// N A V I G A T I O N
 // navigation for mobile state
 nav {
     .handle span {
@@ -785,30 +785,9 @@ nav li.has-children {
     }
 }
 
-//CONTENT 
-//mailchimp form 
-#mc_embed_signup {
-    input {
-        margin-top: 10px; 
-        padding: 10px 20px;
-        border: 1px solid $color-accent; 
-        font-family: $font-sans; 
-        font-size: 14px; 
-        border-radius: 3px; 
+// C O N T E N T 
 
-        &:focus {
-            outline: 0;
-            outline-offset: 0; 
-        }
-    }
-
-    .btn-main {
-        display: inline; 
-        font-size: 12px; 
-    }
-}
-
-//flex
+//FLEXBOX
 .flex-container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -914,10 +893,11 @@ nav li.has-children {
             margin: 20px 0 0 0; 
             padding: 0;
             max-width: 100%;
-            //text-align: center; 
+            
         } 
     }
 
+//for "our story" layout
     aside.left {
         display: inline-block; 
         min-width: 200px;
@@ -988,6 +968,7 @@ nav li.has-children {
     }
 }
 
+// grid (bios, news, etc.)
 .flex-grid {
   display: flex; 
   flex-wrap: wrap;
@@ -1094,6 +1075,7 @@ nav li.has-children {
     }
 }
 
+//homepage flexbox
 .homepage-flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1208,7 +1190,6 @@ nav li.has-children {
 }
 
 //events
-
 #map {
     display: block; 
     max-width: 100%;
@@ -1251,6 +1232,28 @@ ol.event-list-three-columns {
             margin-top: 0; 
             line-height: 20px; 
         } 
+    }
+}
+
+//mailchimp form 
+#mc_embed_signup {
+    input {
+        margin-top: 10px; 
+        padding: 10px 20px;
+        border: 1px solid $color-accent; 
+        font-family: $font-sans; 
+        font-size: 14px; 
+        border-radius: 3px; 
+
+        &:focus {
+            outline: 0;
+            outline-offset: 0; 
+        }
+    }
+
+    .btn-main {
+        display: inline; 
+        font-size: 12px; 
     }
 }
 
