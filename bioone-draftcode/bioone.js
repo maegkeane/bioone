@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 	$('.handle').click(function() {  
 		toggleNav();
+    $('body').toggleClass('stop-scrolling');
   });
 
 //charter button 
