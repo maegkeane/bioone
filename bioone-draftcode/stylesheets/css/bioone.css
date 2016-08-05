@@ -676,12 +676,15 @@ nav li.has-children > a:before {
     .flex-grid .bio-list-item .bio-list-item_modal {
       display: none;
       padding: 40px;
-      position: absolute;
-      left: 20%;
-      right: 20%;
+      position: fixed;
+      top: 40px;
+      right: 15%;
+      left: 15%;
+      bottom: 40px;
       z-index: 1000;
       background: white;
-      border: 2px solid #6E9934; }
+      border: 2px solid #6E9934;
+      overflow-y: scroll; }
       .flex-grid .bio-list-item .bio-list-item_modal.visible {
         display: block; }
         .flex-grid .bio-list-item .bio-list-item_modal.visible h2 {

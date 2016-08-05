@@ -1,5 +1,5 @@
 //  TO DO
-//  javascript for disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
+//  disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 //  modal window needs to be positioned in the window properly
 //  one-column flexbox for the "story" page — not responsive really
 //  mailchimp form — not sure if it will work and can't seem to format it the way I'd like
@@ -1020,12 +1020,15 @@ nav li.has-children {
         .bio-list-item_modal {
             display: none; 
             padding: 40px; 
-            position: absolute; 
-            left: 20%; 
-            right: 20%; 
+            position: fixed;
+            top: 40px;
+            right: 15%; 
+            left: 15%; 
+            bottom: 40px; 
             z-index: 1000;
             background: white; 
             border: 2px solid $color-brand;
+            overflow-y: scroll; 
 
             &.visible {
                 display: block; 
