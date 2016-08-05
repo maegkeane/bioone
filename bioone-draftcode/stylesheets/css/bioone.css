@@ -678,13 +678,21 @@ nav li.has-children > a:before {
       padding: 40px;
       position: fixed;
       top: 40px;
-      right: 15%;
-      left: 15%;
+      right: 25%;
+      left: 25%;
       bottom: 40px;
       z-index: 1000;
       background: white;
       border: 2px solid #6E9934;
       overflow-y: scroll; }
+      @media only screen and (max-width: 870px) {
+        .flex-grid .bio-list-item .bio-list-item_modal {
+          right: 15%;
+          left: 15%; } }
+      @media only screen and (max-width: 670px) {
+        .flex-grid .bio-list-item .bio-list-item_modal {
+          right: 5%;
+          left: 5%; } }
       .flex-grid .bio-list-item .bio-list-item_modal.visible {
         display: block; }
         .flex-grid .bio-list-item .bio-list-item_modal.visible h2 {

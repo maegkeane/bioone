@@ -1,6 +1,5 @@
 //  TO DO
 //  disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
-//  modal window needs to be positioned in the window properly
 //  one-column flexbox for the "story" page — not responsive really
 //  mailchimp form — not sure if it will work and can't seem to format it the way I'd like
 
@@ -1022,13 +1021,23 @@ nav li.has-children {
             padding: 40px; 
             position: fixed;
             top: 40px;
-            right: 15%; 
-            left: 15%; 
+            right: 25%; 
+            left: 25%; 
             bottom: 40px; 
             z-index: 1000;
             background: white; 
             border: 2px solid $color-brand;
             overflow-y: scroll; 
+
+            @include media-query(max, medium) {
+                right: 15%; 
+                left: 15%;             
+            }
+
+            @include media-query(max, small) {
+                right: 5%; 
+                left: 5%;             
+            }
 
             &.visible {
                 display: block; 
