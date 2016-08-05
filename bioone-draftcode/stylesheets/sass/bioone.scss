@@ -1,5 +1,4 @@
 //  TO DO
-//  disabling content scrolling while the nav has a scroll in mobile (see Ian's email)
 //  one-column flexbox for the "story" page — not responsive really
 //  mailchimp form — not sure if it will work and can't seem to format it the way I'd like
 
@@ -59,7 +58,15 @@ $break-huge: 1280px;
   }
 }
 
+
 //mixin for flexbox goes here
+@mixin flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+} 
 
 // VARIABLES
 $color-main: #000000; //black
@@ -789,11 +796,8 @@ nav li.has-children {
 
 //FLEXBOX
 .flex-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
+    @include flexbox(); 
+
     padding-right: 5px;
     order: 1; 
 
@@ -815,7 +819,7 @@ nav li.has-children {
     }
 
     .flex-nested-row {
-        display: flex; 
+        @include flexbox(); 
         justify-content: space-between;
 
         @include media-query(max, small) {
@@ -942,7 +946,7 @@ nav li.has-children {
     }
 
     .flex-aside-text-container {
-        display: flex;
+        @include flexbox(); 
         flex-direction: column; 
 
         h2.flex-aside-text-container-today {
@@ -953,8 +957,9 @@ nav li.has-children {
 
 //one column flexbox
 #story-founder-logos {
+    @include flexbox(); 
+    
     margin: 0;
-    display: flex;
     align-items: center; 
     padding-bottom: 30px;  
 
@@ -970,15 +975,17 @@ nav li.has-children {
 
 // grid (bios, news, etc.)
 .flex-grid {
-  display: flex; 
-  flex-wrap: wrap;
-  margin-bottom: 20px; 
+   @include flexbox(); 
+    flex-wrap: wrap;
+
+    margin-bottom: 20px; 
 
     .bio-list-item {
-        display: flex; 
+       @include flexbox(); 
+        flex-direction: column; 
+
         margin-right: 40px;
         margin-bottom: 20px;  
-        flex-direction: column; 
 
         .bio-list-item_image {
             width: 150px; 
@@ -1082,11 +1089,7 @@ nav li.has-children {
 
 //homepage flexbox
 .homepage-flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
+    @include flexbox(); 
     -ms-flex-pack: distribute;
     -webkit-justify-content: "space-between";
     -moz-justify-content: "space-between"; 
@@ -1147,11 +1150,16 @@ nav li.has-children {
 }
 
 .timeline-flex {
-  display: flex;
-  height: 2220px; 
-  justify-content: center;
-  margin-bottom: 100px;  
+    @include flexbox(); 
+    
+    height: 2220px; 
+    justify-content: center;
+    margin-bottom: 100px;  
   
+    @include media-query(max, small) {
+        justify-content: flex-start;
+    }
+
     .timeline-rule {
         margin-top: 20px; 
         height: 100%; 
@@ -1160,7 +1168,7 @@ nav li.has-children {
     }
 
     .timeline-item-container {
-        display: flex; 
+        @include flexbox(); 
         flex-direction: column; 
   
         .timeline-item { 
@@ -1196,10 +1204,8 @@ nav li.has-children {
 
 //events
 #map {
-    display: block; 
-    max-width: 100%;
-    height: 380px; 
-    background-image: url("../../images/map.jpg");
+    max-width: 300px; 
+    background-image: url("../../images/map.png");
     background-repeat: no-repeat;
     background-position: center;   
 }
@@ -1297,11 +1303,7 @@ footer {
     }
 
     .page-footer_content {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
+       @include flexbox(); 
         -ms-flex-pack: distribute;
         -webkit-justify-content: "space-around";
         -moz-justify-content: "space-around"; 
