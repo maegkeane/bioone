@@ -602,7 +602,7 @@ nav {
         }
 
         &.open ul {
-            right: calc(265px + 80px - 2px);
+            right: calc(250px + 80px - 3px);
         }
     }
 
@@ -1074,6 +1074,11 @@ nav li.has-children {
         } 
     }
 }
+
+   .stop-scrolling {
+        height: 100%; 
+        overflow: hidden; 
+   }
 
 //homepage flexbox
 .homepage-flex {

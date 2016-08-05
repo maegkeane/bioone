@@ -377,7 +377,7 @@ nav .handle span {
       overflow-y: scroll;
       max-height: 90vh; }
     nav.open ul {
-      right: calc(265px + 80px - 2px); } }
+      right: calc(250px + 80px - 3px); } }
 nav ul {
   position: relative;
   float: right;
@@ -716,6 +716,10 @@ nav li.has-children > a:before {
     @media only screen and (max-width: 870px) {
       .flex-grid .news-item {
         width: 50%; } }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden; }
 
 .homepage-flex {
   display: -webkit-box;
