@@ -807,8 +807,8 @@ nav li.has-children {
     
     //2-column flexbox
     .flex-1stcol {
-        margin-right: 30px;  
-        max-width: 60%; 
+        margin-right: 20px;  
+        max-width: 55%; 
 
         @include media-query(max, small) {
             flex-direction: column;
@@ -853,9 +853,9 @@ nav li.has-children {
             max-width: 100%; 
             padding: 0;
             margin-bottom: 30px; 
-            -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); 
-            -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); 
-            box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); 
+            -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); 
+            -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); 
+            box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); 
         
             @include media-query(max, small) {
                 max-width: 90%; 
@@ -1074,7 +1074,16 @@ nav li.has-children {
         width: 240px;
         margin-right: 25px;
         font-size: 13px;  
-        line-height: 16px;  
+        line-height: 22px;
+
+            ul.dashed > li {
+                text-indent: -7px;
+            }
+            
+            ul.dashed > li:before {
+                content: "-  ";
+                text-indent: -7px;
+            }  
 
         @include media-query(max, medium) {
             width: 50%;

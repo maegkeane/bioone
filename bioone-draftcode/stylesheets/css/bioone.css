@@ -522,8 +522,8 @@ nav li.has-children > a:before {
     .flex-container {
       flex-direction: column; } }
   .flex-container .flex-1stcol {
-    margin-right: 30px;
-    max-width: 60%; }
+    margin-right: 20px;
+    max-width: 55%; }
     @media only screen and (max-width: 670px) {
       .flex-container .flex-1stcol {
         flex-direction: column;
@@ -561,9 +561,9 @@ nav li.has-children > a:before {
       max-width: 100%;
       padding: 0;
       margin-bottom: 30px;
-      -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
-      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); }
+      -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); }
       @media only screen and (max-width: 670px) {
         .flex-container .flex-2ndcol_no-border img.screenshot {
           max-width: 90%; } }
@@ -732,7 +732,12 @@ nav li.has-children > a:before {
     width: 240px;
     margin-right: 25px;
     font-size: 13px;
-    line-height: 16px; }
+    line-height: 22px; }
+    .flex-grid .news-item ul.dashed > li {
+      text-indent: -7px; }
+    .flex-grid .news-item ul.dashed > li:before {
+      content: "-  ";
+      text-indent: -7px; }
     @media only screen and (max-width: 870px) {
       .flex-grid .news-item {
         width: 50%; } }
