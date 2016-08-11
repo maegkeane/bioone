@@ -377,7 +377,7 @@ nav .handle span {
       overflow-y: scroll;
       max-height: 90vh; }
     nav.open ul {
-      right: calc(250px + 80px - 3px); } }
+      right: calc(265px + 80px - 2px); } }
 nav ul {
   position: relative;
   float: right;
@@ -488,14 +488,16 @@ nav li.has-children > a:before {
   @media only screen and (max-width: 740px) {
     nav li.has-children > a:before {
       display: none; } }
+nav li.has-children > a:after {
+  content: "\25bc";
+  display: inline;
+  position: relative;
+  margin-left: 5px;
+  top: -2px;
+  font-size: 80%; }
 @media only screen and (max-width: 740px) {
-  nav li.has-children > a:after {
-    content: "\25bc";
-    display: inline;
-    position: relative;
-    margin-left: 5px;
-    top: -2px;
-    font-size: 80%; } }
+  nav li.has-children > a:hover {
+    color: #6E9934; } }
 
 #nav-align-left {
   left: -40%;

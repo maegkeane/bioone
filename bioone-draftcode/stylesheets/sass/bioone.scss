@@ -607,7 +607,7 @@ nav {
         }
 
         &.open ul {
-            right: calc(250px + 80px - 3px);
+            right: calc(265px + 80px - 2px);
         }
     }
 
@@ -761,7 +761,7 @@ nav li.has-children {
             display: none;
         } 
     }
-    @include media-query(max, small) {
+
         > a:after {
             content: "\25bc";
             display: inline; 
@@ -770,6 +770,11 @@ nav li.has-children {
             top: -2px; 
             font-size: 80%;
         }
+    
+    @include media-query(max, small) {
+        > a:hover {
+            color: $color-brand;                
+        }    
     }
 }
 
