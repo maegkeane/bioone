@@ -111,7 +111,7 @@ article {
         size: 14px;
     }
     @include media-query(max,medium) {
-        margin: 0 40px; 
+        margin: 0 20px; 
     }
 }
 
@@ -141,7 +141,7 @@ h1 {
     font: {
         family: $font-sans;
         size: 28px;
-        weight: 100;
+        weight: 300;
     }
     color: $color-brand;
 }
@@ -359,12 +359,12 @@ hr {
 .page-header {
     width: 100%;
     height: 90px; 
-    padding: 25px 25px 0 50px;
+    padding: 25px 0 0 50px;
     margin: 0;
     position: relative;
     font: {
         family: $font-sans;
-        size: 11px;
+        size: 12px;
         weight: 500; 
     }
     letter-spacing: 1.5px;
@@ -373,7 +373,7 @@ hr {
     background-image: url("../../images/headerbg.png");
 
     @include media-query(max, medium) {
-        font-size: 10px;
+        font-size: 11px;
         padding: 25px 0 0 25px; 
     }
     
@@ -382,7 +382,7 @@ hr {
         height: 75px; 
         border-bottom: $color-brand solid 2px;
         padding: 25px 75px 0 25px; 
-        font-size: 10px; 
+        font-size: 12px; 
     }
     
     img {
@@ -640,7 +640,7 @@ nav {
             }
             
             @include media-query(max, medium) { 
-                padding-left: 15px; 
+                padding-left: 20px; 
                 padding-right: 0; 
             } 
         
@@ -703,13 +703,13 @@ nav > ul > li:last-of-type li:last-of-type a {
 
 nav .children {
     display: none; 
-    width: 230px; 
+    width: 215px; 
     padding: 0; 
     left: 27%; 
 
     @include media-query(max, medium) { 
         left: 16%; 
-        width: 190px;
+        width: 208px;
     }
 
     @include media-query(max, small) { 
@@ -723,7 +723,7 @@ nav .children {
 
         a {
             display: block; 
-            padding: 10px 20px; 
+            padding: 10px 13px; 
             color: $color-light;
             font-weight: 600; 
             border-bottom: 2px solid lighten($color-light, 30%);  
@@ -733,7 +733,7 @@ nav .children {
             }
 
             @include media-query(max, medium) {
-                padding: 10px 15px 10px 15px; 
+                padding: 10px 15px; 
             }
 
             @include media-query(max, small) {
@@ -757,11 +757,13 @@ nav li.has-children {
         margin-right: 5px;
         top: -2px; 
         font-size: 80%;
+        
         @include media-query(max, small) {
             display: none;
         } 
     }
 
+    @include media-query(max, small) {
         > a:after {
             content: "\25bc";
             display: inline; 
@@ -770,6 +772,7 @@ nav li.has-children {
             top: -2px; 
             font-size: 80%;
         }
+    }
     
     @include media-query(max, small) {
         > a:hover {
@@ -982,6 +985,10 @@ nav li.has-children {
     flex-wrap: wrap;
 
     margin-bottom: 20px; 
+
+    a {
+        cursor: pointer; 
+    }
 
     .bio-list-item {
        @include flexbox(); 
