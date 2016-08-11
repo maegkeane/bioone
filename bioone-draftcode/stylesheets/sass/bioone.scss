@@ -703,7 +703,7 @@ nav > ul > li:last-of-type li:last-of-type a {
 
 nav .children {
     display: none; 
-    width: 221px; 
+    width: 230px; 
     padding: 0; 
     left: 27%; 
 
@@ -1159,7 +1159,7 @@ nav li.has-children {
 .timeline-flex {
     @include flexbox(); 
     
-    height: 2220px; 
+    height: 2300px; 
     justify-content: center;
     margin-bottom: 100px;  
   

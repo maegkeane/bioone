@@ -445,7 +445,7 @@ nav > ul > li:last-of-type li:last-of-type a {
 
 nav .children {
   display: none;
-  width: 221px;
+  width: 230px;
   padding: 0;
   left: 27%; }
   @media only screen and (max-width: 900px) {
@@ -800,7 +800,7 @@ nav li.has-children > a:before {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 2220px;
+  height: 2300px;
   justify-content: center;
   margin-bottom: 100px; }
   @media only screen and (max-width: 740px) {
