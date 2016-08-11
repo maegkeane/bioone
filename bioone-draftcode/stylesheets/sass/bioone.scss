@@ -3,8 +3,8 @@
 //  mailchimp form — not sure if it will work and can't seem to format it the way I'd like
 
 // BREAKPOINTS
-$break-small: 670px;
-$break-medium: 870px;
+$break-small: 740px;
+$break-medium: 900px;
 $break-large: 1024px;
 $break-huge: 1280px;
 
@@ -191,7 +191,7 @@ h4 {
 h5 {
     margin: 0; 
     font: {
-        size: 12px; 
+        size: 14px; 
         weight: 600; 
         family: $font-sans; 
     }
@@ -412,7 +412,7 @@ hr {
     height: 400px;
     font: {
         family: $font-sans;
-        size: 11px;
+        size: 12px;
         weight: 500; 
     }
     letter-spacing: 1.5px;
@@ -426,7 +426,7 @@ hr {
     border-bottom: 15px solid $color-brand; 
 
     @include media-query(max, medium) {
-        font-size: 10px;
+        font-size: 12px;
         padding: 25px 0 0 25px; 
     }
     
@@ -435,7 +435,7 @@ hr {
         height: 75px; 
         border-bottom: $color-brand solid 2px;
         padding: 25px 75px 0 25px; 
-        font-size: 10px; 
+        font-size: 12px; 
     }
     
     img {
@@ -1297,7 +1297,7 @@ footer {
     }
     font: {
         family: $font-serif;
-        size: 12px;
+        size: 14px;
     } 
    
 
