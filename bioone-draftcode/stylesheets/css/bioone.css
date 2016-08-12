@@ -21,11 +21,11 @@ aside {
   margin: 1rem 0px; }
 
 article {
-  max-width: 800px;
+  max-width: 900px;
   margin-left: 100px;
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px; }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 740px) {
     article {
       margin: 0 20px; } }
 
@@ -521,9 +521,13 @@ nav li.has-children > a:before {
   display: flex;
   padding-right: 5px;
   order: 1; }
+  .flex-container h3 {
+    margin-top: 0; }
   @media only screen and (max-width: 740px) {
     .flex-container {
-      flex-direction: column; } }
+      flex-direction: column; }
+      .flex-container h3 {
+        margin: 1rem 0; } }
   .flex-container .flex-1stcol {
     margin-right: 20px;
     max-width: 55%; }
@@ -769,35 +773,78 @@ nav li.has-children > a:before {
   @media only screen and (max-width: 740px) {
     .homepage-flex {
       flex-direction: column; } }
-  .homepage-flex .homepage-flex-icon img {
-    max-width: 80px;
-    margin-right: 20px;
-    margin-top: 20px; }
+
+.homepage-flex-icon img {
+  max-width: 80px;
+  margin-right: 20px;
+  margin-top: 20px; }
+  @media only screen and (max-width: 900px) {
+    .homepage-flex-icon img {
+      max-width: 70px; } }
+  @media only screen and (max-width: 740px) {
+    .homepage-flex-icon img {
+      max-width: 90px; } }
+
+.homepage-flex-content {
+  max-width: 40%;
+  margin-right: 20px; }
+  .homepage-flex-content h3 {
+    margin-bottom: 5px; }
+  @media only screen and (max-width: 900px) {
+    .homepage-flex-content {
+      font-size: 13px; }
+      .homepage-flex-content ol {
+        margin-bottom: 20px; }
+      .homepage-flex-content h3 {
+        font-size: 14px;
+        margin-bottom: 5px; } }
+  @media only screen and (max-width: 740px) {
+    .homepage-flex-content {
+      max-width: 100%;
+      font-size: 14px; }
+      .homepage-flex-content h3 {
+        font-size: 16px; } }
+
+.homepage-flex-calendar-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: "space-between";
+  -moz-justify-content: "space-between";
+  justify-content: "space-between";
+  -webkit-box-align: "baseline";
+  -ms-flex-align: "baseline";
+  -webkit-align-items: "baseline";
+  -moz-align-items: "baseline";
+  align-items: "baseline";
+  flex-direction: column; }
+
+.homepage-flex-calendar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .homepage-flex-calendar h3 {
+    margin: 0; }
+  .homepage-flex-calendar .flex-item {
+    margin-right: 70px; }
     @media only screen and (max-width: 900px) {
-      .homepage-flex .homepage-flex-icon img {
-        max-width: 70px; } }
-    @media only screen and (max-width: 740px) {
-      .homepage-flex .homepage-flex-icon img {
-        max-width: 90px; } }
-  .homepage-flex .homepage-flex-content {
-    max-width: 40%;
-    margin-right: 20px; }
-    .homepage-flex .homepage-flex-content h3 {
-      margin-bottom: 5px; }
-    @media only screen and (max-width: 900px) {
-      .homepage-flex .homepage-flex-content {
-        font-size: 13px; }
-        .homepage-flex .homepage-flex-content ol {
-          margin-bottom: 20px; }
-        .homepage-flex .homepage-flex-content h3 {
-          font-size: 14px;
-          margin-bottom: 5px; } }
-    @media only screen and (max-width: 740px) {
-      .homepage-flex .homepage-flex-content {
-        max-width: 100%;
-        font-size: 16px; }
-        .homepage-flex .homepage-flex-content h3 {
-          font-size: 16px; } }
+      .homepage-flex-calendar .flex-item {
+        margin-right: 50px; } }
+  @media only screen and (max-width: 740px) {
+    .homepage-flex-calendar {
+      flex-direction: column; }
+      .homepage-flex-calendar ol {
+        margin-top: 0; }
+      .homepage-flex-calendar h3 {
+        margin-top: 1rem; } }
+
+.no-bottom-margin {
+  margin-bottom: 0; }
 
 .timeline-flex {
   display: -webkit-box;
@@ -875,17 +922,34 @@ ol.event-list-three-columns {
 
 #mc_embed_signup input {
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: 1px solid #3B4991;
-  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: gray;
+  font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px;
   border-radius: 3px; }
   #mc_embed_signup input:focus {
     outline: 0;
     outline-offset: 0; }
+#mc_embed_signup .sign-up-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: baseline; }
+  #mc_embed_signup .sign-up-list .sign-up-col1 {
+    width: 15%; }
+  #mc_embed_signup .sign-up-list .sign-up-col2 {
+    width: 40%; }
 #mc_embed_signup .btn-main {
   display: inline;
-  font-size: 12px; }
+  color: #FFFFFF;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin-top: 0;
+  margin-right: 0;
+  padding: 14px 20px; }
 
 img.pub-logo {
   display: inline;
