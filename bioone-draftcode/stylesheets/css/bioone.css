@@ -524,8 +524,6 @@ nav li.has-children > a:before {
   display: flex;
   padding-right: 5px;
   order: 1; }
-  .flex-container h3 {
-    margin-top: 0; }
   @media only screen and (max-width: 740px) {
     .flex-container {
       flex-direction: column; }
@@ -628,7 +626,8 @@ nav li.has-children > a:before {
   flex-wrap: wrap;
   margin-bottom: 20px; }
   .flex-grid a {
-    cursor: pointer; }
+    cursor: pointer;
+    padding-right: 20px; }
   .flex-grid .bio-list-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -638,12 +637,14 @@ nav li.has-children > a:before {
     flex-direction: column;
     margin-right: 40px;
     margin-bottom: 20px; }
+    .flex-grid .bio-list-item._short-bio-container {
+      padding-right: 20px; }
     .flex-grid .bio-list-item .bio-list-item_image {
       width: 150px;
       height: 150px;
       margin-top: 20px; }
     .flex-grid .bio-list-item p.bio-list-item_info {
-      width: 150px;
+      width: 170px;
       margin-top: 10px;
       font-size: 14px;
       line-height: 20px; }

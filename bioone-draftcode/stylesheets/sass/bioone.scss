@@ -811,10 +811,6 @@ nav li.has-children {
 	padding-right: 5px;
 	order: 1; 
 
-	h3 {
-		margin-top: 0; 
-	}
-
 	@include media-query(max, small) {
 		flex-direction: column; 
 
@@ -946,15 +942,20 @@ nav li.has-children {
 	margin-bottom: 20px; 
 
 	a {
-		cursor: pointer; 
+		cursor: pointer;
+		padding-right: 20px;  
 	}
 
 	.bio-list-item {
-	   @include flexbox(); 
+	  @include flexbox(); 
 		flex-direction: column; 
 
 		margin-right: 40px;
 		margin-bottom: 20px;  
+
+		&._short-bio-container {
+			padding-right: 20px; 
+		}
 
 		.bio-list-item_image {
 			width: 150px; 
@@ -963,7 +964,7 @@ nav li.has-children {
 		}
 
 		p.bio-list-item_info {
-			width: 150px; 
+			width: 170px;  
 			margin-top: 10px;
 			font-size: 14px; 
 			line-height: 20px;
