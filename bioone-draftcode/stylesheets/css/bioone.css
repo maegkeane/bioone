@@ -22,12 +22,13 @@ aside {
 
 article {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 700px;
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 16px; }
   @media only screen and (max-width: 740px) {
     article {
-      margin: 0 20px; } }
+      margin: 0 auto;
+      padding: 0 30px; } }
 
 section {
   margin-bottom: 35px; }
