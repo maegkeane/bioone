@@ -21,10 +21,10 @@ aside {
   margin: 1rem 0px; }
 
 article {
-  max-width: 900px;
-  margin-left: 100px;
+  margin: 0 auto;
+  max-width: 800px;
   font-family: "Tisa Pro", Georgia, serif;
-  font-size: 14px; }
+  font-size: 16px; }
   @media only screen and (max-width: 740px) {
     article {
       margin: 0 20px; } }
@@ -34,8 +34,8 @@ section {
 
 p {
   font-family: "Tisa Pro", Georgia, serif;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 24px;
   margin-top: 0;
   margin-bottom: 10px; }
 
@@ -684,8 +684,8 @@ nav li.has-children > a:before {
     .flex-grid .bio-list-item p.bio-list-item_info {
       width: 150px;
       margin-top: 10px;
-      font-size: 12px;
-      line-height: 18px; }
+      font-size: 14px;
+      line-height: 20px; }
       .flex-grid .bio-list-item p.bio-list-item_info span.bio-list-item_name {
         font-weight: 600; }
     .flex-grid .bio-list-item .bio-list-item_modal {
@@ -852,7 +852,7 @@ nav li.has-children > a:before {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 2300px;
+  height: 2550px;
   justify-content: center;
   margin-bottom: 100px; }
   @media only screen and (max-width: 740px) {
@@ -885,8 +885,8 @@ nav li.has-children > a:before {
         border-top: 3px solid #3B4991; }
       .timeline-flex .timeline-item-container .timeline-item p {
         padding: 13px 20px 60px 20px;
-        font-size: 14px;
-        line-height: 22px; }
+        font-size: 16px;
+        line-height: 24px; }
       .timeline-flex .timeline-item-container .timeline-item .timeline-item-year {
         font-weight: 400; }
 

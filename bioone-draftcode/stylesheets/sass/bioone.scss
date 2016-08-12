@@ -104,11 +104,11 @@ aside,
 }
 
 article {
-	max-width: 900px;
-	margin-left: 100px;
+	margin: 0 auto; 
+	max-width: 800px; 
 	font: {
 		family: $font-serif;
-		size: 14px;
+		size: 16px;
 	}
 
 	@include media-query(max, small) {
@@ -123,9 +123,9 @@ section {
 p {
 	font: {
 		family: $font-serif; 
-		size: 14px;
+		size: 16px;
 	}
-	line-height: 22px;
+	line-height: 24px;
 	margin-top: 0; 
 	margin-bottom: 10px; 
 }
@@ -1015,8 +1015,8 @@ nav li.has-children {
 		p.bio-list-item_info {
 			width: 150px; 
 			margin-top: 10px;
-			font-size: 12px; 
-			line-height: 18px;
+			font-size: 14px; 
+			line-height: 20px;
 		  
 			span.bio-list-item_name {
 				font-weight: 600; 
@@ -1226,7 +1226,7 @@ nav li.has-children {
 .timeline-flex {
 	@include flexbox(); 
 	
-	height: 2300px; 
+	height: 2550px; 
 	justify-content: center;
 	margin-bottom: 100px;  
   
@@ -1265,8 +1265,8 @@ nav li.has-children {
 		
 			p {
 			  padding: 13px 20px 60px 20px; 
-			  font-size: 14px;
-			  line-height: 22px;
+			  font-size: 16px;
+			  line-height: 24px;
 			}
 
 			.timeline-item-year {
