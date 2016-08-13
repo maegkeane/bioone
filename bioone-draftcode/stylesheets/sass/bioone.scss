@@ -80,6 +80,12 @@ $font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	-webkit-font-smoothing:antialiased; 
+	-moz-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale; 
+	-o-font-smoothing:antialiased; 
+	font-smoothing: antialiased; 
+	text-rednering:optimizeLegibility; 
 } 
 
 //base styles
