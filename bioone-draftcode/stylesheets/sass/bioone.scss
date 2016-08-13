@@ -1128,52 +1128,6 @@ nav li.has-children {
 	}  
 }
 
-.homepage-flex-calendar-container {
-	@include flexbox(); 
-	-ms-flex-pack: distribute;
-	-webkit-justify-content: "space-between";
-	-moz-justify-content: "space-between"; 
-	justify-content: "space-between";
-	-webkit-box-align: "baseline";
-	-ms-flex-align: "baseline";
-	-webkit-align-items: "baseline";
-	-moz-align-items: "baseline";
-	align-items: "baseline";
-	flex-direction: column; 
-}
-
-.homepage-flex-calendar {
-	@include flexbox(); 
-
-	h3 {
-		margin: 0; 
-	}
-
-	.flex-item {
-		margin-right: 70px; 
-
-		@include media-query(max, medium) {
-			margin-right: 50px;         
-		}
-	}
-
-	@include media-query(max, small) {
-		flex-direction: column; 
-
-		ol {
-			margin-top: 0; 
-		}
-		
-		h3 {
-			margin-top: 1rem; 
-		}     
-	}
-} 
-
-.no-bottom-margin {
-	margin-bottom: 0; 
-}
-
 .timeline-flex {
 	@include flexbox(); 
 	
