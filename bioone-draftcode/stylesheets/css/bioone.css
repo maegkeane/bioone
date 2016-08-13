@@ -412,7 +412,8 @@ nav ul {
         padding: 0; } }
     nav ul li a {
       color: #FFFFFF;
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 20px 0; }
       nav ul li a:hover {
         color: #FFFFFF; }
       @media only screen and (max-width: 740px) {
@@ -425,7 +426,8 @@ nav ul {
           nav ul li a:hover {
             color: #537327; } }
     nav ul li:hover ul {
-      display: block; }
+      display: block;
+      top: 25px; }
     nav ul li ul {
       margin: 0;
       padding: 10px;
@@ -450,7 +452,8 @@ nav .children {
   display: none;
   width: 215px;
   padding: 0;
-  left: 27%; }
+  left: 27%;
+  z-index: 2; }
   @media only screen and (max-width: 900px) {
     nav .children {
       left: 16%;
