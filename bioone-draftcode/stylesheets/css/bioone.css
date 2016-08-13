@@ -7,7 +7,7 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  text-rednering: optimizeLegibility; }
+  text-rendering: optimizeLegibility; }
 
 body {
   margin: 0;
@@ -68,7 +68,7 @@ h2 {
 h3 {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   color: #6E9934; }
   h3 a {
     color: #3B4991; }
@@ -78,13 +78,13 @@ h3 {
 h4 {
   margin-top: 15px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
   color: #000000; }
 
 h5 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6E9934;
@@ -133,6 +133,7 @@ hr {
   border-radius: 3px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
@@ -140,7 +141,8 @@ hr {
   color: #FFFFFF; }
   .btn-main:hover {
     background: #4252a3;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    cursor: pointer; }
 
 .btn-secondary {
   display: inline-block;
@@ -151,6 +153,7 @@ hr {
   border-radius: 3px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
@@ -158,7 +161,8 @@ hr {
   color: #3B4991; }
   .btn-secondary:hover {
     border: 2px solid #6e7cc4;
-    color: #6e7cc4; }
+    color: #6e7cc4;
+    cursor: pointer; }
 
 .btn-secondary-charter {
   display: inline-block;
@@ -169,6 +173,7 @@ hr {
   border-radius: 3px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
@@ -176,7 +181,8 @@ hr {
   color: #3B4991; }
   .btn-secondary-charter:hover {
     border: 2px solid #6e7cc4;
-    color: #6e7cc4; }
+    color: #6e7cc4;
+    cursor: pointer; }
 
 #charter-supporters-container {
   display: none; }
@@ -212,7 +218,7 @@ hr {
   position: relative;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   background-image: url("../../images/headerbg.png"); }
@@ -247,7 +253,7 @@ hr {
   height: 400px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   background-image: url("../../images/headerbg_homepage.jpg");
@@ -539,8 +545,8 @@ nav li.has-children > a:before {
       .flex-container h3 {
         margin: 1rem 0; } }
   .flex-container .flex-1stcol {
-    margin-right: 20px;
-    max-width: 55%; }
+    margin-right: 30px;
+    max-width: 80%; }
     @media only screen and (max-width: 740px) {
       .flex-container .flex-1stcol {
         flex-direction: column;
@@ -583,7 +589,7 @@ nav li.has-children > a:before {
       box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); }
       @media only screen and (max-width: 740px) {
         .flex-container .flex-2ndcol_no-border img.screenshot {
-          max-width: 90%; } }
+          max-width: 100%; } }
     .flex-container .flex-2ndcol_no-border li {
       padding-bottom: 5px; }
       .flex-container .flex-2ndcol_no-border li img {
@@ -597,7 +603,7 @@ nav li.has-children > a:before {
   .flex-container .flex-2ndcol_leftborder {
     border-left: 2px solid #6E9934;
     padding-left: 30px;
-    max-width: 40%; }
+    max-width: 100%; }
     .flex-container .flex-2ndcol_leftborder li {
       padding-bottom: 5px; }
       .flex-container .flex-2ndcol_leftborder li img {
@@ -711,7 +717,7 @@ nav li.has-children > a:before {
   .flex-grid .news-item {
     width: 240px;
     margin-right: 25px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 22px; }
     .flex-grid .news-item ul.dashed > li {
       text-indent: -7px; }
@@ -845,7 +851,8 @@ ol.event-list-three-columns {
     width: 100%; }
     ol.event-list-three-columns .event-list-item h5 {
       margin-top: 15px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      font-size: 14px; }
     ol.event-list-three-columns .event-list-item p {
       margin-top: 0;
       line-height: 20px; }
@@ -877,6 +884,7 @@ ol.event-list-three-columns {
   color: #FFFFFF;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 400;
   margin-top: 0;
   margin-right: 0;
   padding: 14px 20px; }

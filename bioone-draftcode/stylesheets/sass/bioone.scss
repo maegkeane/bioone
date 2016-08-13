@@ -76,6 +76,7 @@ $white: #FFFFFF; //white
 $font-serif: "Tisa Pro", Georgia, serif;
 $font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 
+
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -85,7 +86,7 @@ $font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-moz-osx-font-smoothing: grayscale; 
 	-o-font-smoothing:antialiased; 
 	font-smoothing: antialiased; 
-	text-rednering:optimizeLegibility; 
+	text-rendering:optimizeLegibility; 
 } 
 
 //base styles
@@ -171,7 +172,7 @@ h3 {
 	font: {
 		family: $font-sans;
 		size: 18px;
-		weight: 400; 
+		weight: 600; 
 	}
 	color: $color-brand;
 
@@ -188,8 +189,8 @@ h4 {
 	margin-top: 15px; 
 	font: {
 		family: $font-sans; 
-		size: 16px;
-		weight: 400; 
+		size: 14px;
+		weight: 600; 
 	}
 	color: $color-main; 
 }
@@ -197,7 +198,7 @@ h4 {
 h5 {
 	margin: 0; 
 	font: {
-		size: 16px; 
+		size: 14px; 
 		weight: 600; 
 		family: $font-sans; 
 	}
@@ -260,6 +261,7 @@ hr {
 	font: {
 		family: $font-sans; 
 		size: 12px; 
+		weight: 600; 
 	}
 	text: {
 		transform: uppercase;
@@ -271,7 +273,8 @@ hr {
   
 	&:hover {
 		background: lighten($color-accent, 5%);
-		color: $white; 
+		color: $white;
+		cursor: pointer;  
 	}
 }
  
@@ -287,6 +290,7 @@ hr {
 	font: {
 		family: $font-sans; 
 		size: 12px; 
+		weight: 600; 
 	}
 	text: {
 		transform: uppercase;
@@ -299,6 +303,7 @@ hr {
 	&:hover {
 		border: 2px solid lighten($color-accent, 20%);
 		color: lighten($color-accent, 20%);
+		cursor: pointer; 
 	}
 }
 
@@ -313,7 +318,8 @@ hr {
 	border-radius: 3px; 
 	font: {
 		family: $font-sans; 
-		size: 12px; 
+		size: 12px;
+		weight: 600;  
 	}
 	text: {
 		transform: uppercase;
@@ -326,6 +332,7 @@ hr {
 	&:hover {
 		border: 2px solid lighten($color-accent, 20%);
 		color: lighten($color-accent, 20%);
+		cursor: pointer; 
 	}
 }
 
@@ -375,7 +382,7 @@ hr {
 	font: {
 		family: $font-sans;
 		size: 12px;
-		weight: 500; 
+		weight: 600; 
 	}
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
@@ -421,7 +428,7 @@ hr {
 	font: {
 		family: $font-sans;
 		size: 12px;
-		weight: 500; 
+		weight: 600; 
 	}
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
@@ -830,8 +837,8 @@ nav li.has-children {
 	
 	//2-column flexbox
 	.flex-1stcol {
-		margin-right: 20px;  
-		max-width: 55%; 
+		margin-right: 30px;  
+		max-width: 80%; 
 
 		@include media-query(max, small) {
 			flex-direction: column;
@@ -881,7 +888,7 @@ nav li.has-children {
 			box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); 
 		
 			@include media-query(max, small) {
-				max-width: 90%; 
+				max-width: 100%; 
 			} 
 		}
 
@@ -904,7 +911,7 @@ nav li.has-children {
 	.flex-2ndcol_leftborder {
 		border-left: 2px solid $color-brand; 
 		padding-left: 30px;  
-		max-width: 40%;
+		max-width: 100%;
 
 		li {
 		padding-bottom: 5px;
@@ -1052,7 +1059,7 @@ nav li.has-children {
 	.news-item {
 		width: 240px;
 		margin-right: 25px;
-		font-size: 13px;  
+		font-size: 14px;  
 		line-height: 22px;
 
 			ul.dashed > li {
@@ -1222,6 +1229,7 @@ ol.event-list-three-columns {
 		h5 {
 			margin-top: 15px; 
 			margin-bottom: 5px; 
+			font-size: 14px; 
 		}
 
 		p {
@@ -1269,6 +1277,7 @@ ol.event-list-three-columns {
 		font: {
 			family: $font-sans; 
 			size: 12px; 
+			weight: 400; 
 		}
 		margin-top: 0;
 		margin-right: 0;  
