@@ -161,6 +161,7 @@ header {
 
 
 h2 { 
+	margin-bottom: 5px; 
 	font: {
 		family: $font-serif; 
 		size: 20px;
@@ -169,6 +170,7 @@ h2 {
 }
 
 h3 {
+	margin-bottom: 0; 
 	font: {
 		family: $font-sans;
 		size: 18px;
@@ -186,12 +188,13 @@ h3 {
 }
 
 h4 {
-	margin-top: 15px; 
+	margin: 0; 
 	font: {
 		family: $font-sans; 
-		size: 14px;
+		size: 16px;
 		weight: 600; 
 	}
+	line-height: 24px; 
 	color: $color-main; 
 }
 
@@ -258,7 +261,8 @@ blockquote {
 	.blockquote-source {
 		margin-top: 10px;
 		margin-bottom: 0;  
-		font-size: 14px; 
+		font-size: 16px; 
+		line-height: 26px; 
 	}
 }
 
@@ -377,7 +381,8 @@ hr {
 	&.open {
 		display: inline;
 		margin: 0; 
-		padding: 0;  
+		padding: 0;
+		font-size: 14px;   
 	
 		ul {
 			margin-top: 0; 
@@ -403,6 +408,9 @@ hr {
 				width: 100%; 
 			}
 		}
+	}
+	p {
+		font-size: 14px; 
 	}
 }
 
@@ -1182,7 +1190,7 @@ nav li.has-children {
 .timeline-flex {
 	@include flexbox(); 
 	
-	height: 2550px; 
+	height: 2570px; 
 	justify-content: center;
 	margin-bottom: 100px;  
   
@@ -1207,13 +1215,16 @@ nav li.has-children {
 			h3 {
 				padding-left: 20px; 
 				margin-bottom: 10px;
-				font-size: 16px; 
+				font-size: 18px; 
 			}
 
 			h2 {
 				color: $color-brand; 
-				font-size: 22px; 
-				font-family: $font-sans; 
+				font: {
+					size: 22px; 
+					family: $font-sans; 
+					weight: 400; 
+				}
 				padding: 17px 20px 0 20px;
 				margin-bottom: 0;  
 				border-top: 3px solid $color-accent;
@@ -1237,20 +1248,14 @@ nav li.has-children {
 	max-width: 100%; 
 }
 
-ol.event-list-three-columns {
+ol.event-list-two-columns {
 	margin: 0; 
 	padding: 0;  
 	
-	-webkit-column-count: 3;
-	-moz-column-count: 3;
-	column-count: 3; 
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2; 
 	list-style-type: none;
-
-	@include media-query(max, medium) {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;     
-	}
 
 	@include media-query(max, small) {
 		-webkit-column-count: 1;
