@@ -106,6 +106,30 @@ h6 {
 address {
   font-style: normal; }
 
+blockquote {
+  padding: 0;
+  color: #64717D;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center; }
+  blockquote:before {
+    content: '\201C';
+    display: block;
+    margin-bottom: -3rem;
+    text-align: center;
+    font-size: 4em;
+    color: #7cac3a; }
+  blockquote:after {
+    content: '\201D';
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    color: #89bf41; }
+  blockquote .blockquote-source {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px; }
+
 ol, ul {
   padding: 0;
   list-style-type: none; }
@@ -861,7 +885,7 @@ ol.event-list-three-columns {
   margin-top: 10px;
   padding: 10px 10px;
   border: 1px solid #3B4991;
-  color: gray;
+  color: #64717D;
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 14px;
   border-radius: 3px; }
@@ -884,7 +908,7 @@ ol.event-list-three-columns {
   color: #FFFFFF;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 0;
   margin-right: 0;
   padding: 14px 20px; }
