@@ -579,6 +579,7 @@ hr {
 // N A V I G A T I O N
 // navigation for mobile state
 nav {
+	z-index: 1;
 	.handle span {
 		display: none;
 	}
@@ -1179,10 +1180,14 @@ nav li.has-children {
 	p {
 		color: $color-brand; 
 		font: {
-			size: 12px; 
+			size: 14px; 
 			family: $font-sans;
 			weight: 600;
 		}  
+	}
+
+	p.card-pdf {
+		font-size: 12px;
 	}
 
 	.card {
@@ -1206,6 +1211,42 @@ nav li.has-children {
       -moz-box-shadow:inset 0px 0px 0px 4px $color-brand;
       box-shadow:inset 0px 0px 0px 4px $color-brand;
     }
+	}
+
+	.card_calendar {
+		display: flex; 
+		align-items: center; 
+		flex-direction: column; 
+		width: 200px; 
+		height: 200px; 
+		padding: 5px; 
+		margin-right: 10px;
+		margin-top: 10px;
+	  border: 2px solid $color-accent; 
+
+		&:hover {
+			-webkit-box-shadow:inset 0px 0px 0px 4px $color-accent;
+      -moz-box-shadow:inset 0px 0px 0px 4px $color-accent;
+      box-shadow:inset 0px 0px 0px 4px $color-accent;
+		}
+
+		h2, h3, p {
+			color: $color-accent; 
+		}
+
+		h2 {
+			padding: 0; 
+		}
+
+		h3:after {
+			content: "";
+      position: relative;
+      display: block; 
+      margin: 0 auto;  
+      padding-top: 7px;
+      border-bottom: 2px solid $color-accent; 
+      width: 30px; 
+		} 
 	}
 
 	.image-card { 
