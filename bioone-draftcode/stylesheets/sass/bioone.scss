@@ -144,13 +144,17 @@ a {
 	&:hover {
 		color: lighten($color-accent, 15%);
 	}
+
+	a#calendar {
+		color: $color-main; 
+	}
 }
 
 h1 {
 	font: {
 		family: $font-sans;
 		size: 30px;
-		weight: 300;
+		weight: 400;
 	}
 	color: $color-brand;
 }
@@ -498,7 +502,6 @@ hr {
 	height: 400px;
 	font: {
 		family: $font-sans;
-		size: 13px;
 		weight: 600; 
 	}
 	letter-spacing: 1.5px;
@@ -540,7 +543,7 @@ hr {
 	}
 	
 	.hero-text-container {
-		max-width: 900px; 
+		max-width: 950px; 
 		padding: 115px 20px 0 20px; 
 		margin: 0 auto; 
 
@@ -554,7 +557,7 @@ hr {
 		.hero-header {
 			font: {
 				family: $font-sans;
-				weight: 100;
+				weight: 400;
 				size: 32px; 
 			} 
 			text-transform: none; 
@@ -566,7 +569,7 @@ hr {
 			padding-top: 25px; 
 			font: {
 				family: $font-sans;
-				weight: 100;
+				weight: 400;
 				size: 22px; 
 			} 
 			text-transform: none; 
@@ -633,7 +636,7 @@ nav {
 				font: {
 					family: $font-sans; 
 					size: 12px; 
-					weight: 600; 
+					weight: 800; 
 				}
 				color: $color-brand;
 				text: {
@@ -717,6 +720,7 @@ nav {
 		}
 
 		li {
+			font-size: 13px;
 			display: inline;
 			position: relative;
 			padding-left: 35px;
@@ -726,7 +730,8 @@ nav {
 			}
 			
 			@include media-query(max, medium) { 
-				padding-left: 20px; 
+				font-size: 12px; 
+				padding-left: 15px; 
 				padding-right: 0; 
 			} 
 		
@@ -798,7 +803,7 @@ nav .children {
 	display: none; 
 	width: 215px; 
 	padding: 0; 
-	left: 27%; 
+	left: 27%;
 	z-index: 2; 
 
 	@include media-query(max, medium) { 
@@ -819,6 +824,7 @@ nav .children {
 			display: block; 
 			padding: 10px 13px; 
 			color: $color-light;
+			font-size: 12px; 
 			font-weight: 600; 
 			border-bottom: 2px solid lighten($color-light, 30%);  
 
@@ -850,7 +856,7 @@ nav li.has-children {
 		position: relative; 
 		margin-right: 5px;
 		top: -2px; 
-		font-size: 80%;
+		font-size: 90%;
 		
 		@include media-query(max, small) {
 			display: none;
@@ -1196,7 +1202,7 @@ nav li.has-children {
 		flex-direction: column; 
 		width: 200px; 
 		height: 200px; 
-		padding: 5px 10px; 
+		padding: 0 10px; 
 		margin-right: 10px;
 		margin-top: 10px;
 		border: 2px solid $color-brand;   
@@ -1254,16 +1260,27 @@ nav li.has-children {
 		align-items: center; 
 		flex-direction: column;
 		position: relative; 
-		background: { 
-			image: url("../../images/ar-2015.png"); 
-			size: cover; 
-			position: center;
-		} 
 		width: 200px; 
 		height: 200px; 
 		padding: 5px 10px; 
 		margin-right: 10px;
 		margin-top: 10px; 
+
+		&.ar-2015 {
+			background: { 
+				image: url("../../images/ar-2015.png"); 
+				size: cover; 
+				position: center;
+			}
+		}
+
+		&.ar-2014 {
+			background: { 
+				image: url("../../images/ar-2014.png"); 
+				size: cover; 
+				position: center;
+			}  
+		}	
 
 		h3 {
 			color: $white; 
@@ -1294,7 +1311,7 @@ nav li.has-children {
 		p {
 			color: $white; 
 			font: {
-				size: 12px; 
+				size: 14px; 
 				family: $font-sans;
 				weight: 600; 
 			}
@@ -1351,7 +1368,6 @@ nav li.has-children {
 } 
 
 .homepage-flex-content {
-	max-width: 40%; 
 	margin-right: 20px;
 
 	h3 {
@@ -1471,50 +1487,62 @@ ol.event-list-two-columns {
 }
 
 //mailchimp form 
-#mc_embed_signup {
-	input {
-		margin-top: 10px; 
-		padding: 10px 10px;
-		border: 1px solid $color-accent; 
-		color: $color-light; 
-		font: {
-			family: $font-serif; 
-			size: 14px; 
+.light-purple-bg {
+	position: relative;
+	padding: 20px 40px;  
+	background-color: lighten($color-accent, 50%);
+
+	#mc_embed_signup {
+		input {
+			margin-top: 10px; 
+			padding: 10px 10px;
+			border: 1px solid $color-accent; 
+			color: $color-light; 
+			font: {
+				family: $font-serif; 
+				size: 14px; 
+			}
+			border-radius: 3px;
+
+			&:focus {
+				outline: 0;
+				outline-offset: 0; 
+			}
 		}
-		border-radius: 3px;
 
-		&:focus {
-			outline: 0;
-			outline-offset: 0; 
-		}  
-	}
+		.sign-up-list {
+			@include flexbox();
+			align-items: baseline; 
 
-	.sign-up-list {
-		@include flexbox();
-		align-items: baseline; 
+			.sign-up-col1 {
+				width: 15%; 
+			} 
 
-		.sign-up-col1 {
-			width: 15%; 
-		} 
-
-		.sign-up-col2 {
-			width: 40%; 
+			.sign-up-col2 {
+				width: 40%; 
+			}
 		}
-	}
 
-	.btn-main {
-		display: inline; 
-		color: $white; 
-		font: {
-			family: $font-sans; 
-			size: 12px; 
-			weight: 600; 
+		.btn-main {
+			display: inline; 
+			color: $white; 
+			font: {
+				family: $font-sans; 
+				size: 12px; 
+				weight: 600; 
+			}
+			margin-top: 0;
+			margin-right: 0;  
+			padding: { 
+				top: 14px;
+				right: 20px;
+				bottom: 13px; 
+				left: 20px;
+			}   
 		}
-		margin-top: 0;
-		margin-right: 0;  
-		padding: 14px 20px;
 	}
 }
+
 
 //images
 img.pub-logo {
