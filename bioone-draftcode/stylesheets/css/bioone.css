@@ -267,9 +267,9 @@ hr {
   margin: 0;
   position: relative;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border-bottom: 15px solid #6E9934;
   background-image: url("../../images/headerbg.png"); }
@@ -306,7 +306,7 @@ hr {
   margin: 0;
   height: 400px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -316,7 +316,7 @@ hr {
   border-bottom: 15px solid #6E9934; }
   @media only screen and (max-width: 900px) {
     .page-header_homepage {
-      font-size: 12px;
+      font-size: 11px;
       padding: 25px 0 0 25px; } }
   @media only screen and (max-width: 740px) {
     .page-header_homepage {
@@ -445,7 +445,7 @@ nav .handle span {
       overflow-y: scroll;
       max-height: 90vh; }
     nav.open ul {
-      right: calc(246px + 80px + 2px); } }
+      right: calc(265px + 80px - 2px); } }
 nav ul {
   position: relative;
   float: right;
@@ -493,6 +493,9 @@ nav ul {
     nav ul li:hover ul {
       display: block;
       top: 25px; }
+      @media only screen and (max-width: 740px) {
+        nav ul li:hover ul {
+          top: 0; } }
     nav ul li ul {
       margin: 0;
       padding: 10px;
@@ -775,8 +778,10 @@ nav li.has-children > a:before {
 .card-container {
   display: flex;
   text-align: center;
-  color: #6E9934;
   flex-wrap: wrap; }
+  .card-container a.card-link {
+    text-decoration: none;
+    pointer: cursor; }
   .card-container h3 {
     position: relative;
     text-transform: uppercase;
@@ -792,6 +797,7 @@ nav li.has-children > a:before {
       border-bottom: 2px solid #6E9934;
       width: 30px; }
   .card-container h2 {
+    color: #6E9934;
     font-family: "Tisa Pro", Georgia, serif;
     font-size: 20px;
     font-weight: 100;
@@ -799,7 +805,8 @@ nav li.has-children > a:before {
     padding: 0 10px;
     margin-top: 15px; }
   .card-container p {
-    font-size: 14px;
+    color: #6E9934;
+    font-size: 12px;
     font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600; }
   .card-container .card {
@@ -852,7 +859,7 @@ nav li.has-children > a:before {
       margin-top: 15px; }
     .card-container .image-card p {
       color: #FFFFFF;
-      font-size: 14px;
+      font-size: 12px;
       font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 600; }
   .card-container .outline {

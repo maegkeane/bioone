@@ -447,10 +447,10 @@ hr {
 	position: relative;
 	font: {
 		family: $font-sans;
-		size: 12px;
+		size: 13px; 
 		weight: 600; 
 	}
-	letter-spacing: 1.5px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 	border-bottom: 15px solid $color-brand; 
 
@@ -498,7 +498,7 @@ hr {
 	height: 400px;
 	font: {
 		family: $font-sans;
-		size: 12px;
+		size: 13px;
 		weight: 600; 
 	}
 	letter-spacing: 1.5px;
@@ -512,7 +512,7 @@ hr {
 	border-bottom: 15px solid $color-brand; 
 
 	@include media-query(max, medium) {
-		font-size: 12px;
+		font-size: 11px;
 		padding: 25px 0 0 25px; 
 	}
 	
@@ -692,7 +692,7 @@ nav {
 		}
 
 		&.open ul {
-			right: calc(246px + 80px + 2px);
+			right: calc(265px + 80px - 2px);
 		}
 	}
 
@@ -740,7 +740,7 @@ nav {
 				padding: 20px 0; 
 
 				&:hover {
-					color: $white; 
+					color: $white;
 				}
 			
 				@include media-query(max, small) { 
@@ -751,13 +751,18 @@ nav {
 					font-weight: 600;
 
 					&:hover {
-						color: darken($color-brand, 10%);               }  
-					}
+						color: darken($color-brand, 10%);
+					}     
 				}
+			}
 
 			&:hover ul {
 				display: block;
 				top: 25px; 
+
+				@include media-query(max, small) {
+					top: 0; 
+				}	
 			}
 
 			ul {
@@ -1134,8 +1139,12 @@ nav li.has-children {
 .card-container {
 	display: flex;
 	text-align: center;
-	color: $color-brand; 
 	flex-wrap: wrap; 
+
+	a.card-link {
+		text-decoration: none; 
+		pointer: cursor;
+	}
 		 
 	h3 {
 		position: relative; 
@@ -1156,6 +1165,7 @@ nav li.has-children {
 	}
 
 	h2 {
+		color: $color-brand; 
 		font: {
 			family: $font-serif; 
 			size: 20px;
@@ -1167,8 +1177,9 @@ nav li.has-children {
 	}
 
 	p {
+		color: $color-brand; 
 		font: {
-			size: 14px; 
+			size: 12px; 
 			family: $font-sans;
 			weight: 600;
 		}  
@@ -1242,7 +1253,7 @@ nav li.has-children {
 		p {
 			color: $white; 
 			font: {
-				size: 14px; 
+				size: 12px; 
 				family: $font-sans;
 				weight: 600; 
 			}
