@@ -134,6 +134,26 @@ blockquote {
     font-size: 16px;
     line-height: 26px; }
 
+aside.left {
+  display: inline;
+  position: relative;
+  float: left;
+  left: -150px;
+  width: 200px;
+  font-family: "Tisa Pro", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #6E9934;
+  line-height: 24px;
+  border-top: 2px solid #6E9934;
+  margin: 10px 0 30px 0;
+  padding-top: 5px; }
+  @media only screen and (max-width: 740px) {
+    aside.left {
+      float: none;
+      margin: 20px 0 30px 0;
+      max-width: 200px; } }
+
 ol, ul {
   padding: 0;
   list-style-type: none; }
@@ -243,7 +263,7 @@ hr {
 
 .page-header {
   height: 100px;
-  padding: 24px 0 0 15px;
+  padding: 25px 0 0 15px;
   margin: 0;
   position: relative;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -282,7 +302,7 @@ hr {
 
 .page-header_homepage {
   position: relative;
-  padding: 24px 0 0 15px;
+  padding: 25px 0 0 15px;
   margin: 0;
   height: 400px;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -747,23 +767,103 @@ nav li.has-children > a:before {
     left: 0;
     z-index: 500;
     background: rgba(0, 0, 0, 0.3); }
-  .flex-grid .news-item {
-    width: 240px;
-    margin-right: 25px;
-    font-size: 14px;
-    line-height: 22px; }
-    .flex-grid .news-item ul.dashed > li {
-      text-indent: -7px; }
-    .flex-grid .news-item ul.dashed > li:before {
-      content: "-  ";
-      text-indent: -7px; }
-    @media only screen and (max-width: 900px) {
-      .flex-grid .news-item {
-        width: 50%; } }
 
 .stop-scrolling {
   height: 100%;
   overflow: hidden; }
+
+.card-container {
+  display: flex;
+  text-align: center;
+  color: #6E9934;
+  flex-wrap: wrap; }
+  .card-container h3 {
+    position: relative;
+    text-transform: uppercase;
+    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px; }
+    .card-container h3:after {
+      content: "";
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      padding-top: 7px;
+      border-bottom: 2px solid #6E9934;
+      width: 30px; }
+  .card-container h2 {
+    font-family: "Tisa Pro", Georgia, serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-top: 15px; }
+  .card-container p {
+    font-size: 14px;
+    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600; }
+  .card-container .card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 2px solid #6E9934; }
+    .card-container .card img {
+      margin: 5px 0;
+      width: 90px; }
+    .card-container .card:hover {
+      -webkit-box-shadow: inset 0px 0px 0px 4px #6E9934;
+      -moz-box-shadow: inset 0px 0px 0px 4px #6E9934;
+      box-shadow: inset 0px 0px 0px 4px #6E9934; }
+  .card-container .image-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../../images/ar-2015.png");
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-top: 10px; }
+    .card-container .image-card h3 {
+      color: #FFFFFF; }
+      .card-container .image-card h3:after {
+        content: "";
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding-top: 7px;
+        border-bottom: 2px solid #FFFFFF;
+        width: 30px; }
+    .card-container .image-card h2 {
+      color: #FFFFFF;
+      font-family: "Tisa Pro", Georgia, serif;
+      font-size: 20px;
+      font-weight: 100;
+      line-height: 26px;
+      padding: 0 10px;
+      margin-top: 15px; }
+    .card-container .image-card p {
+      color: #FFFFFF;
+      font-size: 14px;
+      font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 600; }
+  .card-container .outline {
+    margin-top: 3px;
+    border: 2px solid #FFFFFF;
+    width: 184px;
+    height: 184px; }
+    .card-container .outline:hover {
+      -webkit-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
+      -moz-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
+      box-shadow: inset 0px 0px 0px 3px #FFFFFF; }
 
 .homepage-flex {
   display: -webkit-box;
@@ -821,7 +921,7 @@ nav li.has-children > a:before {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 2570px;
+  height: 2600px;
   justify-content: center;
   margin-bottom: 100px; }
   @media only screen and (max-width: 740px) {

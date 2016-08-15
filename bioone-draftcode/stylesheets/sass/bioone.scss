@@ -1,4 +1,5 @@
 //  TO DO
+//	asides in "story" aren't working
 
 // BREAKPOINTS
 $break-small: 740px;
@@ -22,7 +23,7 @@ $break-huge: 1280px;
 	@else if $size == huge {
 		@media only screen and (min-width: $break-huge) { @content; }
 	}
-  }
+	}
  
 	@else if $type == max {
 	@if $size == small {
@@ -38,24 +39,23 @@ $break-huge: 1280px;
 	@else if $size == huge {
 		@media only screen and (max-width: $break-huge) { @content; }
 	}
-  }
+	}
  
 	@else if $type == only {
 	@if $size == small {
 		@media only screen and (max-width: $break-small) { @content; }
 	}
 	@else if $size == medium {
-	  @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+		@media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
 	}
 	@else if $size == large {
-	  @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+		@media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
 	}
 	@else if $size == huge {
-	  @media only screen and (min-width: $break-huge) { @content; }
+		@media only screen and (min-width: $break-huge) { @content; }
 	}
-  }
+	}
 }
-
 
 //mixin for flexbox goes here
 @mixin flexbox {
@@ -107,7 +107,7 @@ ol,
 ul, 
 aside, 
 {
-  margin: 1rem 0px;
+	margin: 1rem 0px;
 }
 
 article {
@@ -266,6 +266,30 @@ blockquote {
 	}
 }
 
+aside.left {
+	display: inline; 
+	position: relative; 
+	float: left;
+	left: -150px;  
+	width: 200px;
+	font: {
+		family: $font-serif; 
+		size: 18px; 
+		style: italic; 
+	}
+	color: $color-brand; 
+	line-height: 24px; 
+	border-top: 2px solid $color-brand; 
+	margin: 10px 0 30px 0; 
+	padding-top: 5px; 
+
+	@include media-query(max, small) {
+		float: none;
+		margin: 20px 0 30px 0;
+		max-width: 200px;  
+	} 
+}
+
 ol, ul {
 	padding: 0;
 	list-style-type: none;
@@ -309,7 +333,7 @@ hr {
 	}
 	letter-spacing: 1.5px; 
 	color: $white; 
-  
+	
 	&:hover {
 		background: lighten($color-accent, 5%);
 		color: $white;
@@ -338,7 +362,7 @@ hr {
 	}
 	letter-spacing: 1.5px; 
 	color: $color-accent; 
-  
+	
 	&:hover {
 		border: 2px solid lighten($color-accent, 20%);
 		color: lighten($color-accent, 20%);
@@ -367,7 +391,7 @@ hr {
 	}
 	letter-spacing: 1.5px; 
 	color: $color-accent; 
-  
+	
 	&:hover {
 		border: 2px solid lighten($color-accent, 20%);
 		color: lighten($color-accent, 20%);
@@ -376,7 +400,7 @@ hr {
 }
 
 #charter-supporters-container {
-  display:none; 
+	display:none; 
 
 	&.open {
 		display: inline;
@@ -418,7 +442,7 @@ hr {
 
 .page-header {
 	height: 100px; 
-	padding: 24px 0 0 15px;
+	padding: 25px 0 0 15px;
 	margin: 0;
 	position: relative;
 	font: {
@@ -469,7 +493,7 @@ hr {
 //homepage header
 .page-header_homepage {
 	position: relative;
-	padding: 24px 0 0 15px;
+	padding: 25px 0 0 15px;
 	margin: 0;
 	height: 400px;
 	font: {
@@ -811,7 +835,7 @@ nav .children {
 		}
 	}
 }
-  
+	
 //nav-dropdown-arrow
 nav li.has-children {
 	> a:before {
@@ -994,9 +1018,9 @@ nav li.has-children {
 	}
 }
 
-// grid (bios, news, etc.)
+// grid 
 .flex-grid {
-   @include flexbox(); 
+	 @include flexbox(); 
 	flex-wrap: wrap;
 
 	margin-bottom: 20px; 
@@ -1007,7 +1031,7 @@ nav li.has-children {
 	}
 
 	.bio-list-item {
-	  @include flexbox(); 
+		@include flexbox(); 
 		flex-direction: column; 
 
 		margin-right: 40px;
@@ -1028,7 +1052,7 @@ nav li.has-children {
 			margin-top: 10px;
 			font-size: 14px; 
 			line-height: 20px;
-		  
+			
 			span.bio-list-item_name {
 				font-weight: 600; 
 			}
@@ -1099,32 +1123,146 @@ nav li.has-children {
 		z-index: 500; 
 		background: rgba(0,0,0,0.3); 
 	}
-
-	.news-item {
-		width: 240px;
-		margin-right: 25px;
-		font-size: 14px;  
-		line-height: 22px;
-
-			ul.dashed > li {
-				text-indent: -7px;
-			}
-			
-			ul.dashed > li:before {
-				content: "-  ";
-				text-indent: -7px;
-			}  
-
-		@include media-query(max, medium) {
-			width: 50%;
-		} 
-	}
 }
 
-   .stop-scrolling {
-		height: 100%; 
-		overflow: hidden; 
-   }
+.stop-scrolling {
+	height: 100%; 
+	overflow: hidden; 
+}
+
+//news & events
+.card-container {
+	display: flex;
+	text-align: center;
+	color: $color-brand; 
+	flex-wrap: wrap; 
+		 
+	h3 {
+		position: relative; 
+		text-transform: uppercase;
+		font-family: $font-sans;
+		font-size: 13px;  
+		letter-spacing: 1px; 
+
+		&:after {
+			content: "";
+      position: relative;
+      display: block; 
+      margin: 0 auto;  
+      padding-top: 7px;
+      border-bottom: 2px solid $color-brand; 
+      width: 30px; 
+		} 
+	}
+
+	h2 {
+		font: {
+			family: $font-serif; 
+			size: 20px;
+			weight: 100; 
+		}
+		line-height: 26px; 
+		padding: 0 10px; 
+		margin-top: 15px;  
+	}
+
+	p {
+		font: {
+			size: 14px; 
+			family: $font-sans;
+			weight: 600;
+		}  
+	}
+
+	.card {
+		display: flex; 
+		align-items: center; 
+		flex-direction: column; 
+		width: 200px; 
+		height: 200px; 
+		padding: 5px 10px; 
+		margin-right: 10px;
+		margin-top: 10px;
+		border: 2px solid $color-brand;   
+
+		img {
+			margin: 5px 0; 
+			width: 90px; 
+		}
+
+		&:hover {
+      -webkit-box-shadow:inset 0px 0px 0px 4px $color-brand;
+      -moz-box-shadow:inset 0px 0px 0px 4px $color-brand;
+      box-shadow:inset 0px 0px 0px 4px $color-brand;
+    }
+	}
+
+	.image-card { 
+		display: flex; 
+		align-items: center; 
+		flex-direction: column;
+		position: relative; 
+		background: { 
+			image: url("../../images/ar-2015.png"); 
+			size: cover; 
+			position: center;
+		} 
+		width: 200px; 
+		height: 200px; 
+		padding: 5px 10px; 
+		margin-right: 10px;
+		margin-top: 10px; 
+
+		h3 {
+			color: $white; 
+
+			&:after {
+				content: "";
+	      position: relative;
+	      display: block; 
+	      margin: 0 auto;  
+	      padding-top: 7px;
+	      border-bottom: 2px solid $white; 
+	      width: 30px; 
+			} 
+	}
+
+		h2 {
+			color: $white; 
+			font: {
+				family: $font-serif; 
+				size: 20px;
+				weight: 100; 
+			}
+			line-height: 26px; 
+			padding: 0 10px; 
+			margin-top: 15px;  
+		}
+
+		p {
+			color: $white; 
+			font: {
+				size: 14px; 
+				family: $font-sans;
+				weight: 600; 
+			}
+		}
+	}
+
+	.outline {
+		margin-top: 3px; 
+		border: 2px solid $white; 
+		width: 184px; 
+		height: 184px;
+	
+		&:hover {
+			-webkit-box-shadow:inset 0px 0px 0px 3px $white;
+      -moz-box-shadow:inset 0px 0px 0px 3px $white;
+      box-shadow:inset 0px 0px 0px 3px $white; 
+		}	 
+	}		
+}
+
 
 //homepage flexbox
 .homepage-flex {
@@ -1191,10 +1329,10 @@ nav li.has-children {
 .timeline-flex {
 	@include flexbox(); 
 	
-	height: 2570px; 
+	height: 2600px; 
 	justify-content: center;
 	margin-bottom: 100px;  
-  
+	
 	@include media-query(max, small) {
 		justify-content: flex-start;
 	}
@@ -1209,7 +1347,7 @@ nav li.has-children {
 	.timeline-item-container {
 		@include flexbox(); 
 		flex-direction: column; 
-  
+	
 		.timeline-item { 
 			max-width: 300px; 
 		
@@ -1232,9 +1370,9 @@ nav li.has-children {
 			}
 		
 			p {
-			  padding: 13px 20px 60px 20px; 
-			  font-size: 16px;
-			  line-height: 24px;
+				padding: 13px 20px 60px 20px; 
+				font-size: 16px;
+				line-height: 24px;
 			}
 
 			.timeline-item-year {
@@ -1351,7 +1489,7 @@ footer {
 		family: $font-serif;
 		size: 14px;
 	} 
-   
+	 
 
 	#footer-rule {
 		width: 100%;
@@ -1361,7 +1499,7 @@ footer {
 	}
 
 	.page-footer_content {
-	   @include flexbox(); 
+		 @include flexbox(); 
 		-ms-flex-pack: distribute;
 		-webkit-justify-content: "space-around";
 		-moz-justify-content: "space-around"; 
