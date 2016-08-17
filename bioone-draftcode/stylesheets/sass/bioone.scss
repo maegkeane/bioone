@@ -196,7 +196,7 @@ h4 {
 	font: {
 		family: $font-sans; 
 		size: 16px;
-		weight: 600; 
+		weight: 400; 
 	}
 	line-height: 24px; 
 	color: $color-main; 
@@ -902,7 +902,7 @@ nav li.has-children {
 
 //FLEXBOX
 .flex-container {
-	@include flexbox(); 
+	@include flexbox();
 
 	padding-right: 5px;
 	order: 1; 
@@ -1198,14 +1198,14 @@ nav li.has-children {
 
 	.card {
 		display: flex; 
-		align-items: center; 
-		flex-direction: column; 
-		width: 200px; 
-		height: 200px; 
-		padding: 0 10px; 
+		align-items: center;
+		flex-direction: column;
+		width: 220px;
+		padding: 10px; 
 		margin-right: 10px;
-		margin-top: 10px;
-		border: 2px solid $color-brand;   
+		margin-bottom: 10px;
+		border: 2px solid $color-brand;
+		transition: box-shadow 250ms linear;   
 
 		img {
 			margin: 5px 0; 
@@ -1223,12 +1223,12 @@ nav li.has-children {
 		display: flex; 
 		align-items: center; 
 		flex-direction: column; 
-		width: 200px; 
-		height: 200px; 
-		padding: 5px; 
+		width: 220px;
+		padding: 10px; 
 		margin-right: 10px;
-		margin-top: 10px;
+		margin-bottom: 10px;
 	  border: 2px solid $color-accent; 
+	  transition: box-shadow 250ms linear;
 
 		&:hover {
 			-webkit-box-shadow:inset 0px 0px 0px 4px $color-accent;
@@ -1260,11 +1260,11 @@ nav li.has-children {
 		align-items: center; 
 		flex-direction: column;
 		position: relative; 
-		width: 200px; 
-		height: 200px; 
-		padding: 5px 10px; 
+		width: 220px; 
+		height: 220px; 
+		padding: 9px; 
 		margin-right: 10px;
-		margin-top: 10px; 
+		margin-bottom: 10px; 
 
 		&.ar-2015 {
 			background: { 
@@ -1319,11 +1319,12 @@ nav li.has-children {
 	}
 
 	.outline {
-		margin-top: 3px; 
+		margin-top: 2px; 
 		border: 2px solid $white; 
-		width: 184px; 
-		height: 184px;
-	
+		width: 200px; 
+		height: 200px;
+		transition: box-shadow 250ms linear;
+
 		&:hover {
 			-webkit-box-shadow:inset 0px 0px 0px 3px $white;
       -moz-box-shadow:inset 0px 0px 0px 3px $white;
@@ -1332,6 +1333,16 @@ nav li.has-children {
 	}		
 }
 
+#map {
+	max-width: 100%;
+}
+
+.events-logo {
+	max-width: 300px;
+	-webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); 
+	-moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); 
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);	 
+}
 
 //homepage flexbox
 .homepage-flex {
@@ -1450,41 +1461,6 @@ nav li.has-children {
 	}
 }
 
-//events
-#map {
-	max-width: 100%; 
-}
-
-ol.event-list-two-columns {
-	margin: 0; 
-	padding: 0;  
-	
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2; 
-	list-style-type: none;
-
-	@include media-query(max, small) {
-		-webkit-column-count: 1;
-		-moz-column-count: 1;
-		column-count: 1;     
-	}  
-
-	.event-list-item {
-		display: inline-block;
-		width: 100%;
-		h5 {
-			margin-top: 15px; 
-			margin-bottom: 5px; 
-			font-size: 14px; 
-		}
-
-		p {
-			margin-top: 0; 
-			line-height: 20px; 
-		} 
-	}
-}
 
 //mailchimp form 
 .light-purple-bg {

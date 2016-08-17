@@ -83,7 +83,7 @@ h4 {
   margin: 0;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   color: #000000; }
 
@@ -821,12 +821,12 @@ nav li.has-children > a:before {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 200px;
-    height: 200px;
-    padding: 0 10px;
+    width: 220px;
+    padding: 10px;
     margin-right: 10px;
-    margin-top: 10px;
-    border: 2px solid #6E9934; }
+    margin-bottom: 10px;
+    border: 2px solid #6E9934;
+    transition: box-shadow 250ms linear; }
     .card-container .card img {
       margin: 5px 0;
       width: 90px; }
@@ -838,12 +838,12 @@ nav li.has-children > a:before {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 200px;
-    height: 200px;
-    padding: 5px;
+    width: 220px;
+    padding: 10px;
     margin-right: 10px;
-    margin-top: 10px;
-    border: 2px solid #3B4991; }
+    margin-bottom: 10px;
+    border: 2px solid #3B4991;
+    transition: box-shadow 250ms linear; }
     .card-container .card_calendar:hover {
       -webkit-box-shadow: inset 0px 0px 0px 4px #3B4991;
       -moz-box-shadow: inset 0px 0px 0px 4px #3B4991;
@@ -865,11 +865,11 @@ nav li.has-children > a:before {
     align-items: center;
     flex-direction: column;
     position: relative;
-    width: 200px;
-    height: 200px;
-    padding: 5px 10px;
+    width: 220px;
+    height: 220px;
+    padding: 9px;
     margin-right: 10px;
-    margin-top: 10px; }
+    margin-bottom: 10px; }
     .card-container .image-card.ar-2015 {
       background-image: url("../../images/ar-2015.png");
       background-size: cover;
@@ -902,14 +902,24 @@ nav li.has-children > a:before {
       font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 600; }
   .card-container .outline {
-    margin-top: 3px;
+    margin-top: 2px;
     border: 2px solid #FFFFFF;
-    width: 184px;
-    height: 184px; }
+    width: 200px;
+    height: 200px;
+    transition: box-shadow 250ms linear; }
     .card-container .outline:hover {
       -webkit-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
       -moz-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
       box-shadow: inset 0px 0px 0px 3px #FFFFFF; }
+
+#map {
+  max-width: 100%; }
+
+.events-logo {
+  max-width: 300px;
+  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); }
 
 .homepage-flex {
   display: -webkit-box;
@@ -1004,32 +1014,6 @@ nav li.has-children > a:before {
         line-height: 24px; }
       .timeline-flex .timeline-item-container .timeline-item .timeline-item-year {
         font-weight: 400; }
-
-#map {
-  max-width: 100%; }
-
-ol.event-list-two-columns {
-  margin: 0;
-  padding: 0;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  list-style-type: none; }
-  @media only screen and (max-width: 740px) {
-    ol.event-list-two-columns {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1; } }
-  ol.event-list-two-columns .event-list-item {
-    display: inline-block;
-    width: 100%; }
-    ol.event-list-two-columns .event-list-item h5 {
-      margin-top: 15px;
-      margin-bottom: 5px;
-      font-size: 14px; }
-    ol.event-list-two-columns .event-list-item p {
-      margin-top: 0;
-      line-height: 20px; }
 
 .light-purple-bg {
   position: relative;
