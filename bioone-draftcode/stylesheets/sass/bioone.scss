@@ -1148,10 +1148,13 @@ nav li.has-children {
 	text-align: center;
 	flex-wrap: wrap; 
 
-	a.card-link {
-		text-decoration: none; 
-		pointer: cursor;
-	}
+	//a.card-link {
+	//	flex: 1 1 auto;
+	//	border: blue solid 2px; 
+	//	max-width: 220px; 
+	//	text-decoration: none; 
+	//	pointer: cursor;
+	//}
 		 
 	h3 {
 		position: relative; 
@@ -1196,16 +1199,21 @@ nav li.has-children {
 		font-size: 12px;
 	}
 
-	.card {
+	a.card {
 		display: flex; 
 		align-items: center;
 		flex-direction: column;
 		width: 220px;
+		min-height: 220px;  
 		padding: 10px; 
 		margin-right: 10px;
 		margin-bottom: 10px;
 		border: 2px solid $color-brand;
 		transition: box-shadow 250ms linear;   
+
+		flex: 0 1 auto;
+		text-decoration: none; 
+		pointer: cursor;
 
 		img {
 			margin: 5px 0; 
@@ -1224,11 +1232,15 @@ nav li.has-children {
 		align-items: center; 
 		flex-direction: column; 
 		width: 220px;
+		min-height: 220px;  
 		padding: 10px; 
 		margin-right: 10px;
 		margin-bottom: 10px;
 	  border: 2px solid $color-accent; 
 	  transition: box-shadow 250ms linear;
+
+		text-decoration: none; 
+		pointer: cursor;
 
 		&:hover {
 			-webkit-box-shadow:inset 0px 0px 0px 4px $color-accent;
@@ -1261,10 +1273,14 @@ nav li.has-children {
 		flex-direction: column;
 		position: relative; 
 		width: 220px; 
-		height: 220px; 
+		min-height: 200px;  
 		padding: 9px; 
 		margin-right: 10px;
 		margin-bottom: 10px; 
+
+		flex: 0 1 auto;
+		text-decoration: none; 
+		pointer: cursor;
 
 		&.ar-2015 {
 			background: { 
@@ -1321,9 +1337,10 @@ nav li.has-children {
 	.outline {
 		margin-top: 2px; 
 		border: 2px solid $white; 
-		width: 200px; 
-		height: 200px;
+		width: 200px;
+		min-height: 200px;  
 		transition: box-shadow 250ms linear;
+		flex: 1 1 auto;
 
 		&:hover {
 			-webkit-box-shadow:inset 0px 0px 0px 3px $white;

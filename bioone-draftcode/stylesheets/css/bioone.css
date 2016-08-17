@@ -785,9 +785,6 @@ nav li.has-children > a:before {
   display: flex;
   text-align: center;
   flex-wrap: wrap; }
-  .card-container a.card-link {
-    text-decoration: none;
-    pointer: cursor; }
   .card-container h3 {
     position: relative;
     text-transform: uppercase;
@@ -817,20 +814,24 @@ nav li.has-children > a:before {
     font-weight: 600; }
   .card-container p.card-pdf {
     font-size: 12px; }
-  .card-container .card {
+  .card-container a.card {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 220px;
+    min-height: 220px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     border: 2px solid #6E9934;
-    transition: box-shadow 250ms linear; }
-    .card-container .card img {
+    transition: box-shadow 250ms linear;
+    flex: 0 1 auto;
+    text-decoration: none;
+    pointer: cursor; }
+    .card-container a.card img {
       margin: 5px 0;
       width: 90px; }
-    .card-container .card:hover {
+    .card-container a.card:hover {
       -webkit-box-shadow: inset 0px 0px 0px 4px #6E9934;
       -moz-box-shadow: inset 0px 0px 0px 4px #6E9934;
       box-shadow: inset 0px 0px 0px 4px #6E9934; }
@@ -839,11 +840,14 @@ nav li.has-children > a:before {
     align-items: center;
     flex-direction: column;
     width: 220px;
+    min-height: 220px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     border: 2px solid #3B4991;
-    transition: box-shadow 250ms linear; }
+    transition: box-shadow 250ms linear;
+    text-decoration: none;
+    pointer: cursor; }
     .card-container .card_calendar:hover {
       -webkit-box-shadow: inset 0px 0px 0px 4px #3B4991;
       -moz-box-shadow: inset 0px 0px 0px 4px #3B4991;
@@ -866,10 +870,13 @@ nav li.has-children > a:before {
     flex-direction: column;
     position: relative;
     width: 220px;
-    height: 220px;
+    min-height: 200px;
     padding: 9px;
     margin-right: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    flex: 0 1 auto;
+    text-decoration: none;
+    pointer: cursor; }
     .card-container .image-card.ar-2015 {
       background-image: url("../../images/ar-2015.png");
       background-size: cover;
@@ -905,8 +912,9 @@ nav li.has-children > a:before {
     margin-top: 2px;
     border: 2px solid #FFFFFF;
     width: 200px;
-    height: 200px;
-    transition: box-shadow 250ms linear; }
+    min-height: 200px;
+    transition: box-shadow 250ms linear;
+    flex: 1 1 auto; }
     .card-container .outline:hover {
       -webkit-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
       -moz-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
