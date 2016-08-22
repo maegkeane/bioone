@@ -196,7 +196,7 @@ h4 {
 	font: {
 		family: $font-sans; 
 		size: 16px;
-		weight: 400; 
+		weight: 600; 
 	}
 	line-height: 24px; 
 	color: $color-main; 
@@ -234,6 +234,12 @@ h6 {
 
 address {
 	font-style: normal;
+}
+
+small {
+	@include media-query(max, small) {
+		font-size: 14px; 
+	}	
 }
 
 blockquote {
@@ -297,6 +303,12 @@ aside.left {
 ol, ul {
 	padding: 0;
 	list-style-type: none;
+}
+
+.long-list {
+	li {
+		padding-bottom: 12px; 
+	}
 }
 
 hr {
@@ -918,7 +930,7 @@ nav li.has-children {
 	//2-column flexbox
 	.flex-1stcol {
 		margin-right: 30px;  
-		max-width: 80%; 
+		max-width: 60%; 
 
 		@include media-query(max, small) {
 			flex-direction: column;
@@ -941,11 +953,7 @@ nav li.has-children {
 		img.notb1-logo {
 			display: inline; 
 			margin-top: 10px; 
-			max-height: 48px;
-			
-			@include media-query (max, medium) {
-				max-height: 40px; 
-			}
+			max-height: 40px;
 
 			@include media-query(max, small) {
 				max-width: 200px; 
@@ -958,6 +966,7 @@ nav li.has-children {
 	.flex-2ndcol_no-border {
 		padding: 0 30px; 
 		max-width: 100%; 
+		}
 
 		img.screenshot {
 			max-width: 100%; 
@@ -986,7 +995,6 @@ nav li.has-children {
 			margin: 0; 
 			padding: 0; 
 		} 
-	}
 
 	.flex-2ndcol_leftborder {
 		border-left: 2px solid $color-brand; 
@@ -1007,8 +1015,7 @@ nav li.has-children {
 			margin: 20px 0 0 0; 
 			padding: 0;
 			max-width: 100%;
-			
-		} 
+		}  
 	}
 }
 
@@ -1147,14 +1154,6 @@ nav li.has-children {
 	display: flex;
 	text-align: center;
 	flex-wrap: wrap; 
-
-	//a.card-link {
-	//	flex: 1 1 auto;
-	//	border: blue solid 2px; 
-	//	max-width: 220px; 
-	//	text-decoration: none; 
-	//	pointer: cursor;
-	//}
 		 
 	h3 {
 		position: relative; 
@@ -1213,7 +1212,7 @@ nav li.has-children {
 
 		flex: 0 1 auto;
 		text-decoration: none; 
-		pointer: cursor;
+		cursor: pointer;
 
 		img {
 			margin: 5px 0; 
@@ -1240,7 +1239,7 @@ nav li.has-children {
 	  transition: box-shadow 250ms linear;
 
 		text-decoration: none; 
-		pointer: cursor;
+		cursor: pointer; 
 
 		&:hover {
 			-webkit-box-shadow:inset 0px 0px 0px 4px $color-accent;
@@ -1265,6 +1264,18 @@ nav li.has-children {
       border-bottom: 2px solid $color-accent; 
       width: 30px; 
 		} 
+
+		.card_calendar_expand {
+       
+      display: none;
+      p {
+        font-weight: 400; 
+      }
+      
+      &.visible {
+        display: inline; 
+      }
+    }
 	}
 
 	.image-card { 
@@ -1280,7 +1291,7 @@ nav li.has-children {
 
 		flex: 0 1 auto;
 		text-decoration: none; 
-		pointer: cursor;
+		cursor: pointer; 
 
 		&.ar-2015 {
 			background: { 

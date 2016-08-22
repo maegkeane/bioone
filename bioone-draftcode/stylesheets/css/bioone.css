@@ -83,7 +83,7 @@ h4 {
   margin: 0;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   color: #000000; }
 
@@ -110,6 +110,10 @@ h6 {
 
 address {
   font-style: normal; }
+
+@media only screen and (max-width: 740px) {
+  small {
+    font-size: 14px; } }
 
 blockquote {
   padding: 0;
@@ -159,6 +163,9 @@ aside.left {
 ol, ul {
   padding: 0;
   list-style-type: none; }
+
+.long-list li {
+  padding-bottom: 12px; }
 
 hr {
   display: block;
@@ -608,7 +615,7 @@ nav li.has-children > a:before {
         margin: 1rem 0; } }
   .flex-container .flex-1stcol {
     margin-right: 30px;
-    max-width: 80%; }
+    max-width: 60%; }
     @media only screen and (max-width: 740px) {
       .flex-container .flex-1stcol {
         flex-direction: column;
@@ -630,10 +637,7 @@ nav li.has-children > a:before {
     .flex-container .flex-nested-row img.notb1-logo {
       display: inline;
       margin-top: 10px;
-      max-height: 48px; }
-      @media only screen and (max-width: 900px) {
-        .flex-container .flex-nested-row img.notb1-logo {
-          max-height: 40px; } }
+      max-height: 40px; }
       @media only screen and (max-width: 740px) {
         .flex-container .flex-nested-row img.notb1-logo {
           max-width: 200px;
@@ -642,26 +646,26 @@ nav li.has-children > a:before {
   .flex-container .flex-2ndcol_no-border {
     padding: 0 30px;
     max-width: 100%; }
-    .flex-container .flex-2ndcol_no-border img.screenshot {
-      max-width: 100%;
-      padding: 0;
-      margin-bottom: 30px;
-      -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); }
-      @media only screen and (max-width: 740px) {
-        .flex-container .flex-2ndcol_no-border img.screenshot {
-          max-width: 100%; } }
-    .flex-container .flex-2ndcol_no-border li {
-      padding-bottom: 5px; }
-      .flex-container .flex-2ndcol_no-border li img {
-        width: 35px;
-        margin-right: 15px; }
+  .flex-container img.screenshot {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 740px) {
-      .flex-container .flex-2ndcol_no-border {
-        border: 0;
-        margin: 0;
-        padding: 0; } }
+      .flex-container img.screenshot {
+        max-width: 100%; } }
+  .flex-container li {
+    padding-bottom: 5px; }
+    .flex-container li img {
+      width: 35px;
+      margin-right: 15px; }
+  @media only screen and (max-width: 740px) {
+    .flex-container {
+      border: 0;
+      margin: 0;
+      padding: 0; } }
   .flex-container .flex-2ndcol_leftborder {
     border-left: 2px solid #6E9934;
     padding-left: 30px;
@@ -827,7 +831,7 @@ nav li.has-children > a:before {
     transition: box-shadow 250ms linear;
     flex: 0 1 auto;
     text-decoration: none;
-    pointer: cursor; }
+    cursor: pointer; }
     .card-container a.card img {
       margin: 5px 0;
       width: 90px; }
@@ -847,7 +851,7 @@ nav li.has-children > a:before {
     border: 2px solid #3B4991;
     transition: box-shadow 250ms linear;
     text-decoration: none;
-    pointer: cursor; }
+    cursor: pointer; }
     .card-container .card_calendar:hover {
       -webkit-box-shadow: inset 0px 0px 0px 4px #3B4991;
       -moz-box-shadow: inset 0px 0px 0px 4px #3B4991;
@@ -864,6 +868,12 @@ nav li.has-children > a:before {
       padding-top: 7px;
       border-bottom: 2px solid #3B4991;
       width: 30px; }
+    .card-container .card_calendar .card_calendar_expand {
+      display: none; }
+      .card-container .card_calendar .card_calendar_expand p {
+        font-weight: 400; }
+      .card-container .card_calendar .card_calendar_expand.visible {
+        display: inline; }
   .card-container .image-card {
     display: flex;
     align-items: center;
@@ -876,7 +886,7 @@ nav li.has-children > a:before {
     margin-bottom: 10px;
     flex: 0 1 auto;
     text-decoration: none;
-    pointer: cursor; }
+    cursor: pointer; }
     .card-container .image-card.ar-2015 {
       background-image: url("../../images/ar-2015.png");
       background-size: cover;

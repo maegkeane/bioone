@@ -40,3 +40,13 @@ $(document).ready(function() {
    	});
 
 });
+
+//calendar card
+  var toggleCardCalendar = function() {
+    $('.card_calendar_expand').toggleClass('visible');
+    };
+
+    $('.card_calendar').click(function() {
+      toggleCardCalendar();     
+});
+
