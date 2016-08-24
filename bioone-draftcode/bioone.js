@@ -42,11 +42,10 @@ $(document).ready(function() {
 });
 
 //calendar card
-  var toggleCardCalendar = function() {
-    $('.card_calendar_expand').toggleClass('visible');
-    };
+var toggleCardCalendar = function(calendar) {
+  calendar.find('.card_calendar_expand').toggleClass('visible');
+};
 
-    $('.card_calendar').click(function() {
-      toggleCardCalendar();     
+$('.card_calendar').click(function() {
+  toggleCardCalendar($(this));     
 });
-
