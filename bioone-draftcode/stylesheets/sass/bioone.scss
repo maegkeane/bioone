@@ -303,8 +303,36 @@ aside.left {
 	}
 	
 	@include media-query(max, small) {
+		width: 280px; 
 		float: none;
 		display: block;
+		margin: 20px 0 20px 0;   
+	} 
+}
+
+aside.right {
+	display: inline; 
+	float: right;
+	width: 170px;
+	font: {
+		family: $font-serif; 
+		size: 18px; 
+		style: italic; 
+	}
+	color: $color-brand; 
+	line-height: 24px; 
+	border-top: 2px solid $color-brand; 
+	margin: 10px -130px 30px 30px; 
+	padding-top: 5px; 
+
+	@include media-query(max, aside) {
+		margin: 10px 0 60px 30px; 
+	}
+	
+	@include media-query(max, small) {
+		float: none;
+		display: block;
+		width: 320px; 
 		margin: 20px 0 20px 0;   
 	} 
 }

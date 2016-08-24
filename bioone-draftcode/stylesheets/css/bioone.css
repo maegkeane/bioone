@@ -157,8 +157,31 @@ aside.left {
       margin: 10px 30px 60px 0; } }
   @media only screen and (max-width: 740px) {
     aside.left {
+      width: 280px;
       float: none;
       display: block;
+      margin: 20px 0 20px 0; } }
+
+aside.right {
+  display: inline;
+  float: right;
+  width: 170px;
+  font-family: "Tisa Pro", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #6E9934;
+  line-height: 24px;
+  border-top: 2px solid #6E9934;
+  margin: 10px -130px 30px 30px;
+  padding-top: 5px; }
+  @media only screen and (max-width: 1020px) {
+    aside.right {
+      margin: 10px 0 60px 30px; } }
+  @media only screen and (max-width: 740px) {
+    aside.right {
+      float: none;
+      display: block;
+      width: 320px;
       margin: 20px 0 20px 0; } }
 
 ol, ul {
