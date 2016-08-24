@@ -142,23 +142,24 @@ blockquote {
 
 aside.left {
   display: inline;
-  position: relative;
   float: left;
-  left: -150px;
-  width: 200px;
+  width: 180px;
   font-family: "Tisa Pro", Georgia, serif;
   font-size: 18px;
   font-style: italic;
   color: #6E9934;
   line-height: 24px;
   border-top: 2px solid #6E9934;
-  margin: 10px 0 30px 0;
+  margin: 10px 30px 30px -150px;
   padding-top: 5px; }
+  @media only screen and (max-width: 1020px) {
+    aside.left {
+      margin: 10px 30px 60px 0; } }
   @media only screen and (max-width: 740px) {
     aside.left {
       float: none;
-      margin: 20px 0 30px 0;
-      max-width: 200px; } }
+      display: block;
+      margin: 20px 0 20px 0; } }
 
 ol, ul {
   padding: 0;
@@ -1081,6 +1082,11 @@ img.pub-logo {
     img.pub-logo {
       max-width: 200px;
       margin-top: 30px; } }
+
+.stats {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px; }
 
 footer {
   width: 100%;
