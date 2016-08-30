@@ -39,8 +39,6 @@ $(document).ready(function() {
       $('body').removeClass('stop-scrolling'); 
    	});
 
-});
-
 //calendar card
 var toggleCardCalendar = function(calendar) {
   calendar.find('.card_calendar_expand').toggleClass('visible');
@@ -48,4 +46,6 @@ var toggleCardCalendar = function(calendar) {
 
 $('.card_calendar').click(function() {
   toggleCardCalendar($(this));     
+});
+
 });
